@@ -11,7 +11,7 @@ import zipfile
 
 def create_directory_structure():
     """Crea la estructura de directorios necesaria para el dataset YOLO."""
-    # Directory principali
+    # Crea los directorios principales
     base_dirs = ['dataset', 'dataset/images', 'dataset/labels', 
                 'dataset/images/train', 'dataset/images/val', 'dataset/images/test',
                 'dataset/labels/train', 'dataset/labels/val', 'dataset/labels/test']
@@ -33,8 +33,8 @@ def get_background_files(backgrounds_dir):
 
 def calculate_iou(box1, box2):
     """
-    Calcola l'IoU (Intersection over Union) tra due bounding box.
-    box1, box2: ogni box è rappresentata da [x1, y1, x2, y2]
+    Calcula el IoU (Intersection over Union) entre dos bounding box.
+    box1, box2: cada box está representada por [x1, y1, x2, y2]
     """
     # Coordenadas de la intersección
     x1 = max(box1[0], box2[0])
@@ -64,107 +64,107 @@ def place_card_on_background(card_img, bg_img, existing_boxes=None, max_attempts
     if existing_boxes is None:
         existing_boxes = []
     
-    # Ottieni dimensioni delle immagini
+    # Obtén dimensiones de las imágenes
     bg_width, bg_height = bg_img.size
     card_width, card_height = card_img.size
     
-    # Usa il fattore di scala fornito o genera uno predefinito
+    # Usa el factor de escala proporcionado o genera uno por defecto
     if scale_factor is None:
         scale_factor = random.uniform(0.08, 0.15)
     
     new_card_width = int(bg_width * scale_factor)
     new_card_height = int(card_height * (new_card_width / card_width))
     
-    # Salva le dimensioni originali prima della rotazione
+    # Guarda las dimensiones originales antes de la rotación
     original_width = new_card_width
     original_height = new_card_height
     
     card_img = card_img.resize((new_card_width, new_card_height), Image.LANCZOS)
     
-    # Angolo casuale più limitato per mantenere un aspetto ordinato
-    # Riduce l'angolo per carte grandi
+    # Ángulo aleatorio más limitado para mantener un aspecto ordenado
+    # Reduce el ángulo para cartas grandes
     if scale_factor > 0.3:
-        angle_deg = random.uniform(-5, 5)  # Angolo minore per carte grandi
+        angle_deg = random.uniform(-5, 5)  # Ángulo menor para cartas grandes
     else:
         angle_deg = random.uniform(-15, 15)
         
     card_img = card_img.rotate(angle_deg, expand=True, resample=Image.BICUBIC)
     
-    # Ottieni le nuove dimensioni dopo la rotazione
+    # Obtén las nuevas dimensiones después de la rotación
     rotated_width, rotated_height = card_img.size
     
-    # Definisci una griglia
-    grid_cols = 5  # Numero di colonne nella griglia
-    grid_rows = 4  # Numero di righe nella griglia
+    # Define una grilla
+    grid_cols = 5  # Número de columnas en la grilla
+    grid_rows = 4  # Número de filas en la grilla
     cell_width = bg_width // grid_cols
     cell_height = bg_height // grid_rows
     
     # Prova posizioni nella griglia
     for _ in range(max_attempts):
-        # Scegli una cella della griglia
+        # Elige una celda de la grilla
         grid_x = random.randint(0, grid_cols - 1)
         grid_y = random.randint(0, grid_rows - 1)
         
-        # Calcola la posizione base nella cella con un po' di variazione casuale
+        # Calcula la posición base en la celda con un poco de variación aleatoria
         base_x = grid_x * cell_width + random.randint(-10, 10)
         base_y = grid_y * cell_height + random.randint(-10, 10)
         
-        # Calcola la posizione effettiva, assicurandosi che sia all'interno dell'immagine
+        # Calcula la posición efectiva, asegurándote de que esté dentro de la imagen
         paste_x = max(0, min(base_x, bg_width - rotated_width))
         paste_y = max(0, min(base_y, bg_height - rotated_height))
         
-        # Calcola la bounding box in coordinate assolute (pixel)
+        # Calcula la bounding box en coordenadas absolutas (pixeles)
         x1 = paste_x
         y1 = paste_y
         x2 = paste_x + rotated_width
         y2 = paste_y + rotated_height
         
-        # Controlla se la bounding box è valida
+        # Comprueba si la bounding box es válida
         if x1 >= bg_width or y1 >= bg_height or x2 <= 0 or y2 <= 0:
             continue
         
-        # Assicurati che la bounding box sia all'interno dell'immagine
+        # Asegúrate de que la bounding box esté dentro de la imagen
         x1 = max(0, x1)
         y1 = max(0, y1)
         x2 = min(bg_width, x2)
         y2 = min(bg_height, y2)
         
-        # Controlla se la bounding box è abbastanza grande
+        # Comprueba si la bounding box es lo suficientemente grande
         if (x2 - x1) < 10 or (y2 - y1) < 10:
             continue
         
-        # Crea bbox in formato pixel per controllo sovrapposizioni
+        # Crea bbox en formato pixel para verificar superposiciones
         pixel_bbox = [x1, y1, x2, y2]
         
-        # Abbassa la soglia IoU per permettere carte più vicine
+        # Baja el umbral IoU para permitir cartas más cercanas
         overlap_detected = False
         for existing_box in existing_boxes:
             iou = calculate_iou(pixel_bbox, existing_box)
-            if iou > 0.1:  # Soglia IoU ridotta al 10%
+            if iou > 0.1:  # Umbral IoU reducido al 10%
                 overlap_detected = True
                 break
                 
         if not overlap_detected:
-            # Crea una copia dello sfondo per evitare modifiche all'originale
+            # Crea una copia del fondo para evitar modificar el original
             result_img = bg_img.copy()
             
-            # Crea una maschera per la trasparenza
+            # Crea una máscara para la transparencia
             if card_img.mode == 'RGBA':
                 mask = card_img.split()[3]
             else:
                 mask = None
                 
-            # Incolla la carta sullo sfondo
+            # Pega la carta sobre el fondo
             result_img.paste(card_img, (paste_x, paste_y), mask)
             
-            # Calcola i quattro angoli del rettangolo ruotato
-            # Per OBB, abbiamo bisogno delle coordinate dei 4 angoli
-            # Calcola il centro della carta
+            # Calcula los cuatro ángulos del rectángulo rotado
+            # Para OBB, necesitamos las coordenadas de los 4 ángulos
+            # Calcula el centro de la carta
             center_x = paste_x + rotated_width / 2
             center_y = paste_y + rotated_height / 2
             
-            # Calcola i quattro angoli prima della rotazione (relativo al centro)
-            # Usa le dimensioni originali della carta, non quelle dopo la rotazione
+            # Calcula los cuatro ángulos antes de la rotación (relativo al centro)
+            # Usa las dimensiones originales de la carta, no aquellas después de la rotación
             half_width = original_width / 2
             half_height = original_height / 2
             corners = [
@@ -174,37 +174,37 @@ def place_card_on_background(card_img, bg_img, existing_boxes=None, max_attempts
                 [-half_width, half_height]    # Bottom-left
             ]
             
-            # Converti l'angolo in radianti (per il calcolo della rotazione)
-            angle_rad = math.radians(-angle_deg)  # Negativo perché PIL ruota in senso antiorario
+            # Convierte el ángulo a radianes (para el cálculo de la rotación)
+            angle_rad = math.radians(-angle_deg)  # Negativo porque PIL rota en sentido antihorario
             
-            # Applica la rotazione e trasla al centro
+            # Aplica la rotación y traslada al centro
             rotated_corners = []
             for x, y in corners:
-                # Applica la rotazione
+                # Aplica la rotación
                 x_rot = x * math.cos(angle_rad) - y * math.sin(angle_rad)
                 y_rot = x * math.sin(angle_rad) + y * math.cos(angle_rad)
                 
-                # Trasla al centro e normalizza per YOLO
+                # Traslada al centro y normaliza para YOLO
                 x_final = (center_x + x_rot) / bg_width
                 y_final = (center_y + y_rot) / bg_height
                 
-                # Assicurati che i valori siano in range [0, 1]
+                # Asegúrate de que los valores estén en el rango [0, 1]
                 x_final = max(0, min(1, x_final))
                 y_final = max(0, min(1, y_final))
                 
                 rotated_corners.append(x_final)
                 rotated_corners.append(y_final)
             
-            # Formato OBB YOLO: classe x1 y1 x2 y2 x3 y3 x4 y4
+            # Formato OBB YOLO: clase x1 y1 x2 y2 x3 y3 x4 y4
             yolo_bbox = [0] + rotated_corners
             
-            # Per il controllo delle sovrapposizioni, usiamo ancora il rettangolo non ruotato
+            # Para el control de superposiciones, usamos aún el rectángulo no rotado
             pixel_bbox = [x1, y1, x2, y2]
             
             return result_img, yolo_bbox, pixel_bbox
     
-    # Se dopo tutti i tentativi non è stato possibile evitare sovrapposizioni
-    # Ritorna l'ultima posizione generata
+    # Si después de todos los intentos no fue posible evitar superposiciones
+    # Devuelve la última posición generada
     result_img = bg_img.copy()
     
     if card_img.mode == 'RGBA':
@@ -214,17 +214,17 @@ def place_card_on_background(card_img, bg_img, existing_boxes=None, max_attempts
         
     result_img.paste(card_img, (paste_x, paste_y), mask)
     
-    # Assicurati che la bounding box sia all'interno dell'immagine
+    # Asegúrate de que la bounding box esté dentro de la imagen
     x1 = max(0, paste_x)
     y1 = max(0, paste_y)
     x2 = min(bg_width, paste_x + rotated_width)
     y2 = min(bg_height, paste_y + rotated_height)
     
-    # Calcola il centro della carta
+    # Calcula el centro de la carta
     center_x = paste_x + rotated_width / 2
     center_y = paste_y + rotated_height / 2
     
-    # Calcola i quattro angoli prima della rotazione (relativo al centro)
+    # Calcula los cuatro ángulos antes de la rotación (relativo al centro)
     half_width = original_width / 2
     half_height = original_height / 2
     corners = [
@@ -234,28 +234,28 @@ def place_card_on_background(card_img, bg_img, existing_boxes=None, max_attempts
         [-half_width, half_height]    # Bottom-left
     ]
     
-    # Converti l'angolo in radianti (per il calcolo della rotazione)
-    angle_rad = math.radians(-angle_deg)  # Negativo perché PIL ruota in senso antiorario
+    # Convierte el ángulo a radianes (para el cálculo de la rotación)
+    angle_rad = math.radians(-angle_deg)  # Negativo porque PIL rota en sentido antihorario
     
-    # Applica la rotazione e trasla al centro
+    # Aplica la rotación y traslada al centro
     rotated_corners = []
     for x, y in corners:
-        # Applica la rotazione
+        # Aplica la rotación
         x_rot = x * math.cos(angle_rad) - y * math.sin(angle_rad)
         y_rot = x * math.sin(angle_rad) + y * math.cos(angle_rad)
         
-        # Trasla al centro e normalizza per YOLO
+        # Traslada al centro y normaliza para YOLO
         x_final = (center_x + x_rot) / bg_width
         y_final = (center_y + y_rot) / bg_height
         
-        # Assicurati che i valori siano in range [0, 1]
+        # Asegúrate de que los valores estén en el rango [0, 1]
         x_final = max(0, min(1, x_final))
         y_final = max(0, min(1, y_final))
         
         rotated_corners.append(x_final)
         rotated_corners.append(y_final)
     
-    # Formato OBB YOLO: classe x1 y1 x2 y2 x3 y3 x4 y4
+    # Formato OBB YOLO: clase x1 y1 x2 y2 x3 y3 x4 y4
     yolo_bbox = [0] + rotated_corners
     
     pixel_bbox = [x1, y1, x2, y2]
@@ -288,28 +288,28 @@ def generate_dataset_image(cards_files, backgrounds_files, idx, save_dir, labels
     bg_img = Image.open(bg_file).convert("RGBA")
     
     # Ridimensiona lo sfondo a una dimensione standard per YOLO
-    target_size = (640, 640)  # dimensione standard per dataset YOLO
+    target_size = (640, 640)  # tamaño estándar para dataset YOLO
     bg_img = bg_img.resize(target_size, Image.LANCZOS)
     
-    # Lista per tenere traccia delle bounding box esistenti
+    # Lista para mantener un registro de las bounding box existentes
     existing_boxes = []
     
-    # Lista per memorizzare le coordinate YOLO
+    # Lista para almacenar las coordenadas YOLO
     yolo_bboxes = []
     
     if use_grid:
-        # Genera una griglia regolare di carte
+        # Genera una grilla regular de cartas
         cell_width = bg_img.width // grid_cols
         cell_height = bg_img.height // grid_rows
         
-        # Calcola la dimensione delle carte (leggermente più piccola della cella)
-        card_scale = 0.99  # Lascia un piccolo spazio tra le carte
+        # Calcula el tamaño de las cartas (ligeramente más pequeña que la celda)
+        card_scale = 0.99  # Deja un pequeño espacio entre las cartas
         card_width = int(cell_width * card_scale)
         card_height = int(cell_height * card_scale)
         
         for row in range(grid_rows):
             for col in range(grid_cols):
-                # Seleziona una carta casuale
+                # Selecciona una carta aleatoria
                 card_file = random.choice(cards_files)
                 card_img = Image.open(card_file).convert("RGBA")
                 
@@ -319,18 +319,18 @@ def generate_dataset_image(cards_files, backgrounds_files, idx, save_dir, labels
                 new_card_width = card_width
                 new_card_height = int(new_card_width * aspect_ratio)
                 
-                # Se l'altezza è troppo grande, ridimensiona in base all'altezza
+                # Si la altura es demasiado grande, redimensiona según la altura
                 if new_card_height > card_height:
                     new_card_height = card_height
                     new_card_width = int(new_card_height / aspect_ratio)
                 
                 card_img = card_img.resize((new_card_width, new_card_height), Image.LANCZOS)
                 
-                # Calcola la posizione centrale nella cella
+                # Calcula la posición central en la celda
                 paste_x = col * cell_width + (cell_width - new_card_width) // 2
                 paste_y = row * cell_height + (cell_height - new_card_height) // 2
                 
-                # Incolla la carta sullo sfondo
+                # Pega la carta sobre el fondo
                 if card_img.mode == 'RGBA':
                     mask = card_img.split()[3]
                 else:
@@ -348,40 +348,40 @@ def generate_dataset_image(cards_files, backgrounds_files, idx, save_dir, labels
                 x4 = x1
                 y4 = y3
                 
-                # Formato OBB YOLO: classe x1 y1 x2 y2 x3 y3 x4 y4
+                # Formato OBB YOLO: clase x1 y1 x2 y2 x3 y3 x4 y4
                 yolo_bbox = [0, x1, y1, x2, y2, x3, y3, x4, y4]
                 yolo_bboxes.append(yolo_bbox)
                 
-                # Aggiungi la bounding box all'elenco delle esistenti (per compatibilità)
+                # Añade la bounding box a la lista de existentes (para compatibilidad)
                 pixel_bbox = [paste_x, paste_y, paste_x + new_card_width, paste_y + new_card_height]
                 existing_boxes.append(pixel_bbox)
     else:
-        # Usa il posizionamento casuale originale
+        # Usa el posicionamiento aleatorio original
         for _ in range(cards_per_image):
-            # Seleziona una carta casuale
+            # Selecciona una carta aleatoria
             card_file = random.choice(cards_files)
             card_img = Image.open(card_file).convert("RGBA")
 
-            # Determina il fattore di scala in base al numero di carte
+            # Determina el factor de escala basado en el número de cartas
             if cards_per_image == 1:
-                scale_factor = random.uniform(0.7, 0.8)  # Carte molto grandi (70-80% dell'immagine)
+                scale_factor = random.uniform(0.7, 0.8)  # Cartas muy grandes (70-80% de la imagen)
             elif cards_per_image == 2:
-                scale_factor = random.uniform(0.35, 0.45)  # Carte grandi (35-45% dell'immagine)
+                scale_factor = random.uniform(0.35, 0.45)  # Cartas grandes (35-45% de la imagen)
             elif cards_per_image == 3:
-                scale_factor = random.uniform(0.25, 0.35)  # Carte medie (25-35% dell'immagine)
+                scale_factor = random.uniform(0.25, 0.35)  # Cartas medianas (25-35% de la imagen)
             else:
-                scale_factor = random.uniform(0.08, 0.15)  # Carte piccole (8-15% dell'immagine)
+                scale_factor = random.uniform(0.08, 0.15)  # Cartas pequeñas (8-15% de la imagen)
             
-            # Posiziona la carta sullo sfondo con il fattore di scala specificato
+            # Posiciona la carta sobre el fondo con el factor de escala especificado
             result, yolo_bbox, bbox = place_card_on_background(
                 card_img, bg_img, existing_boxes, scale_factor=scale_factor
             )
             bg_img = result
             
-            # Aggiungi la bounding box all'elenco delle esistenti
+            # Añade la bounding box a la lista de existentes
             existing_boxes.append(bbox)
             
-            # Memorizza le coordinate YOLO
+            # Almacena las coordenadas YOLO
             yolo_bboxes.append(yolo_bbox)
     
     # Salva l'immagine
@@ -396,7 +396,7 @@ def generate_dataset_image(cards_files, backgrounds_files, idx, save_dir, labels
     
     with open(label_path, "w") as f:
         for bbox in yolo_bboxes:
-            # Formato YOLO OBB: classe x1 y1 x2 y2 x3 y3 x4 y4
+            # Formato YOLO OBB: clase x1 y1 x2 y2 x3 y3 x4 y4
             formatted_bbox = [
                 int(bbox[0]),  # classe (intero)
             ]
@@ -410,13 +410,13 @@ def generate_dataset_image(cards_files, backgrounds_files, idx, save_dir, labels
     return img_path, label_path
 
 def create_yaml_file():
-    """Crea il file YAML per l'addestramento di YOLOv8."""
+    """Crea el archivo YAML para el entrenamiento de YOLOv8."""
     data = {
-        'train': './train/images',  # Percorso relativo per Ultralytics HUB
+        'train': './train/images',  # Ruta relativa para Ultralytics HUB
         'val': './val/images',
         'test': './test/images',
-        'nc': 1,  # Numero di classi
-        'names': ['pokemon_card']  # Nome della classe
+        'nc': 1,  # Número de clases
+        'names': ['pokemon_card']  # Nombre de la clase
     }
     
     with open('dataset/data.yaml', 'w') as f:
@@ -440,20 +440,20 @@ def split_dataset(total_images=10000, train_ratio=0.8, val_ratio=0.1, test_ratio
     }
 
 def create_zip_file():
-    """Crea un file ZIP del dataset."""
+    """Crea un archivo ZIP del dataset."""
     zip_filename = 'pokemon_cards_dataset.zip'
     
     with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        # Crea una struttura come richiesta da Ultralytics HUB
+        # Crea una estructura como lo requiere Ultralytics HUB
         for split in ['train', 'val', 'test']:
-            # Aggiungi immagini
+            # Añade imágenes
             imgs_dir = f'dataset/images/{split}'
             for img_file in os.listdir(imgs_dir):
                 img_path = os.path.join(imgs_dir, img_file)
-                # Percorso nel file ZIP: train/images/file.jpg
+                # Ruta en el archivo ZIP: train/images/file.jpg
                 zipf.write(img_path, f'{split}/images/{img_file}')
             
-            # Aggiungi labels
+            # Añade labels
             labels_dir = f'dataset/labels/{split}'
             for label_file in os.listdir(labels_dir):
                 label_path = os.path.join(labels_dir, label_file)
@@ -467,7 +467,7 @@ def create_zip_file():
     return zip_filename
 
 def verify_labels(labels_dir):
-    """Verifica che i file di label siano formattati correttamente per OBB."""
+    """Verifica que los archivos de label estén correctamente formateados para OBB."""
     invalid_files = []
     
     for label_file in os.listdir(labels_dir):
@@ -476,11 +476,11 @@ def verify_labels(labels_dir):
             lines = f.readlines()
             for line in lines:
                 parts = line.strip().split()
-                if len(parts) != 9:  # Formato OBB: classe + 8 coordinate
+                if len(parts) != 9:  # Formato OBB: clase + 8 coordenadas
                     invalid_files.append(label_file)
                     break
                 try:
-                    # Controlla che i valori siano numeri e nel range corretto
+                    # Comprueba que los valores sean números y estén en el rango correcto
                     class_id = int(parts[0])
                     
                     # Verifica che tutte le coordinate siano nel range [0,1]
@@ -502,10 +502,10 @@ def verify_labels(labels_dir):
         return True
 
 def main():
-    """Funzione principale per generare il dataset."""
+    """Función principal para generar el dataset."""
     print("Generazione dataset YOLO per rilevamento carte Pokemon")
     
-    # Definisci percorsi
+    # Define rutas
     cards_dir = 'carte_pokemon'
     backgrounds_dir = 'background'
     
@@ -515,10 +515,10 @@ def main():
     if not os.path.exists(backgrounds_dir):
         raise FileNotFoundError(f"La cartella {backgrounds_dir} non esiste")
     
-    # Crea struttura directory
+    # Crea estructura de directorios
     create_directory_structure()
     
-    # Ottieni file
+    # Obtén archivos
     cards_files = get_card_files(cards_dir)
     backgrounds_files = get_background_files(backgrounds_dir)
     
@@ -527,8 +527,8 @@ def main():
     if not backgrounds_files:
         raise ValueError(f"Nessuna immagine trovata nella cartella {backgrounds_dir}")
     
-    # Calcola la suddivisione del dataset
-    total_images = 10000  # Numero totale di immagini richiesto
+    # Calcula la división del dataset
+    total_images = 10000  # Número total de imágenes solicitado
     split_counts = split_dataset(total_images)
     
     print(f"Generazione di {total_images} immagini:")
@@ -536,10 +536,10 @@ def main():
     print(f" - Validation: {split_counts['val']} immagini")
     print(f" - Test: {split_counts['test']} immagini")
     
-    # Genera il dataset
+    # Genera el dataset
     current_idx = 0
     
-    # Genera immagini di train
+    # Genera imágenes de train
     print("\nGenerazione immagini di train...")
     for i in tqdm(range(split_counts['train'])):
         generate_dataset_image(
@@ -551,7 +551,7 @@ def main():
         )
         current_idx += 1
     
-    # Genera immagini di validation
+    # Genera imágenes de validación
     print("\nGenerazione immagini di validation...")
     for i in tqdm(range(split_counts['val'])):
         generate_dataset_image(
@@ -563,7 +563,7 @@ def main():
         )
         current_idx += 1
     
-    # Genera immagini di test
+    # Genera imágenes de test
     print("\nGenerazione immagini di test...")
     for i in tqdm(range(split_counts['test'])):
         generate_dataset_image(
@@ -575,7 +575,7 @@ def main():
         )
         current_idx += 1
     
-    # Verifica i file di label
+    # Verifica los archivos de label
     print("\nVerifica dei file di label...")
     verify_labels('dataset/labels/train')
     
