@@ -506,8 +506,8 @@ def main():
     print("Generazione dataset YOLO per rilevamento carte Pokemon")
     
     # Define rutas
-    cards_dir = 'carte_pokemon'
-    backgrounds_dir = 'background'
+    cards_dir = 'cartas_vtes'
+    backgrounds_dir = 'fondos_vtes'
     
     # Verifica esistenza cartelle
     if not os.path.exists(cards_dir):

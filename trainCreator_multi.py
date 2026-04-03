@@ -72,7 +72,7 @@ def generate_dataset_image(cards_files, backgrounds_files, num_cards=10):
 def main():
     """Función principal para generar múltiples imágenes del dataset VTES en paralelo."""
     cards_dir = 'cartas_vtes'
-    backgrounds_dir = 'background'
+    backgrounds_dir = 'fondos_vtes'
     
     if not os.path.exists(cards_dir):
         raise FileNotFoundError(f"La carpeta {cards_dir} no existe")
