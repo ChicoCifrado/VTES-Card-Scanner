@@ -1,0 +1,4148 @@
+{
+  "0": {
+    "filename": "image_000000.jpg",
+    "num_cards": 26,
+    "bounds": [
+      {
+        "name": "oshridahang6.jpg",
+        "x": 356,
+        "y": 853,
+        "width": 99,
+        "height": 99,
+        "rotation": 117.25727427302195,
+        "scale": 0.06799556003889534
+      },
+      {
+        "name": "cicatriz.jpg",
+        "x": 211,
+        "y": 365,
+        "width": 78,
+        "height": 78,
+        "rotation": 179.15861940675165,
+        "scale": 0.07054602624905407
+      },
+      {
+        "name": "ensconced.jpg",
+        "x": 783,
+        "y": 668,
+        "width": 63,
+        "height": 63,
+        "rotation": -25.049625446398153,
+        "scale": 0.04354070469776103
+      },
+      {
+        "name": "tsunda.jpg",
+        "x": 769,
+        "y": 955,
+        "width": 93,
+        "height": 93,
+        "rotation": -123.67489382660703,
+        "scale": 0.06261467239753236
+      },
+      {
+        "name": "gearup.jpg",
+        "x": 879,
+        "y": 464,
+        "width": 32,
+        "height": 32,
+        "rotation": -145.33069532719804,
+        "scale": 0.021047807084141876
+      },
+      {
+        "name": "gabrieldecambraig4.jpg",
+        "x": 233,
+        "y": 923,
+        "width": 99,
+        "height": 99,
+        "rotation": 99.27920707143556,
+        "scale": 0.0788190275044637
+      },
+      {
+        "name": "parisoperahouse.jpg",
+        "x": 636,
+        "y": 949,
+        "width": 86,
+        "height": 86,
+        "rotation": 46.831715951150926,
+        "scale": 0.05619982521288372
+      },
+      {
+        "name": "reanimatedcorpse.jpg",
+        "x": 1013,
+        "y": 600,
+        "width": 32,
+        "height": 32,
+        "rotation": -88.06482555791594,
+        "scale": 0.02789180584150127
+      },
+      {
+        "name": "guardiantheg6.jpg",
+        "x": 1041,
+        "y": 709,
+        "width": 34,
+        "height": 34,
+        "rotation": 141.29833300605992,
+        "scale": 0.022849726383610828
+      },
+      {
+        "name": "paulcalderoneg5.jpg",
+        "x": 466,
+        "y": 872,
+        "width": 76,
+        "height": 76,
+        "rotation": -142.14880947665569,
+        "scale": 0.0508459616278516
+      },
+      {
+        "name": "mamadoukeita.jpg",
+        "x": 34,
+        "y": 369,
+        "width": 94,
+        "height": 94,
+        "rotation": 50.56454448506756,
+        "scale": 0.06203055968264688
+      },
+      {
+        "name": "stormsewers.jpg",
+        "x": 388,
+        "y": 576,
+        "width": 77,
+        "height": 77,
+        "rotation": 166.22353707822253,
+        "scale": 0.058336898394465486
+      },
+      {
+        "name": "cardano.jpg",
+        "x": 516,
+        "y": 963,
+        "width": 48,
+        "height": 48,
+        "rotation": 142.78855219020335,
+        "scale": 0.03163870863523897
+      },
+      {
+        "name": "javiermontoya.jpg",
+        "x": 890,
+        "y": 800,
+        "width": 87,
+        "height": 87,
+        "rotation": -42.862226421528476,
+        "scale": 0.0569039587051369
+      },
+      {
+        "name": "hungermoon.jpg",
+        "x": 46,
+        "y": 594,
+        "width": 34,
+        "height": 34,
+        "rotation": -174.07389991799184,
+        "scale": 0.028576718475427372
+      },
+      {
+        "name": "socratecidibe.jpg",
+        "x": 918,
+        "y": 204,
+        "width": 57,
+        "height": 57,
+        "rotation": 81.80226925702044,
+        "scale": 0.04593822486120134
+      },
+      {
+        "name": "victoriaashg7.jpg",
+        "x": 997,
+        "y": 481,
+        "width": 32,
+        "height": 32,
+        "rotation": 38.73354521979266,
+        "scale": 0.020735641254471922
+      },
+      {
+        "name": "barrenness.jpg",
+        "x": 701,
+        "y": 186,
+        "width": 33,
+        "height": 33,
+        "rotation": 118.55419360615207,
+        "scale": 0.02151713921206928
+      },
+      {
+        "name": "diadelosmuertos.jpg",
+        "x": 947,
+        "y": 847,
+        "width": 57,
+        "height": 57,
+        "rotation": -18.13646401009578,
+        "scale": 0.04253876888120114
+      },
+      {
+        "name": "donaloconnorg2.jpg",
+        "x": 170,
+        "y": 17,
+        "width": 89,
+        "height": 89,
+        "rotation": -103.11334127626554,
+        "scale": 0.06851387957699896
+      },
+      {
+        "name": "pietervandorng3.jpg",
+        "x": 196,
+        "y": 467,
+        "width": 104,
+        "height": 104,
+        "rotation": 72.40640224933955,
+        "scale": 0.07615306435467291
+      },
+      {
+        "name": "vestgeir.jpg",
+        "x": 636,
+        "y": 146,
+        "width": 48,
+        "height": 48,
+        "rotation": 144.3731991222574,
+        "scale": 0.032318497038719564
+      },
+      {
+        "name": "freremarcg4.jpg",
+        "x": 190,
+        "y": 386,
+        "width": 102,
+        "height": 102,
+        "rotation": -36.745216056253156,
+        "scale": 0.06675732719771446
+      },
+      {
+        "name": "ectuoperative.jpg",
+        "x": 543,
+        "y": 491,
+        "width": 90,
+        "height": 90,
+        "rotation": -8.047977570564342,
+        "scale": 0.07307970125960828
+      },
+      {
+        "name": "ricoloco.jpg",
+        "x": 788,
+        "y": 1,
+        "width": 38,
+        "height": 38,
+        "rotation": -124.38933253259037,
+        "scale": 0.024334642568796194
+      },
+      {
+        "name": "framinganancientgrudge.jpg",
+        "x": 112,
+        "y": 394,
+        "width": 100,
+        "height": 100,
+        "rotation": 141.65929157245506,
+        "scale": 0.06501266042863398
+      }
+    ]
+  },
+  "1": {
+    "filename": "image_000001.jpg",
+    "num_cards": 60,
+    "bounds": [
+      {
+        "name": "abrahammellong6.jpg",
+        "x": 875,
+        "y": 43,
+        "width": 98,
+        "height": 98,
+        "rotation": 126.4259643772736,
+        "scale": 0.06569880611172275
+      },
+      {
+        "name": "susiekano.jpg",
+        "x": 675,
+        "y": 154,
+        "width": 73,
+        "height": 73,
+        "rotation": 48.06162950778878,
+        "scale": 0.048136262617810156
+      },
+      {
+        "name": "verbruch.jpg",
+        "x": 843,
+        "y": 267,
+        "width": 88,
+        "height": 88,
+        "rotation": 135.8416702529945,
+        "scale": 0.05753309745350091
+      },
+      {
+        "name": "centralizedbackgroundcheck.jpg",
+        "x": 672,
+        "y": 25,
+        "width": 82,
+        "height": 82,
+        "rotation": -5.202448928543873,
+        "scale": 0.06943702652162625
+      },
+      {
+        "name": "leilamonroeg4.jpg",
+        "x": 459,
+        "y": 334,
+        "width": 99,
+        "height": 99,
+        "rotation": 26.594252661630975,
+        "scale": 0.0681851910265405
+      },
+      {
+        "name": "jackofbothsides.jpg",
+        "x": 9,
+        "y": 859,
+        "width": 61,
+        "height": 61,
+        "rotation": -167.94831746212617,
+        "scale": 0.047567531705118
+      },
+      {
+        "name": "reginablakeg6.jpg",
+        "x": 803,
+        "y": 77,
+        "width": 60,
+        "height": 60,
+        "rotation": 174.5455147568507,
+        "scale": 0.05006277575596528
+      },
+      {
+        "name": "spiritmarionette.jpg",
+        "x": 546,
+        "y": 423,
+        "width": 87,
+        "height": 87,
+        "rotation": 13.199076439930877,
+        "scale": 0.0659619351298865
+      },
+      {
+        "name": "ashestoashes.jpg",
+        "x": 676,
+        "y": 212,
+        "width": 35,
+        "height": 35,
+        "rotation": 69.12925442868217,
+        "scale": 0.02542407808130753
+      },
+      {
+        "name": "threestarcabcompany.jpg",
+        "x": 244,
+        "y": 722,
+        "width": 118,
+        "height": 118,
+        "rotation": 143.71970092622428,
+        "scale": 0.077904363908338
+      },
+      {
+        "name": "saxummasterofslaves.jpg",
+        "x": 425,
+        "y": 239,
+        "width": 71,
+        "height": 71,
+        "rotation": 33.80266015101955,
+        "scale": 0.04742355828453787
+      },
+      {
+        "name": "amavi.jpg",
+        "x": 661,
+        "y": 738,
+        "width": 86,
+        "height": 86,
+        "rotation": 11.274753121187985,
+        "scale": 0.06703161587463166
+      },
+      {
+        "name": "deathofmyconsciencethe.jpg",
+        "x": 227,
+        "y": 167,
+        "width": 54,
+        "height": 54,
+        "rotation": -69.72337582869889,
+        "scale": 0.03949018883845368
+      },
+      {
+        "name": "chairofhades.jpg",
+        "x": 895,
+        "y": 878,
+        "width": 90,
+        "height": 90,
+        "rotation": 64.26056206816332,
+        "scale": 0.06112353480584286
+      },
+      {
+        "name": "watendag2.jpg",
+        "x": 160,
+        "y": 699,
+        "width": 34,
+        "height": 34,
+        "rotation": -53.06717877692367,
+        "scale": 0.022829070818393443
+      },
+      {
+        "name": "419operation.jpg",
+        "x": 582,
+        "y": 649,
+        "width": 96,
+        "height": 96,
+        "rotation": -128.3026190422889,
+        "scale": 0.06302562424446233
+      },
+      {
+        "name": "kemintirig2adv.jpg",
+        "x": 220,
+        "y": 589,
+        "width": 112,
+        "height": 112,
+        "rotation": -125.28188004742888,
+        "scale": 0.07454984327921851
+      },
+      {
+        "name": "feroxtherocklordg2.jpg",
+        "x": 26,
+        "y": 238,
+        "width": 70,
+        "height": 70,
+        "rotation": 175.8699436584606,
+        "scale": 0.05983618727288342
+      },
+      {
+        "name": "undele.jpg",
+        "x": 562,
+        "y": 233,
+        "width": 67,
+        "height": 67,
+        "rotation": -47.544431534304806,
+        "scale": 0.04362288959422299
+      },
+      {
+        "name": "kite.jpg",
+        "x": 501,
+        "y": 605,
+        "width": 35,
+        "height": 35,
+        "rotation": 100.5549951799888,
+        "scale": 0.027301893071735733
+      },
+      {
+        "name": "totalinsanity.jpg",
+        "x": 908,
+        "y": 481,
+        "width": 94,
+        "height": 94,
+        "rotation": 98.82611305655632,
+        "scale": 0.07684856979507734
+      },
+      {
+        "name": "feroxtherocklordg2.jpg",
+        "x": 30,
+        "y": 610,
+        "width": 120,
+        "height": 120,
+        "rotation": -141.5945838968462,
+        "scale": 0.07846821668428067
+      },
+      {
+        "name": "emilycarsong5.jpg",
+        "x": 21,
+        "y": 488,
+        "width": 65,
+        "height": 65,
+        "rotation": -175.02276934165144,
+        "scale": 0.0554243725726193
+      },
+      {
+        "name": "angeliqueg6.jpg",
+        "x": 30,
+        "y": 582,
+        "width": 95,
+        "height": 95,
+        "rotation": 35.22590414839195,
+        "scale": 0.06225883382782224
+      },
+      {
+        "name": "publicvilification.jpg",
+        "x": 894,
+        "y": 102,
+        "width": 78,
+        "height": 78,
+        "rotation": 41.96169489239759,
+        "scale": 0.05034170221375364
+      },
+      {
+        "name": "judahg2.jpg",
+        "x": 93,
+        "y": 339,
+        "width": 116,
+        "height": 116,
+        "rotation": 49.83966840860242,
+        "scale": 0.07682331305263315
+      },
+      {
+        "name": "doncaravelli.jpg",
+        "x": 546,
+        "y": 316,
+        "width": 75,
+        "height": 75,
+        "rotation": 108.16944979259665,
+        "scale": 0.05472756132643984
+      },
+      {
+        "name": "boytoy.jpg",
+        "x": 27,
+        "y": 862,
+        "width": 51,
+        "height": 51,
+        "rotation": -2.0038224126375326,
+        "scale": 0.04550481994509989
+      },
+      {
+        "name": "sullyg6.jpg",
+        "x": 635,
+        "y": 91,
+        "width": 91,
+        "height": 91,
+        "rotation": -165.99947543020468,
+        "scale": 0.06944725366572452
+      },
+      {
+        "name": "henrytaylorg3.jpg",
+        "x": 535,
+        "y": 23,
+        "width": 38,
+        "height": 38,
+        "rotation": 140.94900902668326,
+        "scale": 0.02412567721899548
+      },
+      {
+        "name": "mateuszgryzbowsky.jpg",
+        "x": 410,
+        "y": 469,
+        "width": 77,
+        "height": 77,
+        "rotation": 24.77642636254336,
+        "scale": 0.052933801589713406
+      },
+      {
+        "name": "minorcurse.jpg",
+        "x": 483,
+        "y": 670,
+        "width": 38,
+        "height": 38,
+        "rotation": -104.92806862841579,
+        "scale": 0.028182282890012227
+      },
+      {
+        "name": "nahumenoshg6.jpg",
+        "x": 207,
+        "y": 380,
+        "width": 40,
+        "height": 40,
+        "rotation": -136.36806745606532,
+        "scale": 0.026599950430781318
+      },
+      {
+        "name": "arson.jpg",
+        "x": 176,
+        "y": 260,
+        "width": 57,
+        "height": 57,
+        "rotation": -75.0927990066977,
+        "scale": 0.04255203392000294
+      },
+      {
+        "name": "tara.jpg",
+        "x": 797,
+        "y": 406,
+        "width": 59,
+        "height": 59,
+        "rotation": -107.51189525583072,
+        "scale": 0.04353003250486706
+      },
+      {
+        "name": "delilaheaston.jpg",
+        "x": 307,
+        "y": 358,
+        "width": 83,
+        "height": 83,
+        "rotation": -20.603133782922185,
+        "scale": 0.05840445288427762
+      },
+      {
+        "name": "seating2.jpg",
+        "x": 301,
+        "y": 837,
+        "width": 54,
+        "height": 54,
+        "rotation": -170.3681040746786,
+        "scale": 0.04338699460870982
+      },
+      {
+        "name": "principiadiscordia.jpg",
+        "x": 965,
+        "y": 160,
+        "width": 32,
+        "height": 32,
+        "rotation": -60.005094928463194,
+        "scale": 0.02073543314787418
+      },
+      {
+        "name": "amber.jpg",
+        "x": 753,
+        "y": 578,
+        "width": 94,
+        "height": 94,
+        "rotation": 64.8289445588716,
+        "scale": 0.06547363079763845
+      },
+      {
+        "name": "voicesofthecastle.jpg",
+        "x": 405,
+        "y": 581,
+        "width": 102,
+        "height": 102,
+        "rotation": -128.55061482529302,
+        "scale": 0.06744068947377607
+      },
+      {
+        "name": "jerryg2.jpg",
+        "x": 592,
+        "y": 574,
+        "width": 88,
+        "height": 88,
+        "rotation": 28.81388962137663,
+        "scale": 0.059752827776350964
+      },
+      {
+        "name": "justineelderofdallas.jpg",
+        "x": 772,
+        "y": 547,
+        "width": 67,
+        "height": 67,
+        "rotation": -20.354633921452944,
+        "scale": 0.04784880691623552
+      },
+      {
+        "name": "palatialestate.jpg",
+        "x": 453,
+        "y": 615,
+        "width": 59,
+        "height": 59,
+        "rotation": 176.5732840796192,
+        "scale": 0.051279425284190744
+      },
+      {
+        "name": "lazarusadv.jpg",
+        "x": 199,
+        "y": 666,
+        "width": 79,
+        "height": 79,
+        "rotation": -96.57657091318632,
+        "scale": 0.065929337404732
+      },
+      {
+        "name": "condemnationbetrayed.jpg",
+        "x": 103,
+        "y": 873,
+        "width": 53,
+        "height": 53,
+        "rotation": -153.88062993298664,
+        "scale": 0.03623974193970146
+      },
+      {
+        "name": "greaterhavenuncovered.jpg",
+        "x": 137,
+        "y": 35,
+        "width": 57,
+        "height": 57,
+        "rotation": -60.01622749875469,
+        "scale": 0.038559519818693835
+      },
+      {
+        "name": "camilledevereuxtheraveng1.jpg",
+        "x": 1001,
+        "y": 816,
+        "width": 60,
+        "height": 60,
+        "rotation": -106.02327360397852,
+        "scale": 0.04525951867339564
+      },
+      {
+        "name": "karifalnumair.jpg",
+        "x": 34,
+        "y": 595,
+        "width": 81,
+        "height": 81,
+        "rotation": 106.05647316821484,
+        "scale": 0.06089075683386533
+      },
+      {
+        "name": "dominate.jpg",
+        "x": 354,
+        "y": 665,
+        "width": 58,
+        "height": 58,
+        "rotation": -16.685799459305144,
+        "scale": 0.0435074701550825
+      },
+      {
+        "name": "montanog3.jpg",
+        "x": 133,
+        "y": 182,
+        "width": 40,
+        "height": 40,
+        "rotation": 79.35332778752792,
+        "scale": 0.03220476355622076
+      },
+      {
+        "name": "verrixnaughtyboy.jpg",
+        "x": 490,
+        "y": 164,
+        "width": 34,
+        "height": 34,
+        "rotation": -49.78694654173384,
+        "scale": 0.02238037502642691
+      },
+      {
+        "name": "bronweng2.jpg",
+        "x": 381,
+        "y": 436,
+        "width": 98,
+        "height": 98,
+        "rotation": 105.86828003472982,
+        "scale": 0.07244461553243736
+      },
+      {
+        "name": "silvianpopescu.jpg",
+        "x": 4,
+        "y": 293,
+        "width": 63,
+        "height": 63,
+        "rotation": 158.18663073318902,
+        "scale": 0.043632404351558136
+      },
+      {
+        "name": "orbofulain.jpg",
+        "x": 660,
+        "y": 208,
+        "width": 43,
+        "height": 43,
+        "rotation": -116.85552441528662,
+        "scale": 0.029200743803663547
+      },
+      {
+        "name": "crusadebarcelona.jpg",
+        "x": 125,
+        "y": 719,
+        "width": 97,
+        "height": 97,
+        "rotation": 10.475372264922413,
+        "scale": 0.07701154572822501
+      },
+      {
+        "name": "consecrationrites.jpg",
+        "x": 914,
+        "y": 752,
+        "width": 76,
+        "height": 76,
+        "rotation": -34.18509075919101,
+        "scale": 0.05016692695322162
+      },
+      {
+        "name": "giannadicanneto.jpg",
+        "x": 613,
+        "y": 684,
+        "width": 36,
+        "height": 36,
+        "rotation": 83.09212445603373,
+        "scale": 0.030256974837182912
+      },
+      {
+        "name": "renegadegarou.jpg",
+        "x": 590,
+        "y": 384,
+        "width": 98,
+        "height": 98,
+        "rotation": 41.78067770507917,
+        "scale": 0.06306190551109264
+      },
+      {
+        "name": "gathiig7.jpg",
+        "x": 459,
+        "y": 930,
+        "width": 79,
+        "height": 79,
+        "rotation": -46.33685212933824,
+        "scale": 0.05116582371028017
+      },
+      {
+        "name": "borderskirmish.jpg",
+        "x": 494,
+        "y": 187,
+        "width": 82,
+        "height": 82,
+        "rotation": 100.39396234309686,
+        "scale": 0.06495741460848753
+      }
+    ]
+  },
+  "2": {
+    "filename": "image_000002.jpg",
+    "num_cards": 9,
+    "bounds": [
+      {
+        "name": "eaglessight.jpg",
+        "x": 999,
+        "y": 827,
+        "width": 32,
+        "height": 32,
+        "rotation": 65.77166847975789,
+        "scale": 0.022864954880450955
+      },
+      {
+        "name": "donatellogiovannig4.jpg",
+        "x": 342,
+        "y": 693,
+        "width": 87,
+        "height": 87,
+        "rotation": 13.044275193137082,
+        "scale": 0.0664641099994886
+      },
+      {
+        "name": "marisstreck.jpg",
+        "x": 796,
+        "y": 606,
+        "width": 41,
+        "height": 41,
+        "rotation": -69.17133026870385,
+        "scale": 0.028770476168698645
+      },
+      {
+        "name": "shadowshift.jpg",
+        "x": 849,
+        "y": 809,
+        "width": 53,
+        "height": 53,
+        "rotation": -145.88683544860666,
+        "scale": 0.03506668293342026
+      },
+      {
+        "name": "kaypolernog5.jpg",
+        "x": 504,
+        "y": 907,
+        "width": 99,
+        "height": 99,
+        "rotation": -112.65841631670214,
+        "scale": 0.07019371716046813
+      },
+      {
+        "name": "shevacarr.jpg",
+        "x": 708,
+        "y": 694,
+        "width": 71,
+        "height": 71,
+        "rotation": -90.56412481080434,
+        "scale": 0.06397219228839018
+      },
+      {
+        "name": "cleaaugustedholfordg5.jpg",
+        "x": 691,
+        "y": 926,
+        "width": 46,
+        "height": 46,
+        "rotation": 71.50500008370429,
+        "scale": 0.03376795410882876
+      },
+      {
+        "name": "fleshofmarble.jpg",
+        "x": 0,
+        "y": 956,
+        "width": 107,
+        "height": 107,
+        "rotation": 15.928924157156445,
+        "scale": 0.07920476810675178
+      },
+      {
+        "name": "jennacrossg4.jpg",
+        "x": 421,
+        "y": 383,
+        "width": 117,
+        "height": 117,
+        "rotation": 151.62935460938473,
+        "scale": 0.07888353571476824
+      }
+    ]
+  },
+  "3": {
+    "filename": "image_000003.jpg",
+    "num_cards": 92,
+    "bounds": [
+      {
+        "name": "stillthemortalflesh.jpg",
+        "x": 177,
+        "y": 195,
+        "width": 53,
+        "height": 53,
+        "rotation": -92.83627296380267,
+        "scale": 0.045519790528936774
+      },
+      {
+        "name": "gengisg3.jpg",
+        "x": 539,
+        "y": 442,
+        "width": 106,
+        "height": 106,
+        "rotation": 145.04353578829148,
+        "scale": 0.0705897924657182
+      },
+      {
+        "name": "trophylibrary.jpg",
+        "x": 10,
+        "y": 513,
+        "width": 53,
+        "height": 53,
+        "rotation": 56.35975606562957,
+        "scale": 0.03465286012463828
+      },
+      {
+        "name": "lloydbrooks.jpg",
+        "x": 920,
+        "y": 886,
+        "width": 32,
+        "height": 32,
+        "rotation": -18.2808365046601,
+        "scale": 0.02282430282363815
+      },
+      {
+        "name": "chavioraczkog5.jpg",
+        "x": 645,
+        "y": 378,
+        "width": 37,
+        "height": 37,
+        "rotation": 40.22954905983579,
+        "scale": 0.02390062611912202
+      },
+      {
+        "name": "fangjumper.jpg",
+        "x": 132,
+        "y": 907,
+        "width": 73,
+        "height": 73,
+        "rotation": 77.76469486782179,
+        "scale": 0.05694577153122114
+      },
+      {
+        "name": "coloneltheg3.jpg",
+        "x": 843,
+        "y": 442,
+        "width": 66,
+        "height": 66,
+        "rotation": -87.4497985759827,
+        "scale": 0.05779991787368026
+      },
+      {
+        "name": "exeterchantrylondon.jpg",
+        "x": 749,
+        "y": 748,
+        "width": 82,
+        "height": 82,
+        "rotation": 63.3055269039227,
+        "scale": 0.05583507697208537
+      },
+      {
+        "name": "rodrigog4.jpg",
+        "x": 639,
+        "y": 361,
+        "width": 107,
+        "height": 107,
+        "rotation": 40.65630066743759,
+        "scale": 0.0699332484358284
+      },
+      {
+        "name": "katarinakornfeldg3.jpg",
+        "x": 698,
+        "y": 886,
+        "width": 39,
+        "height": 39,
+        "rotation": -73.58456946458905,
+        "scale": 0.02957992340092446
+      },
+      {
+        "name": "hexe.jpg",
+        "x": 467,
+        "y": 412,
+        "width": 110,
+        "height": 110,
+        "rotation": 52.056925247258306,
+        "scale": 0.07291623806386174
+      },
+      {
+        "name": "guillermoarsuagag4.jpg",
+        "x": 820,
+        "y": 152,
+        "width": 81,
+        "height": 81,
+        "rotation": -134.5437707231403,
+        "scale": 0.05364146636386921
+      },
+      {
+        "name": "richardtauberayeleaspuppet.jpg",
+        "x": 541,
+        "y": 47,
+        "width": 104,
+        "height": 104,
+        "rotation": -143.0423237897326,
+        "scale": 0.06920138685245185
+      },
+      {
+        "name": "gangtactics.jpg",
+        "x": 862,
+        "y": 375,
+        "width": 27,
+        "height": 27,
+        "rotation": 88.69076946246548,
+        "scale": 0.023339749584247612
+      },
+      {
+        "name": "textbookdamnationthe.jpg",
+        "x": 239,
+        "y": 507,
+        "width": 83,
+        "height": 83,
+        "rotation": -14.809077663596355,
+        "scale": 0.06283342142759488
+      },
+      {
+        "name": "presence.jpg",
+        "x": 255,
+        "y": 173,
+        "width": 78,
+        "height": 78,
+        "rotation": 31.48326114153366,
+        "scale": 0.05190599147254768
+      },
+      {
+        "name": "anesthetictouch.jpg",
+        "x": 263,
+        "y": 714,
+        "width": 50,
+        "height": 50,
+        "rotation": 82.81685282948496,
+        "scale": 0.04075807546169853
+      },
+      {
+        "name": "shadowcast.jpg",
+        "x": 584,
+        "y": 371,
+        "width": 108,
+        "height": 108,
+        "rotation": -46.77499366663329,
+        "scale": 0.07086872783522064
+      },
+      {
+        "name": "antonioveradasg3.jpg",
+        "x": 93,
+        "y": 164,
+        "width": 66,
+        "height": 66,
+        "rotation": -104.10867247477692,
+        "scale": 0.050776882639119364
+      },
+      {
+        "name": "tjg4.jpg",
+        "x": 543,
+        "y": 823,
+        "width": 69,
+        "height": 69,
+        "rotation": -79.75618736619515,
+        "scale": 0.055065030579534935
+      },
+      {
+        "name": "marialena.jpg",
+        "x": 960,
+        "y": 389,
+        "width": 41,
+        "height": 41,
+        "rotation": 97.48344449010517,
+        "scale": 0.03307216581017807
+      },
+      {
+        "name": "mummystongue.jpg",
+        "x": 689,
+        "y": 48,
+        "width": 29,
+        "height": 29,
+        "rotation": -91.9711344895256,
+        "scale": 0.025205512160222206
+      },
+      {
+        "name": "pauldicarlothealpha.jpg",
+        "x": 901,
+        "y": 148,
+        "width": 70,
+        "height": 70,
+        "rotation": -71.04285086603618,
+        "scale": 0.0504362241743366
+      },
+      {
+        "name": "charlesdelmare.jpg",
+        "x": 328,
+        "y": 856,
+        "width": 52,
+        "height": 52,
+        "rotation": -79.11429735301571,
+        "scale": 0.041153771716196025
+      },
+      {
+        "name": "domenicgiovanni.jpg",
+        "x": 717,
+        "y": 501,
+        "width": 88,
+        "height": 88,
+        "rotation": 41.845252668583214,
+        "scale": 0.05789800653177071
+      },
+      {
+        "name": "lapse.jpg",
+        "x": 575,
+        "y": 159,
+        "width": 102,
+        "height": 102,
+        "rotation": -130.3608093834613,
+        "scale": 0.06726810790543654
+      },
+      {
+        "name": "abaddong7.jpg",
+        "x": 481,
+        "y": 201,
+        "width": 37,
+        "height": 37,
+        "rotation": -152.63057301632733,
+        "scale": 0.025151473271405878
+      },
+      {
+        "name": "littlewillie.jpg",
+        "x": 457,
+        "y": 541,
+        "width": 65,
+        "height": 65,
+        "rotation": -10.86117981465685,
+        "scale": 0.05164603451812459
+      },
+      {
+        "name": "squirrelbalance.jpg",
+        "x": 105,
+        "y": 453,
+        "width": 32,
+        "height": 32,
+        "rotation": 121.70233194366654,
+        "scale": 0.021187751743297914
+      },
+      {
+        "name": "adritheseeker.jpg",
+        "x": 737,
+        "y": 331,
+        "width": 95,
+        "height": 95,
+        "rotation": -17.510410371635203,
+        "scale": 0.0700858719314641
+      },
+      {
+        "name": "bloodweakens.jpg",
+        "x": 658,
+        "y": 980,
+        "width": 65,
+        "height": 65,
+        "rotation": -50.837558902420085,
+        "scale": 0.042251800938282014
+      },
+      {
+        "name": "surapongg6.jpg",
+        "x": 91,
+        "y": 880,
+        "width": 78,
+        "height": 78,
+        "rotation": -26.652488308355572,
+        "scale": 0.053832676946149544
+      },
+      {
+        "name": "lumumbag4.jpg",
+        "x": 717,
+        "y": 229,
+        "width": 109,
+        "height": 109,
+        "rotation": -160.1560714838526,
+        "scale": 0.07927352798182381
+      },
+      {
+        "name": "makariostheseducer.jpg",
+        "x": 934,
+        "y": 925,
+        "width": 75,
+        "height": 75,
+        "rotation": -130.6175462485192,
+        "scale": 0.049713971878404185
+      },
+      {
+        "name": "swallowedbythenight.jpg",
+        "x": 904,
+        "y": 704,
+        "width": 37,
+        "height": 37,
+        "rotation": 40.024890459088454,
+        "scale": 0.023256713560271404
+      },
+      {
+        "name": "scorpionsting.jpg",
+        "x": 282,
+        "y": 290,
+        "width": 49,
+        "height": 49,
+        "rotation": 89.81765728584878,
+        "scale": 0.04431719739281874
+      },
+      {
+        "name": "sayshila.jpg",
+        "x": 82,
+        "y": 153,
+        "width": 80,
+        "height": 80,
+        "rotation": 104.91670823489767,
+        "scale": 0.05958937702880357
+      },
+      {
+        "name": "azanealg4.jpg",
+        "x": 252,
+        "y": 978,
+        "width": 70,
+        "height": 70,
+        "rotation": 31.440493749380636,
+        "scale": 0.04681268140105309
+      },
+      {
+        "name": "agrippina.jpg",
+        "x": 838,
+        "y": 981,
+        "width": 76,
+        "height": 76,
+        "rotation": -65.34988099768566,
+        "scale": 0.05216542206373369
+      },
+      {
+        "name": "bookofgoingforthbynightthe.jpg",
+        "x": 598,
+        "y": 343,
+        "width": 50,
+        "height": 50,
+        "rotation": 74.96067275659433,
+        "scale": 0.03762656102932668
+      },
+      {
+        "name": "pavlo.jpg",
+        "x": 922,
+        "y": 920,
+        "width": 30,
+        "height": 30,
+        "rotation": -12.29303167431786,
+        "scale": 0.022854246785058714
+      },
+      {
+        "name": "opendossier.jpg",
+        "x": 865,
+        "y": 489,
+        "width": 53,
+        "height": 53,
+        "rotation": -93.9828061366136,
+        "scale": 0.046002643416008446
+      },
+      {
+        "name": "pocketoutoftime.jpg",
+        "x": 732,
+        "y": 513,
+        "width": 94,
+        "height": 94,
+        "rotation": -153.92243262385009,
+        "scale": 0.0648648246634577
+      },
+      {
+        "name": "xendilcharmer.jpg",
+        "x": 268,
+        "y": 695,
+        "width": 80,
+        "height": 80,
+        "rotation": 166.52520243471446,
+        "scale": 0.061533270312070204
+      },
+      {
+        "name": "carmen.jpg",
+        "x": 461,
+        "y": 132,
+        "width": 52,
+        "height": 52,
+        "rotation": -153.0803195540606,
+        "scale": 0.03591608928343086
+      },
+      {
+        "name": "pathofbloodthe.jpg",
+        "x": 432,
+        "y": 176,
+        "width": 47,
+        "height": 47,
+        "rotation": -163.83401483295083,
+        "scale": 0.034883497809121984
+      },
+      {
+        "name": "markofthedamned.jpg",
+        "x": 103,
+        "y": 404,
+        "width": 77,
+        "height": 77,
+        "rotation": -93.72461552803712,
+        "scale": 0.06617189628139956
+      },
+      {
+        "name": "lightintensifyinggoggles.jpg",
+        "x": 211,
+        "y": 865,
+        "width": 77,
+        "height": 77,
+        "rotation": 149.06523549252444,
+        "scale": 0.05183193964533939
+      },
+      {
+        "name": "elenkamjian.jpg",
+        "x": 64,
+        "y": 208,
+        "width": 84,
+        "height": 84,
+        "rotation": -85.14314073953739,
+        "scale": 0.07046943234940364
+      },
+      {
+        "name": "droescheroneeyeg4.jpg",
+        "x": 363,
+        "y": 149,
+        "width": 55,
+        "height": 55,
+        "rotation": 96.06040984608876,
+        "scale": 0.04625856210002546
+      },
+      {
+        "name": "jasontheworldsvoice.jpg",
+        "x": 698,
+        "y": 952,
+        "width": 72,
+        "height": 72,
+        "rotation": -99.78380604550344,
+        "scale": 0.05767289864672755
+      },
+      {
+        "name": "dirkg4.jpg",
+        "x": 85,
+        "y": 389,
+        "width": 30,
+        "height": 30,
+        "rotation": -167.30519051309346,
+        "scale": 0.02314369033412535
+      },
+      {
+        "name": "delilaheastong1.jpg",
+        "x": 987,
+        "y": 196,
+        "width": 83,
+        "height": 83,
+        "rotation": -145.26579198038314,
+        "scale": 0.05521099680005413
+      },
+      {
+        "name": "restructure.jpg",
+        "x": 629,
+        "y": 453,
+        "width": 112,
+        "height": 112,
+        "rotation": 155.19346446552657,
+        "scale": 0.0778854385381745
+      },
+      {
+        "name": "shadowplay.jpg",
+        "x": 114,
+        "y": 788,
+        "width": 62,
+        "height": 62,
+        "rotation": -109.08881685240087,
+        "scale": 0.04501429402265504
+      },
+      {
+        "name": "packalpha.jpg",
+        "x": 257,
+        "y": 747,
+        "width": 53,
+        "height": 53,
+        "rotation": 98.80100705177142,
+        "scale": 0.04181718589497156
+      },
+      {
+        "name": "kyrylo.jpg",
+        "x": 971,
+        "y": 869,
+        "width": 104,
+        "height": 104,
+        "rotation": 32.597503979291446,
+        "scale": 0.06879707368517639
+      },
+      {
+        "name": "maxwell.jpg",
+        "x": 870,
+        "y": 335,
+        "width": 26,
+        "height": 26,
+        "rotation": -100.9088470399178,
+        "scale": 0.020576675546563724
+      },
+      {
+        "name": "greerworderg6.jpg",
+        "x": 32,
+        "y": 607,
+        "width": 105,
+        "height": 105,
+        "rotation": 112.9212582187987,
+        "scale": 0.07346192203543078
+      },
+      {
+        "name": "torturedconfession.jpg",
+        "x": 699,
+        "y": 133,
+        "width": 79,
+        "height": 79,
+        "rotation": 47.99628513699582,
+        "scale": 0.05114403798885658
+      },
+      {
+        "name": "mustafatheheirg4.jpg",
+        "x": 239,
+        "y": 505,
+        "width": 110,
+        "height": 110,
+        "rotation": 123.79234119430589,
+        "scale": 0.0726568300692512
+      },
+      {
+        "name": "nidhoggthehungryworm.jpg",
+        "x": 1029,
+        "y": 1004,
+        "width": 32,
+        "height": 32,
+        "rotation": -125.60903107894873,
+        "scale": 0.020467076415770585
+      },
+      {
+        "name": "swallowedbythedemonicnight.jpg",
+        "x": 112,
+        "y": 479,
+        "width": 79,
+        "height": 79,
+        "rotation": -135.67932087519486,
+        "scale": 0.05166539190235865
+      },
+      {
+        "name": "geraldwindhamg5.jpg",
+        "x": 411,
+        "y": 209,
+        "width": 51,
+        "height": 51,
+        "rotation": -135.92471173898622,
+        "scale": 0.03299104368597142
+      },
+      {
+        "name": "malkavianprank.jpg",
+        "x": 473,
+        "y": 668,
+        "width": 109,
+        "height": 109,
+        "rotation": 111.23994032113887,
+        "scale": 0.0774543663679984
+      },
+      {
+        "name": "elimelechthetwicedamned.jpg",
+        "x": 47,
+        "y": 216,
+        "width": 110,
+        "height": 110,
+        "rotation": -54.362402366786625,
+        "scale": 0.07289945831304162
+      },
+      {
+        "name": "malabranca.jpg",
+        "x": 791,
+        "y": 948,
+        "width": 82,
+        "height": 82,
+        "rotation": 63.63344776007611,
+        "scale": 0.056397614408027985
+      },
+      {
+        "name": "guardianangel.jpg",
+        "x": 777,
+        "y": 897,
+        "width": 77,
+        "height": 77,
+        "rotation": 165.62358475064127,
+        "scale": 0.059070048146411425
+      },
+      {
+        "name": "nehsi.jpg",
+        "x": 754,
+        "y": 965,
+        "width": 89,
+        "height": 89,
+        "rotation": 71.07680563473204,
+        "scale": 0.06480493679650104
+      },
+      {
+        "name": "conscriptedstatue.jpg",
+        "x": 241,
+        "y": 175,
+        "width": 42,
+        "height": 42,
+        "rotation": -15.719169100217044,
+        "scale": 0.031957332731377366
+      },
+      {
+        "name": "lightintensifyinggoggles.jpg",
+        "x": 713,
+        "y": 364,
+        "width": 33,
+        "height": 33,
+        "rotation": 6.269992470592172,
+        "scale": 0.027234016534115925
+      },
+      {
+        "name": "brunhildeg3adv.jpg",
+        "x": 514,
+        "y": 557,
+        "width": 91,
+        "height": 91,
+        "rotation": 175.86818010136216,
+        "scale": 0.0789561041915785
+      },
+      {
+        "name": "blackwallace.jpg",
+        "x": 998,
+        "y": 197,
+        "width": 75,
+        "height": 75,
+        "rotation": 175.25520064177744,
+        "scale": 0.06408042523553334
+      },
+      {
+        "name": "dieterkleist.jpg",
+        "x": 569,
+        "y": 789,
+        "width": 32,
+        "height": 32,
+        "rotation": -107.77032676757938,
+        "scale": 0.022775397089966263
+      },
+      {
+        "name": "infernalruinsofcharizel.jpg",
+        "x": 644,
+        "y": 799,
+        "width": 100,
+        "height": 100,
+        "rotation": -42.03161360410317,
+        "scale": 0.06549737602821414
+      },
+      {
+        "name": "batshevag4.jpg",
+        "x": 729,
+        "y": 803,
+        "width": 102,
+        "height": 102,
+        "rotation": 46.38126024091258,
+        "scale": 0.06738902761999117
+      },
+      {
+        "name": "summonspiritbeast.jpg",
+        "x": 489,
+        "y": 89,
+        "width": 83,
+        "height": 83,
+        "rotation": -55.176959424405325,
+        "scale": 0.05489789403490569
+      },
+      {
+        "name": "sebastianmarleyg1.jpg",
+        "x": 199,
+        "y": 441,
+        "width": 44,
+        "height": 44,
+        "rotation": -113.51849375508785,
+        "scale": 0.03027551935876986
+      },
+      {
+        "name": "omaelkuman.jpg",
+        "x": 13,
+        "y": 298,
+        "width": 61,
+        "height": 61,
+        "rotation": -125.33208309749514,
+        "scale": 0.04001368156636302
+      },
+      {
+        "name": "shatteringcrescendo.jpg",
+        "x": 179,
+        "y": 757,
+        "width": 95,
+        "height": 95,
+        "rotation": -83.18976503378914,
+        "scale": 0.07878471893810113
+      },
+      {
+        "name": "tomg2.jpg",
+        "x": 851,
+        "y": 716,
+        "width": 50,
+        "height": 50,
+        "rotation": 75.67062990683698,
+        "scale": 0.03759396592301635
+      },
+      {
+        "name": "stealthemind.jpg",
+        "x": 16,
+        "y": 296,
+        "width": 68,
+        "height": 68,
+        "rotation": -69.67021446786137,
+        "scale": 0.04905158836643825
+      },
+      {
+        "name": "ignisfatuus.jpg",
+        "x": 74,
+        "y": 218,
+        "width": 39,
+        "height": 39,
+        "rotation": -31.515337892383457,
+        "scale": 0.025379187844704464
+      },
+      {
+        "name": "trainer.jpg",
+        "x": 793,
+        "y": 254,
+        "width": 80,
+        "height": 80,
+        "rotation": -103.2349837524217,
+        "scale": 0.06134383381021981
+      },
+      {
+        "name": "artofpainthe.jpg",
+        "x": 230,
+        "y": 643,
+        "width": 32,
+        "height": 32,
+        "rotation": 70.77252588796358,
+        "scale": 0.023148079409927174
+      },
+      {
+        "name": "cardbackcultistcrypt.jpg",
+        "x": 117,
+        "y": 755,
+        "width": 121,
+        "height": 121,
+        "rotation": 48.24684728113559,
+        "scale": 0.0793674186625747
+      },
+      {
+        "name": "husamettin.jpg",
+        "x": 194,
+        "y": 207,
+        "width": 71,
+        "height": 71,
+        "rotation": 145.29629243039614,
+        "scale": 0.04777295650081524
+      },
+      {
+        "name": "praxisseizurecleveland.jpg",
+        "x": 308,
+        "y": 638,
+        "width": 36,
+        "height": 36,
+        "rotation": 64.88007522335485,
+        "scale": 0.024196162801214307
+      },
+      {
+        "name": "greaterrotschreck.jpg",
+        "x": 867,
+        "y": 541,
+        "width": 34,
+        "height": 34,
+        "rotation": -17.561697606955505,
+        "scale": 0.02458647657155857
+      },
+      {
+        "name": "rezafatirthedarkangel.jpg",
+        "x": 530,
+        "y": 320,
+        "width": 44,
+        "height": 44,
+        "rotation": -45.964629483714475,
+        "scale": 0.02781819443242539
+      },
+      {
+        "name": "keegang6.jpg",
+        "x": 668,
+        "y": 308,
+        "width": 74,
+        "height": 74,
+        "rotation": -130.89303264578047,
+        "scale": 0.04820093732725239
+      },
+      {
+        "name": "danmurdock.jpg",
+        "x": 411,
+        "y": 882,
+        "width": 34,
+        "height": 34,
+        "rotation": -146.978887128104,
+        "scale": 0.02281160844859268
+      }
+    ]
+  },
+  "4": {
+    "filename": "image_000004.jpg",
+    "num_cards": 45,
+    "bounds": [
+      {
+        "name": "vladtepesdracula_storyline.jpg",
+        "x": 696,
+        "y": 657,
+        "width": 39,
+        "height": 39,
+        "rotation": 53.709204368058295,
+        "scale": 0.025323028434342507
+      },
+      {
+        "name": "callofthehungrydead.jpg",
+        "x": 746,
+        "y": 938,
+        "width": 34,
+        "height": 34,
+        "rotation": -119.94683084283855,
+        "scale": 0.022774424103977557
+      },
+      {
+        "name": "nahir.jpg",
+        "x": 320,
+        "y": 924,
+        "width": 38,
+        "height": 38,
+        "rotation": 13.7397197466438,
+        "scale": 0.028326023874798007
+      },
+      {
+        "name": "bloodofthecobra.jpg",
+        "x": 930,
+        "y": 66,
+        "width": 94,
+        "height": 94,
+        "rotation": -150.6929282284261,
+        "scale": 0.06378272017503434
+      },
+      {
+        "name": "melange.jpg",
+        "x": 434,
+        "y": 400,
+        "width": 115,
+        "height": 115,
+        "rotation": -133.1754278941344,
+        "scale": 0.07568326184614428
+      },
+      {
+        "name": "winchestermansion.jpg",
+        "x": 5,
+        "y": 741,
+        "width": 54,
+        "height": 54,
+        "rotation": 76.72521169922919,
+        "scale": 0.04088507442233817
+      },
+      {
+        "name": "communalhaventemple.jpg",
+        "x": 752,
+        "y": 366,
+        "width": 75,
+        "height": 75,
+        "rotation": -133.42468699853026,
+        "scale": 0.04991486345807483
+      },
+      {
+        "name": "merrillmolitorg1.jpg",
+        "x": 953,
+        "y": 774,
+        "width": 45,
+        "height": 45,
+        "rotation": -141.7231738731553,
+        "scale": 0.02896543107306724
+      },
+      {
+        "name": "trainer.jpg",
+        "x": 493,
+        "y": 279,
+        "width": 90,
+        "height": 90,
+        "rotation": -55.189828540225236,
+        "scale": 0.05964387856289356
+      },
+      {
+        "name": "gangtactics.jpg",
+        "x": 194,
+        "y": 704,
+        "width": 90,
+        "height": 90,
+        "rotation": -35.469886841042126,
+        "scale": 0.06012927670963124
+      },
+      {
+        "name": "lifelesstongues.jpg",
+        "x": 356,
+        "y": 856,
+        "width": 81,
+        "height": 81,
+        "rotation": -42.26952290345159,
+        "scale": 0.05360610601357281
+      },
+      {
+        "name": "pillarsfall.jpg",
+        "x": 546,
+        "y": 274,
+        "width": 28,
+        "height": 28,
+        "rotation": 71.89155247374191,
+        "scale": 0.02096749739189685
+      },
+      {
+        "name": "beatricelangoug2.jpg",
+        "x": 24,
+        "y": 387,
+        "width": 119,
+        "height": 119,
+        "rotation": -136.47786781833017,
+        "scale": 0.07698965518994696
+      },
+      {
+        "name": "seating3.jpg",
+        "x": 131,
+        "y": 353,
+        "width": 31,
+        "height": 31,
+        "rotation": 173.10782498128503,
+        "scale": 0.025251385548852725
+      },
+      {
+        "name": "sacrecoeurcathedralfrance.jpg",
+        "x": 875,
+        "y": 324,
+        "width": 58,
+        "height": 58,
+        "rotation": -178.69949428825447,
+        "scale": 0.05198798381358774
+      },
+      {
+        "name": "familygathering.jpg",
+        "x": 94,
+        "y": 759,
+        "width": 83,
+        "height": 83,
+        "rotation": 15.58421735992556,
+        "scale": 0.06285374888078939
+      },
+      {
+        "name": "trophyrevered.jpg",
+        "x": 210,
+        "y": 51,
+        "width": 77,
+        "height": 77,
+        "rotation": 31.504237009629037,
+        "scale": 0.05103098213869353
+      },
+      {
+        "name": "katarinakornfeldg3.jpg",
+        "x": 588,
+        "y": 63,
+        "width": 36,
+        "height": 36,
+        "rotation": 167.78217515499404,
+        "scale": 0.02867780572977209
+      },
+      {
+        "name": "tapestryofblood.jpg",
+        "x": 809,
+        "y": 713,
+        "width": 38,
+        "height": 38,
+        "rotation": 142.9730903793337,
+        "scale": 0.024734334848822582
+      },
+      {
+        "name": "alonzoguillen.jpg",
+        "x": 489,
+        "y": 468,
+        "width": 96,
+        "height": 96,
+        "rotation": 36.741466523089116,
+        "scale": 0.06350971654959561
+      },
+      {
+        "name": "matthewg6.jpg",
+        "x": 151,
+        "y": 27,
+        "width": 92,
+        "height": 92,
+        "rotation": -59.33824869381779,
+        "scale": 0.06159765371415067
+      },
+      {
+        "name": "suhailahg2.jpg",
+        "x": 418,
+        "y": 956,
+        "width": 46,
+        "height": 46,
+        "rotation": -63.98423105257342,
+        "scale": 0.03154223210098618
+      },
+      {
+        "name": "shalmathg6.jpg",
+        "x": 408,
+        "y": 652,
+        "width": 96,
+        "height": 96,
+        "rotation": 168.75975224780416,
+        "scale": 0.07467925912254351
+      },
+      {
+        "name": "mictlantecuhtli.jpg",
+        "x": 18,
+        "y": 735,
+        "width": 57,
+        "height": 57,
+        "rotation": 72.50339778927335,
+        "scale": 0.04181826000554971
+      },
+      {
+        "name": "finalloosening.jpg",
+        "x": 270,
+        "y": 749,
+        "width": 108,
+        "height": 108,
+        "rotation": -148.22632400203275,
+        "scale": 0.07311780276664137
+      },
+      {
+        "name": "crywolf.jpg",
+        "x": 835,
+        "y": 583,
+        "width": 33,
+        "height": 33,
+        "rotation": 175.6615428756287,
+        "scale": 0.027274341594690707
+      },
+      {
+        "name": "biothaumaturgicexperiment.jpg",
+        "x": 190,
+        "y": 863,
+        "width": 51,
+        "height": 51,
+        "rotation": -64.45945888600953,
+        "scale": 0.03448554360412809
+      },
+      {
+        "name": "vestgeirg6.jpg",
+        "x": 633,
+        "y": 916,
+        "width": 74,
+        "height": 74,
+        "rotation": 107.34771230430727,
+        "scale": 0.054299672291602916
+      },
+      {
+        "name": "blackbeastthe.jpg",
+        "x": 208,
+        "y": 192,
+        "width": 37,
+        "height": 37,
+        "rotation": 162.63816232951166,
+        "scale": 0.027264089875788943
+      },
+      {
+        "name": "craigjohnston.jpg",
+        "x": 375,
+        "y": 983,
+        "width": 35,
+        "height": 35,
+        "rotation": 115.49843301817498,
+        "scale": 0.023872899875792875
+      },
+      {
+        "name": "marcusvitelg3adv.jpg",
+        "x": 277,
+        "y": 559,
+        "width": 100,
+        "height": 100,
+        "rotation": 68.86278979599581,
+        "scale": 0.07123468728357438
+      },
+      {
+        "name": "sleepofreason.jpg",
+        "x": 60,
+        "y": 88,
+        "width": 58,
+        "height": 58,
+        "rotation": -169.08248872116368,
+        "scale": 0.04452558277104828
+      },
+      {
+        "name": "fotinikatsikarisg6.jpg",
+        "x": 830,
+        "y": 51,
+        "width": 86,
+        "height": 86,
+        "rotation": 154.4039285327484,
+        "scale": 0.0598495889931035
+      },
+      {
+        "name": "catalinavega.jpg",
+        "x": 488,
+        "y": 440,
+        "width": 33,
+        "height": 33,
+        "rotation": 169.07299150250873,
+        "scale": 0.025105094813313966
+      },
+      {
+        "name": "feralhound.jpg",
+        "x": 920,
+        "y": 181,
+        "width": 35,
+        "height": 35,
+        "rotation": -96.38404366088528,
+        "scale": 0.029015576512890773
+      },
+      {
+        "name": "steelytenacity.jpg",
+        "x": 692,
+        "y": 69,
+        "width": 121,
+        "height": 121,
+        "rotation": -127.76310227387009,
+        "scale": 0.07893414668368041
+      },
+      {
+        "name": "disguisedweapon.jpg",
+        "x": 28,
+        "y": 380,
+        "width": 88,
+        "height": 88,
+        "rotation": -46.283841117236506,
+        "scale": 0.0575119570485574
+      },
+      {
+        "name": "cultistsflamethrower.jpg",
+        "x": 565,
+        "y": 231,
+        "width": 45,
+        "height": 45,
+        "rotation": -175.08286106736648,
+        "scale": 0.03858880639094059
+      },
+      {
+        "name": "ommeenberbenight.jpg",
+        "x": 732,
+        "y": 165,
+        "width": 95,
+        "height": 95,
+        "rotation": 114.83006128064773,
+        "scale": 0.06598167865422117
+      },
+      {
+        "name": "janetlanger.jpg",
+        "x": 415,
+        "y": 268,
+        "width": 31,
+        "height": 31,
+        "rotation": -94.73967711363447,
+        "scale": 0.025393705260648627
+      },
+      {
+        "name": "anielg7.jpg",
+        "x": 839,
+        "y": 1014,
+        "width": 55,
+        "height": 55,
+        "rotation": 95.61734348625873,
+        "scale": 0.04552921600442167
+      },
+      {
+        "name": "hazimel.jpg",
+        "x": 730,
+        "y": 237,
+        "width": 84,
+        "height": 84,
+        "rotation": 165.8491296698624,
+        "scale": 0.06356838782645027
+      },
+      {
+        "name": "verbruchg5.jpg",
+        "x": 955,
+        "y": 842,
+        "width": 51,
+        "height": 51,
+        "rotation": -133.62500567000694,
+        "scale": 0.03242210942199582
+      },
+      {
+        "name": "karensuadelag5.jpg",
+        "x": 692,
+        "y": 956,
+        "width": 31,
+        "height": 31,
+        "rotation": 84.63601888352196,
+        "scale": 0.025360260426735032
+      },
+      {
+        "name": "janpieterzoon.jpg",
+        "x": 880,
+        "y": 638,
+        "width": 76,
+        "height": 76,
+        "rotation": -177.06881593443904,
+        "scale": 0.06723436235318264
+      }
+    ]
+  },
+  "5": {
+    "filename": "image_000005.jpg",
+    "num_cards": 2,
+    "bounds": [
+      {
+        "name": "marianagilbert.jpg",
+        "x": 754,
+        "y": 87,
+        "width": 95,
+        "height": 95,
+        "rotation": -42.10396178856175,
+        "scale": 0.062163821308971995
+      },
+      {
+        "name": "formofthecobra.jpg",
+        "x": 453,
+        "y": 231,
+        "width": 56,
+        "height": 56,
+        "rotation": 176.403357104851,
+        "scale": 0.048293752182579225
+      }
+    ]
+  },
+  "6": {
+    "filename": "image_000006.jpg",
+    "num_cards": 76,
+    "bounds": [
+      {
+        "name": "allanyanseratag5.jpg",
+        "x": 990,
+        "y": 739,
+        "width": 33,
+        "height": 33,
+        "rotation": 139.82112329739078,
+        "scale": 0.021525080188544377
+      },
+      {
+        "name": "cardinalbenediction.jpg",
+        "x": 184,
+        "y": 125,
+        "width": 74,
+        "height": 74,
+        "rotation": 22.161815947422724,
+        "scale": 0.052677299843936154
+      },
+      {
+        "name": "selmatherepugnant.jpg",
+        "x": 66,
+        "y": 736,
+        "width": 41,
+        "height": 41,
+        "rotation": 57.15016376594846,
+        "scale": 0.027773253580558363
+      },
+      {
+        "name": "veleshunt.jpg",
+        "x": 219,
+        "y": 12,
+        "width": 114,
+        "height": 114,
+        "rotation": 50.80183545039091,
+        "scale": 0.07490106834811962
+      },
+      {
+        "name": "catalinavegag6.jpg",
+        "x": 538,
+        "y": 642,
+        "width": 109,
+        "height": 109,
+        "rotation": 150.72051475457204,
+        "scale": 0.07369740820382999
+      },
+      {
+        "name": "privateaudience.jpg",
+        "x": 958,
+        "y": 643,
+        "width": 81,
+        "height": 81,
+        "rotation": 10.250066604676249,
+        "scale": 0.06414617884170504
+      },
+      {
+        "name": "pentweret.jpg",
+        "x": 904,
+        "y": 76,
+        "width": 102,
+        "height": 102,
+        "rotation": -149.29074668017398,
+        "scale": 0.06927775603502692
+      },
+      {
+        "name": "tyecooper.jpg",
+        "x": 347,
+        "y": 993,
+        "width": 48,
+        "height": 48,
+        "rotation": -101.7504445631759,
+        "scale": 0.037152811991071795
+      },
+      {
+        "name": "kathyglensg6.jpg",
+        "x": 949,
+        "y": 415,
+        "width": 102,
+        "height": 102,
+        "rotation": 110.48900715088763,
+        "scale": 0.07258473507243275
+      },
+      {
+        "name": "backstab.jpg",
+        "x": 1014,
+        "y": 862,
+        "width": 54,
+        "height": 54,
+        "rotation": -59.07444922256302,
+        "scale": 0.035368884946975335
+      },
+      {
+        "name": "sidestrike.jpg",
+        "x": 568,
+        "y": 883,
+        "width": 77,
+        "height": 77,
+        "rotation": -57.120945145457924,
+        "scale": 0.05129733371167977
+      },
+      {
+        "name": "cristobalghibertig4.jpg",
+        "x": 294,
+        "y": 36,
+        "width": 86,
+        "height": 86,
+        "rotation": -61.57411384062368,
+        "scale": 0.057871944407778056
+      },
+      {
+        "name": "uchennag4.jpg",
+        "x": 681,
+        "y": 409,
+        "width": 113,
+        "height": 113,
+        "rotation": 57.76561612680487,
+        "scale": 0.07577625132870827
+      },
+      {
+        "name": "antoniodelgado.jpg",
+        "x": 202,
+        "y": 851,
+        "width": 32,
+        "height": 32,
+        "rotation": -98.58075810768456,
+        "scale": 0.026730949758056205
+      },
+      {
+        "name": "calibang2.jpg",
+        "x": 147,
+        "y": 658,
+        "width": 82,
+        "height": 82,
+        "rotation": -87.45899103952438,
+        "scale": 0.07263039384751271
+      },
+      {
+        "name": "ulrikerothbartg4.jpg",
+        "x": 602,
+        "y": 103,
+        "width": 49,
+        "height": 49,
+        "rotation": -62.72217613407628,
+        "scale": 0.0329022462015302
+      },
+      {
+        "name": "elenagutierrezg3.jpg",
+        "x": 1015,
+        "y": 201,
+        "width": 65,
+        "height": 65,
+        "rotation": 90.20254394788003,
+        "scale": 0.05855797862364978
+      },
+      {
+        "name": "stephenbateson.jpg",
+        "x": 257,
+        "y": 116,
+        "width": 99,
+        "height": 99,
+        "rotation": 43.87036294414452,
+        "scale": 0.06416823633684608
+      },
+      {
+        "name": "aireofelation.jpg",
+        "x": 188,
+        "y": 434,
+        "width": 84,
+        "height": 84,
+        "rotation": -105.53431357633255,
+        "scale": 0.06379344639204043
+      },
+      {
+        "name": "accorrigiovanni.jpg",
+        "x": 521,
+        "y": 964,
+        "width": 68,
+        "height": 68,
+        "rotation": -13.108496368339132,
+        "scale": 0.05220253946660233
+      },
+      {
+        "name": "enidblount.jpg",
+        "x": 754,
+        "y": 881,
+        "width": 75,
+        "height": 75,
+        "rotation": 171.7784241917031,
+        "scale": 0.06087499950488723
+      },
+      {
+        "name": "frateranson.jpg",
+        "x": 544,
+        "y": 347,
+        "width": 37,
+        "height": 37,
+        "rotation": -115.55050079003584,
+        "scale": 0.025029529911763194
+      },
+      {
+        "name": "vicissitude.jpg",
+        "x": 663,
+        "y": 853,
+        "width": 56,
+        "height": 56,
+        "rotation": -67.70551170439848,
+        "scale": 0.039399051584058827
+      },
+      {
+        "name": "gavrylog5.jpg",
+        "x": 85,
+        "y": 508,
+        "width": 69,
+        "height": 69,
+        "rotation": -68.35239666865232,
+        "scale": 0.049119679925287714
+      },
+      {
+        "name": "ossian.jpg",
+        "x": 71,
+        "y": 183,
+        "width": 34,
+        "height": 34,
+        "rotation": 36.856109837932166,
+        "scale": 0.023101679691714696
+      },
+      {
+        "name": "franklitzparg4.jpg",
+        "x": 998,
+        "y": 722,
+        "width": 60,
+        "height": 60,
+        "rotation": 102.90766568238342,
+        "scale": 0.047149236843838926
+      },
+      {
+        "name": "citystartaxi.jpg",
+        "x": 918,
+        "y": 490,
+        "width": 41,
+        "height": 41,
+        "rotation": -152.9430865810559,
+        "scale": 0.027210566750483903
+      },
+      {
+        "name": "wendywade.jpg",
+        "x": 132,
+        "y": 127,
+        "width": 74,
+        "height": 74,
+        "rotation": -132.9709877168334,
+        "scale": 0.048758623982497834
+      },
+      {
+        "name": "artmorgan.jpg",
+        "x": 113,
+        "y": 163,
+        "width": 106,
+        "height": 106,
+        "rotation": -34.55826939563613,
+        "scale": 0.07050274539415792
+      },
+      {
+        "name": "beneditoalanternag6.jpg",
+        "x": 599,
+        "y": 157,
+        "width": 105,
+        "height": 105,
+        "rotation": 131.18580272177593,
+        "scale": 0.06795871939799132
+      },
+      {
+        "name": "coletteg6.jpg",
+        "x": 85,
+        "y": 582,
+        "width": 62,
+        "height": 62,
+        "rotation": 92.01890504492553,
+        "scale": 0.05442919241461014
+      },
+      {
+        "name": "vicissitudepoisoning.jpg",
+        "x": 229,
+        "y": 854,
+        "width": 57,
+        "height": 57,
+        "rotation": -68.62414506767544,
+        "scale": 0.03988311308210642
+      },
+      {
+        "name": "abaddon.jpg",
+        "x": 586,
+        "y": 14,
+        "width": 64,
+        "height": 64,
+        "rotation": -44.23977471188937,
+        "scale": 0.04090369639877345
+      },
+      {
+        "name": "ecstaticagony.jpg",
+        "x": 380,
+        "y": 635,
+        "width": 96,
+        "height": 96,
+        "rotation": -50.12668350505908,
+        "scale": 0.06317494690378252
+      },
+      {
+        "name": "antoinethelostg4.jpg",
+        "x": 526,
+        "y": 1011,
+        "width": 67,
+        "height": 67,
+        "rotation": -41.04689469369933,
+        "scale": 0.04443375950024188
+      },
+      {
+        "name": "josef.jpg",
+        "x": 618,
+        "y": 693,
+        "width": 94,
+        "height": 94,
+        "rotation": -151.6368628096514,
+        "scale": 0.06337597567287316
+      },
+      {
+        "name": "unexpectedcoalition.jpg",
+        "x": 953,
+        "y": 588,
+        "width": 111,
+        "height": 111,
+        "rotation": 54.365460885304884,
+        "scale": 0.07327675707510231
+      },
+      {
+        "name": "gavrylog5.jpg",
+        "x": 900,
+        "y": 104,
+        "width": 117,
+        "height": 117,
+        "rotation": 141.33255633102362,
+        "scale": 0.07736540101253649
+      },
+      {
+        "name": "demonicpulseofthecanaille.jpg",
+        "x": 455,
+        "y": 52,
+        "width": 54,
+        "height": 54,
+        "rotation": -87.23180956383545,
+        "scale": 0.04633548839544134
+      },
+      {
+        "name": "autarkispersecution.jpg",
+        "x": 787,
+        "y": 345,
+        "width": 46,
+        "height": 46,
+        "rotation": 4.56914113826204,
+        "scale": 0.03897934073896335
+      },
+      {
+        "name": "duskwork.jpg",
+        "x": 613,
+        "y": 610,
+        "width": 28,
+        "height": 28,
+        "rotation": -99.2826357180501,
+        "scale": 0.022314386757685982
+      },
+      {
+        "name": "saulotsguidingwisdom.jpg",
+        "x": 180,
+        "y": 475,
+        "width": 28,
+        "height": 28,
+        "rotation": -75.27552732844357,
+        "scale": 0.02039230875089233
+      },
+      {
+        "name": "suhailah.jpg",
+        "x": 547,
+        "y": 765,
+        "width": 89,
+        "height": 89,
+        "rotation": -140.5778380531578,
+        "scale": 0.05908136785678088
+      },
+      {
+        "name": "violetteprentissg1.jpg",
+        "x": 326,
+        "y": 15,
+        "width": 69,
+        "height": 69,
+        "rotation": 12.569028884094138,
+        "scale": 0.05369979150525017
+      },
+      {
+        "name": "cultistsentrancement.jpg",
+        "x": 906,
+        "y": 904,
+        "width": 80,
+        "height": 80,
+        "rotation": 47.54835698582957,
+        "scale": 0.05216780496925885
+      },
+      {
+        "name": "lisandrogiovanni.jpg",
+        "x": 329,
+        "y": 78,
+        "width": 38,
+        "height": 38,
+        "rotation": -22.273467581671326,
+        "scale": 0.026703516718603354
+      },
+      {
+        "name": "torturedconfession.jpg",
+        "x": 619,
+        "y": 932,
+        "width": 34,
+        "height": 34,
+        "rotation": 138.15330471155693,
+        "scale": 0.022367407916660524
+      },
+      {
+        "name": "undermyskin.jpg",
+        "x": 143,
+        "y": 992,
+        "width": 73,
+        "height": 73,
+        "rotation": 111.19266024849799,
+        "scale": 0.05106898721484278
+      },
+      {
+        "name": "bloodawakening.jpg",
+        "x": 741,
+        "y": 141,
+        "width": 93,
+        "height": 93,
+        "rotation": -84.58941755688195,
+        "scale": 0.07911163820075993
+      },
+      {
+        "name": "grandesttrickthe.jpg",
+        "x": 491,
+        "y": 561,
+        "width": 24,
+        "height": 24,
+        "rotation": 4.441200496880185,
+        "scale": 0.0210408583338358
+      },
+      {
+        "name": "revelationofthesire.jpg",
+        "x": 505,
+        "y": 86,
+        "width": 86,
+        "height": 86,
+        "rotation": -177.58919780303438,
+        "scale": 0.07636904839092233
+      },
+      {
+        "name": "fatimaalfaqadi.jpg",
+        "x": 738,
+        "y": 582,
+        "width": 61,
+        "height": 61,
+        "rotation": -139.8706336618984,
+        "scale": 0.04037240846499712
+      },
+      {
+        "name": "psyche.jpg",
+        "x": 987,
+        "y": 247,
+        "width": 67,
+        "height": 67,
+        "rotation": 175.6168769345112,
+        "scale": 0.056700908671321035
+      },
+      {
+        "name": "gualtieroghiberti.jpg",
+        "x": 284,
+        "y": 166,
+        "width": 69,
+        "height": 69,
+        "rotation": 104.59835571003208,
+        "scale": 0.05176614703825101
+      },
+      {
+        "name": "erinyig2.jpg",
+        "x": 92,
+        "y": 211,
+        "width": 90,
+        "height": 90,
+        "rotation": -156.2629391516807,
+        "scale": 0.0632995598226303
+      },
+      {
+        "name": "pavlo.jpg",
+        "x": 35,
+        "y": 205,
+        "width": 110,
+        "height": 110,
+        "rotation": -128.4169038347199,
+        "scale": 0.07309312073406636
+      },
+      {
+        "name": "sanguineinstruction.jpg",
+        "x": 618,
+        "y": 331,
+        "width": 37,
+        "height": 37,
+        "rotation": 59.639476496755464,
+        "scale": 0.02532405991587596
+      },
+      {
+        "name": "barbaroluccheseg3.jpg",
+        "x": 515,
+        "y": 932,
+        "width": 107,
+        "height": 107,
+        "rotation": -56.106095073178025,
+        "scale": 0.07193777679728522
+      },
+      {
+        "name": "watendag2.jpg",
+        "x": 5,
+        "y": 500,
+        "width": 53,
+        "height": 53,
+        "rotation": 26.59129657775884,
+        "scale": 0.036396294284119876
+      },
+      {
+        "name": "remover.jpg",
+        "x": 1039,
+        "y": 1025,
+        "width": 38,
+        "height": 38,
+        "rotation": -73.2985338484391,
+        "scale": 0.02786644719982035
+      },
+      {
+        "name": "investiture.jpg",
+        "x": 281,
+        "y": 771,
+        "width": 87,
+        "height": 87,
+        "rotation": 154.97520762270057,
+        "scale": 0.060947097776925585
+      },
+      {
+        "name": "miltonfox.jpg",
+        "x": 233,
+        "y": 830,
+        "width": 66,
+        "height": 66,
+        "rotation": -110.60206516521534,
+        "scale": 0.047032853449872875
+      },
+      {
+        "name": "caern.jpg",
+        "x": 423,
+        "y": 255,
+        "width": 95,
+        "height": 95,
+        "rotation": -102.37954122832603,
+        "scale": 0.07325656753312575
+      },
+      {
+        "name": "trophysafepassage.jpg",
+        "x": 430,
+        "y": 824,
+        "width": 65,
+        "height": 65,
+        "rotation": -135.71978207929712,
+        "scale": 0.042014448462393536
+      },
+      {
+        "name": "rogue.jpg",
+        "x": 880,
+        "y": 291,
+        "width": 42,
+        "height": 42,
+        "rotation": -58.68292474766454,
+        "scale": 0.028305480272936678
+      },
+      {
+        "name": "lise.jpg",
+        "x": 921,
+        "y": 102,
+        "width": 109,
+        "height": 109,
+        "rotation": 158.7070597221035,
+        "scale": 0.07774254181169665
+      },
+      {
+        "name": "doncerrog5.jpg",
+        "x": 966,
+        "y": 571,
+        "width": 70,
+        "height": 70,
+        "rotation": 25.606429745178218,
+        "scale": 0.04891703882268958
+      },
+      {
+        "name": "sreelekha.jpg",
+        "x": 506,
+        "y": 287,
+        "width": 51,
+        "height": 51,
+        "rotation": -85.70100293708899,
+        "scale": 0.044381113486246335
+      },
+      {
+        "name": "alashradamrofalamut.jpg",
+        "x": 890,
+        "y": 365,
+        "width": 65,
+        "height": 65,
+        "rotation": -10.174300111112103,
+        "scale": 0.05149832026239609
+      },
+      {
+        "name": "soak.jpg",
+        "x": 418,
+        "y": 142,
+        "width": 98,
+        "height": 98,
+        "rotation": -137.6154055028527,
+        "scale": 0.06330149013122369
+      },
+      {
+        "name": "barrenness.jpg",
+        "x": 925,
+        "y": 153,
+        "width": 75,
+        "height": 75,
+        "rotation": -27.093490010472266,
+        "scale": 0.051126556355048036
+      },
+      {
+        "name": "erebus.jpg",
+        "x": 416,
+        "y": 255,
+        "width": 47,
+        "height": 47,
+        "rotation": -16.66942288614112,
+        "scale": 0.03440195397406375
+      },
+      {
+        "name": "doubledeuce.jpg",
+        "x": 175,
+        "y": 957,
+        "width": 51,
+        "height": 51,
+        "rotation": -50.523561353707294,
+        "scale": 0.03291508453947644
+      },
+      {
+        "name": "tayshawnkearnsg3.jpg",
+        "x": 16,
+        "y": 354,
+        "width": 82,
+        "height": 82,
+        "rotation": -154.39925638162697,
+        "scale": 0.056316463848035916
+      },
+      {
+        "name": "duckg1.jpg",
+        "x": 851,
+        "y": 343,
+        "width": 76,
+        "height": 76,
+        "rotation": -54.20819321148238,
+        "scale": 0.05060175672187901
+      },
+      {
+        "name": "angelaprestong2.jpg",
+        "x": 97,
+        "y": 10,
+        "width": 103,
+        "height": 103,
+        "rotation": 50.881787240229016,
+        "scale": 0.06848507660151427
+      }
+    ]
+  },
+  "7": {
+    "filename": "image_000007.jpg",
+    "num_cards": 88,
+    "bounds": [
+      {
+        "name": "hasinakesi.jpg",
+        "x": 280,
+        "y": 271,
+        "width": 42,
+        "height": 42,
+        "rotation": -76.5493946222448,
+        "scale": 0.03189990455907525
+      },
+      {
+        "name": "malkavianprank.jpg",
+        "x": 547,
+        "y": 279,
+        "width": 77,
+        "height": 77,
+        "rotation": -152.70794364240248,
+        "scale": 0.05286569502642417
+      },
+      {
+        "name": "censustaker.jpg",
+        "x": 856,
+        "y": 493,
+        "width": 62,
+        "height": 62,
+        "rotation": 177.291852729636,
+        "scale": 0.05419258602019213
+      },
+      {
+        "name": "serviusmariuspustula.jpg",
+        "x": 498,
+        "y": 602,
+        "width": 112,
+        "height": 112,
+        "rotation": -42.87107070913743,
+        "scale": 0.07229709221766185
+      },
+      {
+        "name": "santaleous.jpg",
+        "x": 275,
+        "y": 518,
+        "width": 97,
+        "height": 97,
+        "rotation": -160.33540891516873,
+        "scale": 0.07015497518899716
+      },
+      {
+        "name": "lillehaakeg3.jpg",
+        "x": 932,
+        "y": 1030,
+        "width": 34,
+        "height": 34,
+        "rotation": 101.84376239883335,
+        "scale": 0.02617094789759379
+      },
+      {
+        "name": "jeffersonfoster.jpg",
+        "x": 453,
+        "y": 7,
+        "width": 82,
+        "height": 82,
+        "rotation": -170.6585563256062,
+        "scale": 0.06490583792856856
+      },
+      {
+        "name": "dualityadv_storyline.jpg",
+        "x": 430,
+        "y": 116,
+        "width": 106,
+        "height": 106,
+        "rotation": 148.21868694417878,
+        "scale": 0.07111016153774269
+      },
+      {
+        "name": "hangingfermata.jpg",
+        "x": 557,
+        "y": 382,
+        "width": 92,
+        "height": 92,
+        "rotation": 154.30214792238223,
+        "scale": 0.06344598752717295
+      },
+      {
+        "name": "elizabethdimitros.jpg",
+        "x": 526,
+        "y": 909,
+        "width": 61,
+        "height": 61,
+        "rotation": -110.45820387558595,
+        "scale": 0.04428467804147098
+      },
+      {
+        "name": "badgerg1.jpg",
+        "x": 346,
+        "y": 716,
+        "width": 89,
+        "height": 89,
+        "rotation": 141.10708566510414,
+        "scale": 0.059068605481613065
+      },
+      {
+        "name": "unexpectedcoalition.jpg",
+        "x": 26,
+        "y": 236,
+        "width": 35,
+        "height": 35,
+        "rotation": -6.739363792560226,
+        "scale": 0.029162885226006
+      },
+      {
+        "name": "laylow.jpg",
+        "x": 179,
+        "y": 100,
+        "width": 47,
+        "height": 47,
+        "rotation": 124.04726640610158,
+        "scale": 0.031089344250140982
+      },
+      {
+        "name": "idrissa.jpg",
+        "x": 70,
+        "y": 638,
+        "width": 33,
+        "height": 33,
+        "rotation": 163.61850346123435,
+        "scale": 0.023263516601047945
+      },
+      {
+        "name": "valeriediazantigencommander.jpg",
+        "x": 683,
+        "y": 794,
+        "width": 36,
+        "height": 36,
+        "rotation": 152.94458105441464,
+        "scale": 0.024938182122031825
+      },
+      {
+        "name": "eattherich.jpg",
+        "x": 59,
+        "y": 505,
+        "width": 53,
+        "height": 53,
+        "rotation": -37.84852039312503,
+        "scale": 0.03461043447124984
+      },
+      {
+        "name": "leumeah.jpg",
+        "x": 262,
+        "y": 144,
+        "width": 41,
+        "height": 41,
+        "rotation": 127.89139478385681,
+        "scale": 0.027756461814694725
+      },
+      {
+        "name": "motivatedbygehenna.jpg",
+        "x": 725,
+        "y": 616,
+        "width": 45,
+        "height": 45,
+        "rotation": 144.186623801397,
+        "scale": 0.02887100969486109
+      },
+      {
+        "name": "rakeg1.jpg",
+        "x": 807,
+        "y": 533,
+        "width": 94,
+        "height": 94,
+        "rotation": 61.00687798380133,
+        "scale": 0.06352498030447346
+      },
+      {
+        "name": "hagarstone.jpg",
+        "x": 701,
+        "y": 168,
+        "width": 91,
+        "height": 91,
+        "rotation": 112.65681790936293,
+        "scale": 0.06422490312089948
+      },
+      {
+        "name": "harmony.jpg",
+        "x": 522,
+        "y": 516,
+        "width": 33,
+        "height": 33,
+        "rotation": 176.87001581713042,
+        "scale": 0.028756581925806164
+      },
+      {
+        "name": "chelseablake.jpg",
+        "x": 566,
+        "y": 655,
+        "width": 113,
+        "height": 113,
+        "rotation": -42.19543729206157,
+        "scale": 0.07322275347852346
+      },
+      {
+        "name": "ivankrenyenkog2.jpg",
+        "x": 206,
+        "y": 497,
+        "width": 101,
+        "height": 101,
+        "rotation": -16.820839271790703,
+        "scale": 0.07515745769706611
+      },
+      {
+        "name": "haqimslawretribution.jpg",
+        "x": 111,
+        "y": 107,
+        "width": 35,
+        "height": 35,
+        "rotation": 160.52044318649956,
+        "scale": 0.025186675822717244
+      },
+      {
+        "name": "clandestinecontract.jpg",
+        "x": 74,
+        "y": 483,
+        "width": 105,
+        "height": 105,
+        "rotation": 132.56624726236856,
+        "scale": 0.06763952218364379
+      },
+      {
+        "name": "goanarch.jpg",
+        "x": 555,
+        "y": 69,
+        "width": 36,
+        "height": 36,
+        "rotation": 121.77339875888867,
+        "scale": 0.024867352959192398
+      },
+      {
+        "name": "theron.jpg",
+        "x": 945,
+        "y": 788,
+        "width": 95,
+        "height": 95,
+        "rotation": -165.05986687580852,
+        "scale": 0.07203100426776006
+      },
+      {
+        "name": "reinforcements.jpg",
+        "x": 506,
+        "y": 325,
+        "width": 80,
+        "height": 80,
+        "rotation": -28.02719795398545,
+        "scale": 0.053871136504790515
+      },
+      {
+        "name": "humo.jpg",
+        "x": 795,
+        "y": 944,
+        "width": 80,
+        "height": 80,
+        "rotation": 19.06243963662348,
+        "scale": 0.05808182011752212
+      },
+      {
+        "name": "algirdasthesolarprophetg6.jpg",
+        "x": 651,
+        "y": 46,
+        "width": 87,
+        "height": 87,
+        "rotation": -17.225517830335377,
+        "scale": 0.0639315826771946
+      },
+      {
+        "name": "shame.jpg",
+        "x": 725,
+        "y": 732,
+        "width": 104,
+        "height": 104,
+        "rotation": -33.83436969222694,
+        "scale": 0.0694437492970808
+      },
+      {
+        "name": "ventrueheadquarters.jpg",
+        "x": 119,
+        "y": 873,
+        "width": 57,
+        "height": 57,
+        "rotation": -26.772212246400414,
+        "scale": 0.03827806525379558
+      },
+      {
+        "name": "asguresh.jpg",
+        "x": 967,
+        "y": 472,
+        "width": 71,
+        "height": 71,
+        "rotation": -115.07723629061941,
+        "scale": 0.049672218760748024
+      },
+      {
+        "name": "politicalbacklash.jpg",
+        "x": 865,
+        "y": 479,
+        "width": 45,
+        "height": 45,
+        "rotation": -17.18513418152017,
+        "scale": 0.03245491957339043
+      },
+      {
+        "name": "anaritamontanag3.jpg",
+        "x": 576,
+        "y": 27,
+        "width": 62,
+        "height": 62,
+        "rotation": 165.20492822240965,
+        "scale": 0.046603559467158676
+      },
+      {
+        "name": "blanketofnight.jpg",
+        "x": 473,
+        "y": 24,
+        "width": 83,
+        "height": 83,
+        "rotation": -87.46452113971907,
+        "scale": 0.07390355106251781
+      },
+      {
+        "name": "storageannex.jpg",
+        "x": 310,
+        "y": 573,
+        "width": 71,
+        "height": 71,
+        "rotation": -7.095045884171213,
+        "scale": 0.05912383067930706
+      },
+      {
+        "name": "arriettesylla.jpg",
+        "x": 469,
+        "y": 812,
+        "width": 91,
+        "height": 91,
+        "rotation": -132.7837755946848,
+        "scale": 0.05833366700125889
+      },
+      {
+        "name": "joswaldozzyhydewhiteg3.jpg",
+        "x": 228,
+        "y": 911,
+        "width": 75,
+        "height": 75,
+        "rotation": 157.33295667238974,
+        "scale": 0.052983034233016355
+      },
+      {
+        "name": "devinbisleyg2.jpg",
+        "x": 225,
+        "y": 259,
+        "width": 106,
+        "height": 106,
+        "rotation": -128.74860763149718,
+        "scale": 0.06895407938496467
+      },
+      {
+        "name": "hatchling.jpg",
+        "x": 9,
+        "y": 846,
+        "width": 38,
+        "height": 38,
+        "rotation": 25.106784779783453,
+        "scale": 0.026120422499447182
+      },
+      {
+        "name": "azanealg4.jpg",
+        "x": 174,
+        "y": 23,
+        "width": 35,
+        "height": 35,
+        "rotation": 17.452868772667557,
+        "scale": 0.025698000014863196
+      },
+      {
+        "name": "releaseoftheshackledsoul.jpg",
+        "x": 743,
+        "y": 28,
+        "width": 64,
+        "height": 64,
+        "rotation": -95.72850001065956,
+        "scale": 0.05427834604102562
+      },
+      {
+        "name": "shahidg4.jpg",
+        "x": 955,
+        "y": 541,
+        "width": 86,
+        "height": 86,
+        "rotation": 57.0605056444428,
+        "scale": 0.0581561953612056
+      },
+      {
+        "name": "conflictofinterests.jpg",
+        "x": 555,
+        "y": 316,
+        "width": 92,
+        "height": 92,
+        "rotation": 172.1319239291933,
+        "scale": 0.07425761834152549
+      },
+      {
+        "name": "montano.jpg",
+        "x": 569,
+        "y": 771,
+        "width": 79,
+        "height": 79,
+        "rotation": -139.20767242943504,
+        "scale": 0.05162692695260211
+      },
+      {
+        "name": "theobellg6.jpg",
+        "x": 942,
+        "y": 618,
+        "width": 107,
+        "height": 107,
+        "rotation": 73.70768128371287,
+        "scale": 0.07944968130478741
+      },
+      {
+        "name": "sashamiklosg2.jpg",
+        "x": 1030,
+        "y": 438,
+        "width": 43,
+        "height": 43,
+        "rotation": 7.260469394235628,
+        "scale": 0.03450346902709991
+      },
+      {
+        "name": "asminkobane.jpg",
+        "x": 879,
+        "y": 564,
+        "width": 42,
+        "height": 42,
+        "rotation": -124.4201805208945,
+        "scale": 0.02826890894065559
+      },
+      {
+        "name": "ulrikerothbartg4.jpg",
+        "x": 676,
+        "y": 372,
+        "width": 78,
+        "height": 78,
+        "rotation": 148.46019505947066,
+        "scale": 0.05237941470205937
+      },
+      {
+        "name": "vliamandorg1.jpg",
+        "x": 597,
+        "y": 728,
+        "width": 83,
+        "height": 83,
+        "rotation": 20.633319820530545,
+        "scale": 0.05870415578513527
+      },
+      {
+        "name": "effieloweryg4.jpg",
+        "x": 231,
+        "y": 782,
+        "width": 65,
+        "height": 65,
+        "rotation": -142.2453953590393,
+        "scale": 0.04215823915011524
+      },
+      {
+        "name": "sweeper.jpg",
+        "x": 468,
+        "y": 184,
+        "width": 69,
+        "height": 69,
+        "rotation": 85.90288849563785,
+        "scale": 0.05880708934906889
+      },
+      {
+        "name": "finalnightsthe.jpg",
+        "x": 110,
+        "y": 814,
+        "width": 49,
+        "height": 49,
+        "rotation": 58.98255691616964,
+        "scale": 0.03327590276472144
+      },
+      {
+        "name": "assaultrifle.jpg",
+        "x": 159,
+        "y": 844,
+        "width": 42,
+        "height": 42,
+        "rotation": -94.00417751995491,
+        "scale": 0.03545985918740262
+      },
+      {
+        "name": "infernalpact.jpg",
+        "x": 740,
+        "y": 579,
+        "width": 44,
+        "height": 44,
+        "rotation": 69.48736592845947,
+        "scale": 0.031558073584414384
+      },
+      {
+        "name": "psalmofthedamned.jpg",
+        "x": 412,
+        "y": 745,
+        "width": 100,
+        "height": 100,
+        "rotation": 161.62382240208694,
+        "scale": 0.07290599709500586
+      },
+      {
+        "name": "underbridgestray.jpg",
+        "x": 881,
+        "y": 591,
+        "width": 91,
+        "height": 91,
+        "rotation": -4.046464933918543,
+        "scale": 0.07909809980801884
+      },
+      {
+        "name": "jormungandrmidgardserpent.jpg",
+        "x": 400,
+        "y": 661,
+        "width": 94,
+        "height": 94,
+        "rotation": -127.88736094533695,
+        "scale": 0.061885313004697434
+      },
+      {
+        "name": "alexcamilleg5.jpg",
+        "x": 1011,
+        "y": 725,
+        "width": 66,
+        "height": 66,
+        "rotation": 89.24817408573654,
+        "scale": 0.05942038185537721
+      },
+      {
+        "name": "americajohnson.jpg",
+        "x": 756,
+        "y": 372,
+        "width": 92,
+        "height": 92,
+        "rotation": -120.48372346423221,
+        "scale": 0.06195003362227568
+      },
+      {
+        "name": "venenation.jpg",
+        "x": 914,
+        "y": 429,
+        "width": 66,
+        "height": 66,
+        "rotation": -83.96075531385178,
+        "scale": 0.056297488269330925
+      },
+      {
+        "name": "tryphosag4.jpg",
+        "x": 347,
+        "y": 865,
+        "width": 66,
+        "height": 66,
+        "rotation": 151.7897870066912,
+        "scale": 0.04450643193792029
+      },
+      {
+        "name": "suddenreversal.jpg",
+        "x": 537,
+        "y": 565,
+        "width": 88,
+        "height": 88,
+        "rotation": 3.704251824966377,
+        "scale": 0.07651250068820223
+      },
+      {
+        "name": "josephcambridgeg4.jpg",
+        "x": 376,
+        "y": 724,
+        "width": 99,
+        "height": 99,
+        "rotation": -28.308595195413687,
+        "scale": 0.06800494785961088
+      },
+      {
+        "name": "rebekah.jpg",
+        "x": 1003,
+        "y": 10,
+        "width": 36,
+        "height": 36,
+        "rotation": -168.6880979737191,
+        "scale": 0.02848955095645276
+      },
+      {
+        "name": "persephonetaranisg4.jpg",
+        "x": 898,
+        "y": 632,
+        "width": 100,
+        "height": 100,
+        "rotation": -159.97979621341972,
+        "scale": 0.07312642209314581
+      },
+      {
+        "name": "giselahardenthewinnower.jpg",
+        "x": 162,
+        "y": 707,
+        "width": 107,
+        "height": 107,
+        "rotation": 131.97485085207563,
+        "scale": 0.06985333815953759
+      },
+      {
+        "name": "mouse.jpg",
+        "x": 570,
+        "y": 629,
+        "width": 25,
+        "height": 25,
+        "rotation": 6.252358837745135,
+        "scale": 0.02035916119043029
+      },
+      {
+        "name": "hellforleather.jpg",
+        "x": 313,
+        "y": 945,
+        "width": 109,
+        "height": 109,
+        "rotation": 54.523539200172905,
+        "scale": 0.07145222293129277
+      },
+      {
+        "name": "muricia.jpg",
+        "x": 114,
+        "y": 695,
+        "width": 77,
+        "height": 77,
+        "rotation": 84.97261411667898,
+        "scale": 0.0660051063573351
+      },
+      {
+        "name": "oshridahan.jpg",
+        "x": 986,
+        "y": 728,
+        "width": 88,
+        "height": 88,
+        "rotation": 65.39719734879125,
+        "scale": 0.061187175912620476
+      },
+      {
+        "name": "ramirog2.jpg",
+        "x": 1003,
+        "y": 643,
+        "width": 32,
+        "height": 32,
+        "rotation": -136.84295246217684,
+        "scale": 0.02054429517889663
+      },
+      {
+        "name": "johncop90omalleyg4.jpg",
+        "x": 173,
+        "y": 805,
+        "width": 45,
+        "height": 45,
+        "rotation": 151.6417823995733,
+        "scale": 0.030997489807337544
+      },
+      {
+        "name": "leowashington.jpg",
+        "x": 372,
+        "y": 88,
+        "width": 48,
+        "height": 48,
+        "rotation": -172.25968134704124,
+        "scale": 0.03930001826438478
+      },
+      {
+        "name": "katherinestoddard.jpg",
+        "x": 703,
+        "y": 582,
+        "width": 56,
+        "height": 56,
+        "rotation": -102.79757021156212,
+        "scale": 0.04262005747702391
+      },
+      {
+        "name": "sophiawatsong3.jpg",
+        "x": 518,
+        "y": 144,
+        "width": 71,
+        "height": 71,
+        "rotation": 61.45742859100352,
+        "scale": 0.047284008707597
+      },
+      {
+        "name": "eyesofthewild.jpg",
+        "x": 898,
+        "y": 967,
+        "width": 94,
+        "height": 94,
+        "rotation": 104.8001363019896,
+        "scale": 0.07112931043636983
+      },
+      {
+        "name": "tuskthetalebearerg1.jpg",
+        "x": 806,
+        "y": 358,
+        "width": 120,
+        "height": 120,
+        "rotation": -131.54199003476597,
+        "scale": 0.07844331146130319
+      },
+      {
+        "name": "jacquesrougeg6.jpg",
+        "x": 502,
+        "y": 110,
+        "width": 34,
+        "height": 34,
+        "rotation": 99.63666450417975,
+        "scale": 0.026184842280621408
+      },
+      {
+        "name": "xendilcharmerg4.jpg",
+        "x": 859,
+        "y": 75,
+        "width": 59,
+        "height": 59,
+        "rotation": 80.86830051111474,
+        "scale": 0.04796934401430051
+      },
+      {
+        "name": "bezdunsirn.jpg",
+        "x": 587,
+        "y": 538,
+        "width": 55,
+        "height": 55,
+        "rotation": 88.40929027415643,
+        "scale": 0.04911007185669185
+      },
+      {
+        "name": "eyesofthenight.jpg",
+        "x": 371,
+        "y": 18,
+        "width": 98,
+        "height": 98,
+        "rotation": -101.28508499506597,
+        "scale": 0.07655655720670311
+      },
+      {
+        "name": "josette.jpg",
+        "x": 554,
+        "y": 300,
+        "width": 61,
+        "height": 61,
+        "rotation": 87.46062033188412,
+        "scale": 0.05357336831819842
+      },
+      {
+        "name": "jaroslavpascek.jpg",
+        "x": 345,
+        "y": 37,
+        "width": 110,
+        "height": 110,
+        "rotation": 142.0220538754008,
+        "scale": 0.07299804234777826
+      },
+      {
+        "name": "queenanneg6.jpg",
+        "x": 535,
+        "y": 661,
+        "width": 43,
+        "height": 43,
+        "rotation": 65.63175786711162,
+        "scale": 0.028880588717006012
+      },
+      {
+        "name": "quickjab.jpg",
+        "x": 396,
+        "y": 253,
+        "width": 67,
+        "height": 67,
+        "rotation": -28.999018372351173,
+        "scale": 0.045818698776887365
+      },
+      {
+        "name": "antoniodelgado.jpg",
+        "x": 559,
+        "y": 526,
+        "width": 104,
+        "height": 104,
+        "rotation": -23.33919946026225,
+        "scale": 0.07246154821155736
+      }
+    ]
+  },
+  "8": {
+    "filename": "image_000008.jpg",
+    "num_cards": 53,
+    "bounds": [
+      {
+        "name": "kasimbayar.jpg",
+        "x": 323,
+        "y": 429,
+        "width": 54,
+        "height": 54,
+        "rotation": -99.65596092838716,
+        "scale": 0.04282596153806044
+      },
+      {
+        "name": "gustavomorales.jpg",
+        "x": 179,
+        "y": 121,
+        "width": 68,
+        "height": 68,
+        "rotation": -36.34569932693654,
+        "scale": 0.045224765140052914
+      },
+      {
+        "name": "juliansanders.jpg",
+        "x": 276,
+        "y": 525,
+        "width": 51,
+        "height": 51,
+        "rotation": -95.86398346659233,
+        "scale": 0.04186760201149888
+      },
+      {
+        "name": "lazverinusthralloflambachg2.jpg",
+        "x": 712,
+        "y": 445,
+        "width": 34,
+        "height": 34,
+        "rotation": -172.90365696523293,
+        "scale": 0.02786255130753955
+      },
+      {
+        "name": "salingerg2.jpg",
+        "x": 101,
+        "y": 113,
+        "width": 65,
+        "height": 65,
+        "rotation": 102.54160078512763,
+        "scale": 0.049306104195243214
+      },
+      {
+        "name": "angeliqueg6.jpg",
+        "x": 301,
+        "y": 806,
+        "width": 96,
+        "height": 96,
+        "rotation": -6.998480887621042,
+        "scale": 0.07964838752426273
+      },
+      {
+        "name": "kevinjacksong7.jpg",
+        "x": 847,
+        "y": 995,
+        "width": 34,
+        "height": 34,
+        "rotation": -33.19586511287494,
+        "scale": 0.02247129430568994
+      },
+      {
+        "name": "abderrahimdeathshand.jpg",
+        "x": 793,
+        "y": 126,
+        "width": 43,
+        "height": 43,
+        "rotation": -87.21377521280324,
+        "scale": 0.03807343088435631
+      },
+      {
+        "name": "ayeleathemanipulator.jpg",
+        "x": 390,
+        "y": 15,
+        "width": 59,
+        "height": 59,
+        "rotation": -175.34726220035208,
+        "scale": 0.04930899364142908
+      },
+      {
+        "name": "lubomirahradok.jpg",
+        "x": 71,
+        "y": 737,
+        "width": 40,
+        "height": 40,
+        "rotation": -98.00263338030754,
+        "scale": 0.03149041320518784
+      },
+      {
+        "name": "hasani.jpg",
+        "x": 293,
+        "y": 628,
+        "width": 30,
+        "height": 30,
+        "rotation": -28.806819873569992,
+        "scale": 0.020812933376360827
+      },
+      {
+        "name": "uncontrolledimpulse.jpg",
+        "x": 94,
+        "y": 770,
+        "width": 88,
+        "height": 88,
+        "rotation": 171.15129729817306,
+        "scale": 0.07060131719745759
+      },
+      {
+        "name": "greatsymposium.jpg",
+        "x": 906,
+        "y": 974,
+        "width": 66,
+        "height": 66,
+        "rotation": 120.64118224441438,
+        "scale": 0.045368242059114994
+      },
+      {
+        "name": "reginablake.jpg",
+        "x": 151,
+        "y": 22,
+        "width": 58,
+        "height": 58,
+        "rotation": -17.878139903046645,
+        "scale": 0.04279380339842515
+      },
+      {
+        "name": "nassir.jpg",
+        "x": 534,
+        "y": 436,
+        "width": 104,
+        "height": 104,
+        "rotation": 60.37150383931197,
+        "scale": 0.07103629647835967
+      },
+      {
+        "name": "sennadurekg4.jpg",
+        "x": 730,
+        "y": 943,
+        "width": 80,
+        "height": 80,
+        "rotation": -120.75402844428149,
+        "scale": 0.053962100751552056
+      },
+      {
+        "name": "gunnar.jpg",
+        "x": 422,
+        "y": 748,
+        "width": 80,
+        "height": 80,
+        "rotation": -120.38528109554126,
+        "scale": 0.05434547005409365
+      },
+      {
+        "name": "americajohnsong5.jpg",
+        "x": 790,
+        "y": 489,
+        "width": 106,
+        "height": 106,
+        "rotation": -148.1606965022974,
+        "scale": 0.07064801002564448
+      },
+      {
+        "name": "orlandooriundus.jpg",
+        "x": 140,
+        "y": 611,
+        "width": 102,
+        "height": 102,
+        "rotation": 42.078346125580566,
+        "scale": 0.0669197662814744
+      },
+      {
+        "name": "crywolf.jpg",
+        "x": 882,
+        "y": 58,
+        "width": 109,
+        "height": 109,
+        "rotation": -128.21646333995886,
+        "scale": 0.07195296827318429
+      },
+      {
+        "name": "transcendentlaibon.jpg",
+        "x": 844,
+        "y": 1027,
+        "width": 32,
+        "height": 32,
+        "rotation": 160.1700140697074,
+        "scale": 0.022476067325641967
+      },
+      {
+        "name": "vanessa.jpg",
+        "x": 409,
+        "y": 27,
+        "width": 85,
+        "height": 85,
+        "rotation": -124.32170003599276,
+        "scale": 0.0572248744510855
+      },
+      {
+        "name": "feastofthesoulssecrets.jpg",
+        "x": 690,
+        "y": 814,
+        "width": 42,
+        "height": 42,
+        "rotation": -3.540885297453798,
+        "scale": 0.0359180564089889
+      },
+      {
+        "name": "marlenetheinfernalistg2.jpg",
+        "x": 418,
+        "y": 320,
+        "width": 40,
+        "height": 40,
+        "rotation": -39.78894008399715,
+        "scale": 0.026126313694298676
+      },
+      {
+        "name": "corneliusottaviog2.jpg",
+        "x": 269,
+        "y": 800,
+        "width": 55,
+        "height": 55,
+        "rotation": -16.91977728403765,
+        "scale": 0.040470620809342356
+      },
+      {
+        "name": "zahirhandofthesilsilag2.jpg",
+        "x": 724,
+        "y": 37,
+        "width": 81,
+        "height": 81,
+        "rotation": -169.6028660139549,
+        "scale": 0.06443821711581911
+      },
+      {
+        "name": "ysadorthefoul.jpg",
+        "x": 376,
+        "y": 576,
+        "width": 84,
+        "height": 84,
+        "rotation": -78.01170250750872,
+        "scale": 0.06495396506724523
+      },
+      {
+        "name": "rafaeldecorazon.jpg",
+        "x": 441,
+        "y": 305,
+        "width": 115,
+        "height": 115,
+        "rotation": 63.19904037089199,
+        "scale": 0.07955254637133065
+      },
+      {
+        "name": "chesterduboisg1.jpg",
+        "x": 291,
+        "y": 417,
+        "width": 88,
+        "height": 88,
+        "rotation": 117.79386222377656,
+        "scale": 0.05975743213386066
+      },
+      {
+        "name": "shatteredmirror.jpg",
+        "x": 852,
+        "y": 453,
+        "width": 76,
+        "height": 76,
+        "rotation": -17.67567199856049,
+        "scale": 0.055608263422811055
+      },
+      {
+        "name": "adelinodasilva.jpg",
+        "x": 511,
+        "y": 226,
+        "width": 50,
+        "height": 50,
+        "rotation": 7.736333506859921,
+        "scale": 0.04101743177173164
+      },
+      {
+        "name": "dustup.jpg",
+        "x": 877,
+        "y": 822,
+        "width": 80,
+        "height": 80,
+        "rotation": -121.5308390575187,
+        "scale": 0.05411885785822754
+      },
+      {
+        "name": "helena.jpg",
+        "x": 326,
+        "y": 990,
+        "width": 85,
+        "height": 85,
+        "rotation": 172.81527064217272,
+        "scale": 0.06953703723118
+      },
+      {
+        "name": "cynthiaingold.jpg",
+        "x": 416,
+        "y": 104,
+        "width": 97,
+        "height": 97,
+        "rotation": -19.329640623195928,
+        "scale": 0.06959292586964314
+      },
+      {
+        "name": "kazukihanabirag7.jpg",
+        "x": 241,
+        "y": 864,
+        "width": 79,
+        "height": 79,
+        "rotation": -108.85878214459817,
+        "scale": 0.056836651702139154
+      },
+      {
+        "name": "mithras.jpg",
+        "x": 440,
+        "y": 37,
+        "width": 55,
+        "height": 55,
+        "rotation": 108.03108551815575,
+        "scale": 0.04042578367549557
+      },
+      {
+        "name": "jeremymacneil.jpg",
+        "x": 233,
+        "y": 944,
+        "width": 116,
+        "height": 116,
+        "rotation": -46.10965745650438,
+        "scale": 0.07645333692889847
+      },
+      {
+        "name": "ngoziekwensug5.jpg",
+        "x": 536,
+        "y": 122,
+        "width": 52,
+        "height": 52,
+        "rotation": -105.4240125063225,
+        "scale": 0.0391297662430372
+      },
+      {
+        "name": "nizzamallatif.jpg",
+        "x": 184,
+        "y": 794,
+        "width": 34,
+        "height": 34,
+        "rotation": 117.18785798862007,
+        "scale": 0.022286083984604826
+      },
+      {
+        "name": "wendywade.jpg",
+        "x": 233,
+        "y": 440,
+        "width": 62,
+        "height": 62,
+        "rotation": -6.986127920463616,
+        "scale": 0.050711547646165325
+      },
+      {
+        "name": "beckett.jpg",
+        "x": 700,
+        "y": 314,
+        "width": 27,
+        "height": 27,
+        "rotation": 177.3250746988141,
+        "scale": 0.023721354486361014
+      },
+      {
+        "name": "deflection.jpg",
+        "x": 79,
+        "y": 702,
+        "width": 41,
+        "height": 41,
+        "rotation": -118.17323204155493,
+        "scale": 0.027405086868353867
+      },
+      {
+        "name": "sheldonlordoftheclogg1.jpg",
+        "x": 21,
+        "y": 677,
+        "width": 104,
+        "height": 104,
+        "rotation": -107.27605465762825,
+        "scale": 0.07640058746331661
+      },
+      {
+        "name": "ophidiangaze.jpg",
+        "x": 169,
+        "y": 969,
+        "width": 88,
+        "height": 88,
+        "rotation": -52.08530947526559,
+        "scale": 0.05791821947298083
+      },
+      {
+        "name": "aimeelaroux.jpg",
+        "x": 799,
+        "y": 116,
+        "width": 95,
+        "height": 95,
+        "rotation": 121.6516881736053,
+        "scale": 0.06392630210829768
+      },
+      {
+        "name": "sheepdog.jpg",
+        "x": 788,
+        "y": 756,
+        "width": 112,
+        "height": 112,
+        "rotation": -21.241066742702316,
+        "scale": 0.0797210207250634
+      },
+      {
+        "name": "tututhedoublyevilone.jpg",
+        "x": 418,
+        "y": 225,
+        "width": 89,
+        "height": 89,
+        "rotation": -42.30889877627487,
+        "scale": 0.05850668610941087
+      },
+      {
+        "name": "forcedvigilance.jpg",
+        "x": 389,
+        "y": 542,
+        "width": 106,
+        "height": 106,
+        "rotation": 67.53136845528252,
+        "scale": 0.07460079889450297
+      },
+      {
+        "name": "antoinetteduchampg2.jpg",
+        "x": 987,
+        "y": 872,
+        "width": 39,
+        "height": 39,
+        "rotation": -83.8697111072817,
+        "scale": 0.03308589124529117
+      },
+      {
+        "name": "anarchmanifestoan.jpg",
+        "x": 53,
+        "y": 167,
+        "width": 83,
+        "height": 83,
+        "rotation": -52.658643002500895,
+        "scale": 0.055073060068265414
+      },
+      {
+        "name": "deadpool.jpg",
+        "x": 101,
+        "y": 946,
+        "width": 29,
+        "height": 29,
+        "rotation": 97.08938116235748,
+        "scale": 0.024009829390737068
+      },
+      {
+        "name": "djuhahthebronzebow.jpg",
+        "x": 272,
+        "y": 157,
+        "width": 34,
+        "height": 34,
+        "rotation": 109.42988796256373,
+        "scale": 0.02453506310965239
+      },
+      {
+        "name": "shepherdsinnocence.jpg",
+        "x": 389,
+        "y": 598,
+        "width": 78,
+        "height": 78,
+        "rotation": 9.952761929626888,
+        "scale": 0.06145426425183667
+      }
+    ]
+  },
+  "9": {
+    "filename": "image_000009.jpg",
+    "num_cards": 3,
+    "bounds": [
+      {
+        "name": "cauldronofblood.jpg",
+        "x": 416,
+        "y": 322,
+        "width": 39,
+        "height": 39,
+        "rotation": -83.22058237987983,
+        "scale": 0.032589880721845654
+      },
+      {
+        "name": "salbatorebokkengrog2.jpg",
+        "x": 694,
+        "y": 101,
+        "width": 115,
+        "height": 115,
+        "rotation": 117.78394797768988,
+        "scale": 0.07958631845143047
+      },
+      {
+        "name": "howlerg2.jpg",
+        "x": 573,
+        "y": 509,
+        "width": 71,
+        "height": 71,
+        "rotation": 161.85752140382039,
+        "scale": 0.05133913930935943
+      }
+    ]
+  }
+}

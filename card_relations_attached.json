@@ -1,0 +1,990 @@
+{
+  "version": "1.1",
+  "threshold_iou": 0.1,
+  "total_images_processed": 10,
+  "total_attached_relations": 7,
+  "relations_by_image": [
+    {
+      "image": "image_000000.jpg",
+      "num_cards": 26,
+      "num_attached_pairs": 4,
+      "attached_pairs": [
+        {
+          "card1_name": "cicatriz.jpg",
+          "card2_name": "freremarcg4.jpg",
+          "iou": 0.3692,
+          "position1": "(211, 365)",
+          "position2": "(190, 386)"
+        },
+        {
+          "card1_name": "javiermontoya.jpg",
+          "card2_name": "diadelosmuertos.jpg",
+          "iou": 0.1248,
+          "position1": "(890, 800)",
+          "position2": "(947, 847)"
+        },
+        {
+          "card1_name": "pietervandorng3.jpg",
+          "card2_name": "freremarcg4.jpg",
+          "iou": 0.105,
+          "position1": "(196, 467)",
+          "position2": "(190, 386)"
+        },
+        {
+          "card1_name": "freremarcg4.jpg",
+          "card2_name": "framinganancientgrudge.jpg",
+          "iou": 0.1128,
+          "position1": "(190, 386)",
+          "position2": "(112, 394)"
+        }
+      ]
+    },
+    {
+      "image": "image_000001.jpg",
+      "num_cards": 60,
+      "num_attached_pairs": 13,
+      "attached_pairs": [
+        {
+          "card1_name": "abrahammellong6.jpg",
+          "card2_name": "publicvilification.jpg",
+          "iou": 0.2406,
+          "position1": "(875, 43)",
+          "position2": "(894, 102)"
+        },
+        {
+          "card1_name": "susiekano.jpg",
+          "card2_name": "sullyg6.jpg",
+          "iou": 0.1172,
+          "position1": "(675, 154)",
+          "position2": "(635, 91)"
+        },
+        {
+          "card1_name": "jackofbothsides.jpg",
+          "card2_name": "boytoy.jpg",
+          "iou": 0.5311,
+          "position1": "(9, 859)",
+          "position2": "(27, 862)"
+        },
+        {
+          "card1_name": "spiritmarionette.jpg",
+          "card2_name": "renegadegarou.jpg",
+          "iou": 0.1733,
+          "position1": "(546, 423)",
+          "position2": "(590, 384)"
+        },
+        {
+          "card1_name": "ashestoashes.jpg",
+          "card2_name": "orbofulain.jpg",
+          "iou": 0.4439,
+          "position1": "(676, 212)",
+          "position2": "(660, 208)"
+        },
+        {
+          "card1_name": "419operation.jpg",
+          "card2_name": "giannadicanneto.jpg",
+          "iou": 0.1406,
+          "position1": "(582, 649)",
+          "position2": "(613, 684)"
+        },
+        {
+          "card1_name": "kemintirig2adv.jpg",
+          "card2_name": "lazarusadv.jpg",
+          "iou": 0.1212,
+          "position1": "(220, 589)",
+          "position2": "(199, 666)"
+        },
+        {
+          "card1_name": "feroxtherocklordg2.jpg",
+          "card2_name": "angeliqueg6.jpg",
+          "iou": 0.3731,
+          "position1": "(30, 610)",
+          "position2": "(30, 582)"
+        },
+        {
+          "card1_name": "feroxtherocklordg2.jpg",
+          "card2_name": "karifalnumair.jpg",
+          "iou": 0.3424,
+          "position1": "(30, 610)",
+          "position2": "(34, 595)"
+        },
+        {
+          "card1_name": "angeliqueg6.jpg",
+          "card2_name": "karifalnumair.jpg",
+          "iou": 0.727,
+          "position1": "(30, 582)",
+          "position2": "(34, 595)"
+        },
+        {
+          "card1_name": "mateuszgryzbowsky.jpg",
+          "card2_name": "bronweng2.jpg",
+          "iou": 0.406,
+          "position1": "(410, 469)",
+          "position2": "(381, 436)"
+        },
+        {
+          "card1_name": "amber.jpg",
+          "card2_name": "justineelderofdallas.jpg",
+          "iou": 0.221,
+          "position1": "(753, 578)",
+          "position2": "(772, 547)"
+        },
+        {
+          "card1_name": "voicesofthecastle.jpg",
+          "card2_name": "palatialestate.jpg",
+          "iou": 0.2978,
+          "position1": "(405, 581)",
+          "position2": "(453, 615)"
+        }
+      ]
+    },
+    {
+      "image": "image_000002.jpg",
+      "num_cards": 9,
+      "num_attached_pairs": 0,
+      "attached_pairs": []
+    },
+    {
+      "image": "image_000003.jpg",
+      "num_cards": 92,
+      "num_attached_pairs": 35,
+      "attached_pairs": [
+        {
+          "card1_name": "stillthemortalflesh.jpg",
+          "card2_name": "husamettin.jpg",
+          "iou": 0.2316,
+          "position1": "(177, 195)",
+          "position2": "(194, 207)"
+        },
+        {
+          "card1_name": "gengisg3.jpg",
+          "card2_name": "hexe.jpg",
+          "iou": 0.1498,
+          "position1": "(539, 442)",
+          "position2": "(467, 412)"
+        },
+        {
+          "card1_name": "gengisg3.jpg",
+          "card2_name": "shadowcast.jpg",
+          "iou": 0.1093,
+          "position1": "(539, 442)",
+          "position2": "(584, 371)"
+        },
+        {
+          "card1_name": "chavioraczkog5.jpg",
+          "card2_name": "rodrigog4.jpg",
+          "iou": 0.1196,
+          "position1": "(645, 378)",
+          "position2": "(639, 361)"
+        },
+        {
+          "card1_name": "chavioraczkog5.jpg",
+          "card2_name": "shadowcast.jpg",
+          "iou": 0.1174,
+          "position1": "(645, 378)",
+          "position2": "(584, 371)"
+        },
+        {
+          "card1_name": "fangjumper.jpg",
+          "card2_name": "surapongg6.jpg",
+          "iou": 0.1981,
+          "position1": "(132, 907)",
+          "position2": "(91, 880)"
+        },
+        {
+          "card1_name": "coloneltheg3.jpg",
+          "card2_name": "opendossier.jpg",
+          "iou": 0.1321,
+          "position1": "(843, 442)",
+          "position2": "(865, 489)"
+        },
+        {
+          "card1_name": "exeterchantrylondon.jpg",
+          "card2_name": "batshevag4.jpg",
+          "iou": 0.1485,
+          "position1": "(749, 748)",
+          "position2": "(729, 803)"
+        },
+        {
+          "card1_name": "rodrigog4.jpg",
+          "card2_name": "shadowcast.jpg",
+          "iou": 0.2861,
+          "position1": "(639, 361)",
+          "position2": "(584, 371)"
+        },
+        {
+          "card1_name": "rodrigog4.jpg",
+          "card2_name": "keegang6.jpg",
+          "iou": 0.1011,
+          "position1": "(639, 361)",
+          "position2": "(668, 308)"
+        },
+        {
+          "card1_name": "richardtauberayeleaspuppet.jpg",
+          "card2_name": "summonspiritbeast.jpg",
+          "iou": 0.1218,
+          "position1": "(541, 47)",
+          "position2": "(489, 89)"
+        },
+        {
+          "card1_name": "textbookdamnationthe.jpg",
+          "card2_name": "mustafatheheirg4.jpg",
+          "iou": 0.5693,
+          "position1": "(239, 507)",
+          "position2": "(239, 505)"
+        },
+        {
+          "card1_name": "presence.jpg",
+          "card2_name": "conscriptedstatue.jpg",
+          "iou": 0.1763,
+          "position1": "(255, 173)",
+          "position2": "(241, 175)"
+        },
+        {
+          "card1_name": "anesthetictouch.jpg",
+          "card2_name": "xendilcharmer.jpg",
+          "iou": 0.3383,
+          "position1": "(263, 714)",
+          "position2": "(268, 695)"
+        },
+        {
+          "card1_name": "anesthetictouch.jpg",
+          "card2_name": "packalpha.jpg",
+          "iou": 0.1772,
+          "position1": "(263, 714)",
+          "position2": "(257, 747)"
+        },
+        {
+          "card1_name": "antonioveradasg3.jpg",
+          "card2_name": "sayshila.jpg",
+          "iou": 0.6806,
+          "position1": "(93, 164)",
+          "position2": "(82, 153)"
+        },
+        {
+          "card1_name": "antonioveradasg3.jpg",
+          "card2_name": "elenkamjian.jpg",
+          "iou": 0.1186,
+          "position1": "(93, 164)",
+          "position2": "(64, 208)"
+        },
+        {
+          "card1_name": "domenicgiovanni.jpg",
+          "card2_name": "pocketoutoftime.jpg",
+          "iou": 0.5029,
+          "position1": "(717, 501)",
+          "position2": "(732, 513)"
+        },
+        {
+          "card1_name": "squirrelbalance.jpg",
+          "card2_name": "markofthedamned.jpg",
+          "iou": 0.1479,
+          "position1": "(105, 453)",
+          "position2": "(103, 404)"
+        },
+        {
+          "card1_name": "bloodweakens.jpg",
+          "card2_name": "jasontheworldsvoice.jpg",
+          "iou": 0.1324,
+          "position1": "(658, 980)",
+          "position2": "(698, 952)"
+        },
+        {
+          "card1_name": "lumumbag4.jpg",
+          "card2_name": "trainer.jpg",
+          "iou": 0.1688,
+          "position1": "(717, 229)",
+          "position2": "(793, 254)"
+        },
+        {
+          "card1_name": "makariostheseducer.jpg",
+          "card2_name": "kyrylo.jpg",
+          "iou": 0.1248,
+          "position1": "(934, 925)",
+          "position2": "(971, 869)"
+        },
+        {
+          "card1_name": "sayshila.jpg",
+          "card2_name": "elenkamjian.jpg",
+          "iou": 0.1398,
+          "position1": "(82, 153)",
+          "position2": "(64, 208)"
+        },
+        {
+          "card1_name": "agrippina.jpg",
+          "card2_name": "malabranca.jpg",
+          "iou": 0.159,
+          "position1": "(838, 981)",
+          "position2": "(791, 948)"
+        },
+        {
+          "card1_name": "xendilcharmer.jpg",
+          "card2_name": "packalpha.jpg",
+          "iou": 0.1464,
+          "position1": "(268, 695)",
+          "position2": "(257, 747)"
+        },
+        {
+          "card1_name": "carmen.jpg",
+          "card2_name": "summonspiritbeast.jpg",
+          "iou": 0.1112,
+          "position1": "(461, 132)",
+          "position2": "(489, 89)"
+        },
+        {
+          "card1_name": "elenkamjian.jpg",
+          "card2_name": "elimelechthetwicedamned.jpg",
+          "iou": 0.4998,
+          "position1": "(64, 208)",
+          "position2": "(47, 216)"
+        },
+        {
+          "card1_name": "elenkamjian.jpg",
+          "card2_name": "ignisfatuus.jpg",
+          "iou": 0.2156,
+          "position1": "(64, 208)",
+          "position2": "(74, 218)"
+        },
+        {
+          "card1_name": "delilaheastong1.jpg",
+          "card2_name": "blackwallace.jpg",
+          "iou": 0.7591,
+          "position1": "(987, 196)",
+          "position2": "(998, 197)"
+        },
+        {
+          "card1_name": "shadowplay.jpg",
+          "card2_name": "cardbackcultistcrypt.jpg",
+          "iou": 0.2467,
+          "position1": "(114, 788)",
+          "position2": "(117, 755)"
+        },
+        {
+          "card1_name": "elimelechthetwicedamned.jpg",
+          "card2_name": "ignisfatuus.jpg",
+          "iou": 0.1257,
+          "position1": "(47, 216)",
+          "position2": "(74, 218)"
+        },
+        {
+          "card1_name": "malabranca.jpg",
+          "card2_name": "guardianangel.jpg",
+          "iou": 0.1487,
+          "position1": "(791, 948)",
+          "position2": "(777, 897)"
+        },
+        {
+          "card1_name": "malabranca.jpg",
+          "card2_name": "nehsi.jpg",
+          "iou": 0.3,
+          "position1": "(791, 948)",
+          "position2": "(754, 965)"
+        },
+        {
+          "card1_name": "omaelkuman.jpg",
+          "card2_name": "stealthemind.jpg",
+          "iou": 0.736,
+          "position1": "(13, 298)",
+          "position2": "(16, 296)"
+        },
+        {
+          "card1_name": "shatteringcrescendo.jpg",
+          "card2_name": "cardbackcultistcrypt.jpg",
+          "iou": 0.3103,
+          "position1": "(179, 757)",
+          "position2": "(117, 755)"
+        }
+      ]
+    },
+    {
+      "image": "image_000004.jpg",
+      "num_cards": 45,
+      "num_attached_pairs": 5,
+      "attached_pairs": [
+        {
+          "card1_name": "melange.jpg",
+          "card2_name": "alonzoguillen.jpg",
+          "iou": 0.1437,
+          "position1": "(434, 400)",
+          "position2": "(489, 468)"
+        },
+        {
+          "card1_name": "winchestermansion.jpg",
+          "card2_name": "mictlantecuhtli.jpg",
+          "iou": 0.5133,
+          "position1": "(5, 741)",
+          "position2": "(18, 735)"
+        },
+        {
+          "card1_name": "beatricelangoug2.jpg",
+          "card2_name": "disguisedweapon.jpg",
+          "iou": 0.4824,
+          "position1": "(24, 387)",
+          "position2": "(28, 380)"
+        },
+        {
+          "card1_name": "trophyrevered.jpg",
+          "card2_name": "matthewg6.jpg",
+          "iou": 0.1847,
+          "position1": "(210, 51)",
+          "position2": "(151, 27)"
+        },
+        {
+          "card1_name": "ommeenberbenight.jpg",
+          "card2_name": "hazimel.jpg",
+          "iou": 0.1329,
+          "position1": "(732, 165)",
+          "position2": "(730, 237)"
+        }
+      ]
+    },
+    {
+      "image": "image_000005.jpg",
+      "num_cards": 2,
+      "num_attached_pairs": 0,
+      "attached_pairs": []
+    },
+    {
+      "image": "image_000006.jpg",
+      "num_cards": 76,
+      "num_attached_pairs": 24,
+      "attached_pairs": [
+        {
+          "card1_name": "allanyanseratag5.jpg",
+          "card2_name": "franklitzparg4.jpg",
+          "iou": 0.2135,
+          "position1": "(990, 739)",
+          "position2": "(998, 722)"
+        },
+        {
+          "card1_name": "cardinalbenediction.jpg",
+          "card2_name": "wendywade.jpg",
+          "iou": 0.1691,
+          "position1": "(184, 125)",
+          "position2": "(132, 127)"
+        },
+        {
+          "card1_name": "veleshunt.jpg",
+          "card2_name": "cristobalghibertig4.jpg",
+          "iou": 0.1969,
+          "position1": "(219, 12)",
+          "position2": "(294, 36)"
+        },
+        {
+          "card1_name": "privateaudience.jpg",
+          "card2_name": "unexpectedcoalition.jpg",
+          "iou": 0.3162,
+          "position1": "(958, 643)",
+          "position2": "(953, 588)"
+        },
+        {
+          "card1_name": "pentweret.jpg",
+          "card2_name": "gavrylog5.jpg",
+          "iou": 0.4562,
+          "position1": "(904, 76)",
+          "position2": "(900, 104)"
+        },
+        {
+          "card1_name": "pentweret.jpg",
+          "card2_name": "lise.jpg",
+          "iou": 0.4082,
+          "position1": "(904, 76)",
+          "position2": "(921, 102)"
+        },
+        {
+          "card1_name": "pentweret.jpg",
+          "card2_name": "barrenness.jpg",
+          "iou": 0.1325,
+          "position1": "(904, 76)",
+          "position2": "(925, 153)"
+        },
+        {
+          "card1_name": "sidestrike.jpg",
+          "card2_name": "torturedconfession.jpg",
+          "iou": 0.1145,
+          "position1": "(568, 883)",
+          "position2": "(619, 932)"
+        },
+        {
+          "card1_name": "cristobalghibertig4.jpg",
+          "card2_name": "violetteprentissg1.jpg",
+          "iou": 0.271,
+          "position1": "(294, 36)",
+          "position2": "(326, 15)"
+        },
+        {
+          "card1_name": "cristobalghibertig4.jpg",
+          "card2_name": "lisandrogiovanni.jpg",
+          "iou": 0.1952,
+          "position1": "(294, 36)",
+          "position2": "(329, 78)"
+        },
+        {
+          "card1_name": "stephenbateson.jpg",
+          "card2_name": "gualtieroghiberti.jpg",
+          "iou": 0.3024,
+          "position1": "(257, 116)",
+          "position2": "(284, 166)"
+        },
+        {
+          "card1_name": "accorrigiovanni.jpg",
+          "card2_name": "antoinethelostg4.jpg",
+          "iou": 0.1698,
+          "position1": "(521, 964)",
+          "position2": "(526, 1011)"
+        },
+        {
+          "card1_name": "accorrigiovanni.jpg",
+          "card2_name": "barbaroluccheseg3.jpg",
+          "iou": 0.4039,
+          "position1": "(521, 964)",
+          "position2": "(515, 932)"
+        },
+        {
+          "card1_name": "wendywade.jpg",
+          "card2_name": "artmorgan.jpg",
+          "iou": 0.2023,
+          "position1": "(132, 127)",
+          "position2": "(113, 163)"
+        },
+        {
+          "card1_name": "artmorgan.jpg",
+          "card2_name": "erinyig2.jpg",
+          "iou": 0.261,
+          "position1": "(113, 163)",
+          "position2": "(92, 211)"
+        },
+        {
+          "card1_name": "vicissitudepoisoning.jpg",
+          "card2_name": "miltonfox.jpg",
+          "iou": 0.4138,
+          "position1": "(229, 854)",
+          "position2": "(233, 830)"
+        },
+        {
+          "card1_name": "antoinethelostg4.jpg",
+          "card2_name": "barbaroluccheseg3.jpg",
+          "iou": 0.1334,
+          "position1": "(526, 1011)",
+          "position2": "(515, 932)"
+        },
+        {
+          "card1_name": "unexpectedcoalition.jpg",
+          "card2_name": "doncerrog5.jpg",
+          "iou": 0.2746,
+          "position1": "(953, 588)",
+          "position2": "(966, 571)"
+        },
+        {
+          "card1_name": "gavrylog5.jpg",
+          "card2_name": "lise.jpg",
+          "iou": 0.6715,
+          "position1": "(900, 104)",
+          "position2": "(921, 102)"
+        },
+        {
+          "card1_name": "gavrylog5.jpg",
+          "card2_name": "barrenness.jpg",
+          "iou": 0.3588,
+          "position1": "(900, 104)",
+          "position2": "(925, 153)"
+        },
+        {
+          "card1_name": "erinyig2.jpg",
+          "card2_name": "pavlo.jpg",
+          "iou": 0.3091,
+          "position1": "(92, 211)",
+          "position2": "(35, 205)"
+        },
+        {
+          "card1_name": "caern.jpg",
+          "card2_name": "erebus.jpg",
+          "iou": 0.201,
+          "position1": "(423, 255)",
+          "position2": "(416, 255)"
+        },
+        {
+          "card1_name": "lise.jpg",
+          "card2_name": "barrenness.jpg",
+          "iou": 0.3306,
+          "position1": "(921, 102)",
+          "position2": "(925, 153)"
+        },
+        {
+          "card1_name": "alashradamrofalamut.jpg",
+          "card2_name": "duckg1.jpg",
+          "iou": 0.2497,
+          "position1": "(890, 365)",
+          "position2": "(851, 343)"
+        }
+      ]
+    },
+    {
+      "image": "image_000007.jpg",
+      "num_cards": 88,
+      "num_attached_pairs": 37,
+      "attached_pairs": [
+        {
+          "card1_name": "hasinakesi.jpg",
+          "card2_name": "devinbisleyg2.jpg",
+          "iou": 0.157,
+          "position1": "(280, 271)",
+          "position2": "(225, 259)"
+        },
+        {
+          "card1_name": "malkavianprank.jpg",
+          "card2_name": "reinforcements.jpg",
+          "iou": 0.1087,
+          "position1": "(547, 279)",
+          "position2": "(506, 325)"
+        },
+        {
+          "card1_name": "malkavianprank.jpg",
+          "card2_name": "conflictofinterests.jpg",
+          "iou": 0.2373,
+          "position1": "(547, 279)",
+          "position2": "(555, 316)"
+        },
+        {
+          "card1_name": "malkavianprank.jpg",
+          "card2_name": "josette.jpg",
+          "iou": 0.548,
+          "position1": "(547, 279)",
+          "position2": "(554, 300)"
+        },
+        {
+          "card1_name": "censustaker.jpg",
+          "card2_name": "politicalbacklash.jpg",
+          "iou": 0.3118,
+          "position1": "(856, 493)",
+          "position2": "(865, 479)"
+        },
+        {
+          "card1_name": "serviusmariuspustula.jpg",
+          "card2_name": "chelseablake.jpg",
+          "iou": 0.1143,
+          "position1": "(498, 602)",
+          "position2": "(566, 655)"
+        },
+        {
+          "card1_name": "serviusmariuspustula.jpg",
+          "card2_name": "suddenreversal.jpg",
+          "iou": 0.2248,
+          "position1": "(498, 602)",
+          "position2": "(537, 565)"
+        },
+        {
+          "card1_name": "serviusmariuspustula.jpg",
+          "card2_name": "queenanneg6.jpg",
+          "iou": 0.1474,
+          "position1": "(498, 602)",
+          "position2": "(535, 661)"
+        },
+        {
+          "card1_name": "santaleous.jpg",
+          "card2_name": "ivankrenyenkog2.jpg",
+          "iou": 0.1501,
+          "position1": "(275, 518)",
+          "position2": "(206, 497)"
+        },
+        {
+          "card1_name": "santaleous.jpg",
+          "card2_name": "storageannex.jpg",
+          "iou": 0.2198,
+          "position1": "(275, 518)",
+          "position2": "(310, 573)"
+        },
+        {
+          "card1_name": "lillehaakeg3.jpg",
+          "card2_name": "eyesofthewild.jpg",
+          "iou": 0.1179,
+          "position1": "(932, 1030)",
+          "position2": "(898, 967)"
+        },
+        {
+          "card1_name": "jeffersonfoster.jpg",
+          "card2_name": "blanketofnight.jpg",
+          "iou": 0.4205,
+          "position1": "(453, 7)",
+          "position2": "(473, 24)"
+        },
+        {
+          "card1_name": "dualityadv_storyline.jpg",
+          "card2_name": "sweeper.jpg",
+          "iou": 0.1926,
+          "position1": "(430, 116)",
+          "position2": "(468, 184)"
+        },
+        {
+          "card1_name": "hangingfermata.jpg",
+          "card2_name": "conflictofinterests.jpg",
+          "iou": 0.1604,
+          "position1": "(557, 382)",
+          "position2": "(555, 316)"
+        },
+        {
+          "card1_name": "badgerg1.jpg",
+          "card2_name": "josephcambridgeg4.jpg",
+          "iou": 0.3692,
+          "position1": "(346, 716)",
+          "position2": "(376, 724)"
+        },
+        {
+          "card1_name": "eattherich.jpg",
+          "card2_name": "clandestinecontract.jpg",
+          "iou": 0.1704,
+          "position1": "(59, 505)",
+          "position2": "(74, 483)"
+        },
+        {
+          "card1_name": "motivatedbygehenna.jpg",
+          "card2_name": "katherinestoddard.jpg",
+          "iou": 0.1695,
+          "position1": "(725, 616)",
+          "position2": "(703, 582)"
+        },
+        {
+          "card1_name": "chelseablake.jpg",
+          "card2_name": "vliamandorg1.jpg",
+          "iou": 0.2003,
+          "position1": "(566, 655)",
+          "position2": "(597, 728)"
+        },
+        {
+          "card1_name": "reinforcements.jpg",
+          "card2_name": "conflictofinterests.jpg",
+          "iou": 0.2003,
+          "position1": "(506, 325)",
+          "position2": "(555, 316)"
+        },
+        {
+          "card1_name": "reinforcements.jpg",
+          "card2_name": "josette.jpg",
+          "iou": 0.1284,
+          "position1": "(506, 325)",
+          "position2": "(554, 300)"
+        },
+        {
+          "card1_name": "conflictofinterests.jpg",
+          "card2_name": "josette.jpg",
+          "iou": 0.2847,
+          "position1": "(555, 316)",
+          "position2": "(554, 300)"
+        },
+        {
+          "card1_name": "montano.jpg",
+          "card2_name": "vliamandorg1.jpg",
+          "iou": 0.1839,
+          "position1": "(569, 771)",
+          "position2": "(597, 728)"
+        },
+        {
+          "card1_name": "theobellg6.jpg",
+          "card2_name": "underbridgestray.jpg",
+          "iou": 0.1078,
+          "position1": "(942, 618)",
+          "position2": "(881, 591)"
+        },
+        {
+          "card1_name": "theobellg6.jpg",
+          "card2_name": "persephonetaranisg4.jpg",
+          "iou": 0.3207,
+          "position1": "(942, 618)",
+          "position2": "(898, 632)"
+        },
+        {
+          "card1_name": "infernalpact.jpg",
+          "card2_name": "katherinestoddard.jpg",
+          "iou": 0.1815,
+          "position1": "(740, 579)",
+          "position2": "(703, 582)"
+        },
+        {
+          "card1_name": "psalmofthedamned.jpg",
+          "card2_name": "josephcambridgeg4.jpg",
+          "iou": 0.3301,
+          "position1": "(412, 745)",
+          "position2": "(376, 724)"
+        },
+        {
+          "card1_name": "underbridgestray.jpg",
+          "card2_name": "persephonetaranisg4.jpg",
+          "iou": 0.2538,
+          "position1": "(881, 591)",
+          "position2": "(898, 632)"
+        },
+        {
+          "card1_name": "jormungandrmidgardserpent.jpg",
+          "card2_name": "josephcambridgeg4.jpg",
+          "iou": 0.1425,
+          "position1": "(400, 661)",
+          "position2": "(376, 724)"
+        },
+        {
+          "card1_name": "alexcamilleg5.jpg",
+          "card2_name": "oshridahan.jpg",
+          "iou": 0.4881,
+          "position1": "(1011, 725)",
+          "position2": "(986, 728)"
+        },
+        {
+          "card1_name": "americajohnson.jpg",
+          "card2_name": "tuskthetalebearerg1.jpg",
+          "iou": 0.2034,
+          "position1": "(756, 372)",
+          "position2": "(806, 358)"
+        },
+        {
+          "card1_name": "suddenreversal.jpg",
+          "card2_name": "bezdunsirn.jpg",
+          "iou": 0.1096,
+          "position1": "(537, 565)",
+          "position2": "(587, 538)"
+        },
+        {
+          "card1_name": "suddenreversal.jpg",
+          "card2_name": "antoniodelgado.jpg",
+          "iou": 0.3006,
+          "position1": "(537, 565)",
+          "position2": "(559, 526)"
+        },
+        {
+          "card1_name": "giselahardenthewinnower.jpg",
+          "card2_name": "muricia.jpg",
+          "iou": 0.1217,
+          "position1": "(162, 707)",
+          "position2": "(114, 695)"
+        },
+        {
+          "card1_name": "leowashington.jpg",
+          "card2_name": "eyesofthenight.jpg",
+          "iou": 0.1272,
+          "position1": "(372, 88)",
+          "position2": "(371, 18)"
+        },
+        {
+          "card1_name": "leowashington.jpg",
+          "card2_name": "jaroslavpascek.jpg",
+          "iou": 0.1904,
+          "position1": "(372, 88)",
+          "position2": "(345, 37)"
+        },
+        {
+          "card1_name": "bezdunsirn.jpg",
+          "card2_name": "antoniodelgado.jpg",
+          "iou": 0.2797,
+          "position1": "(587, 538)",
+          "position2": "(559, 526)"
+        },
+        {
+          "card1_name": "eyesofthenight.jpg",
+          "card2_name": "jaroslavpascek.jpg",
+          "iou": 0.4404,
+          "position1": "(371, 18)",
+          "position2": "(345, 37)"
+        }
+      ]
+    },
+    {
+      "image": "image_000008.jpg",
+      "num_cards": 53,
+      "num_attached_pairs": 12,
+      "attached_pairs": [
+        {
+          "card1_name": "kasimbayar.jpg",
+          "card2_name": "chesterduboisg1.jpg",
+          "iou": 0.3765,
+          "position1": "(323, 429)",
+          "position2": "(291, 417)"
+        },
+        {
+          "card1_name": "angeliqueg6.jpg",
+          "card2_name": "corneliusottaviog2.jpg",
+          "iou": 0.1014,
+          "position1": "(301, 806)",
+          "position2": "(269, 800)"
+        },
+        {
+          "card1_name": "abderrahimdeathshand.jpg",
+          "card2_name": "aimeelaroux.jpg",
+          "iou": 0.1714,
+          "position1": "(793, 126)",
+          "position2": "(799, 116)"
+        },
+        {
+          "card1_name": "ayeleathemanipulator.jpg",
+          "card2_name": "vanessa.jpg",
+          "iou": 0.213,
+          "position1": "(390, 15)",
+          "position2": "(409, 27)"
+        },
+        {
+          "card1_name": "lubomirahradok.jpg",
+          "card2_name": "sheldonlordoftheclogg1.jpg",
+          "iou": 0.1479,
+          "position1": "(71, 737)",
+          "position2": "(21, 677)"
+        },
+        {
+          "card1_name": "americajohnsong5.jpg",
+          "card2_name": "shatteredmirror.jpg",
+          "iou": 0.1154,
+          "position1": "(790, 489)",
+          "position2": "(852, 453)"
+        },
+        {
+          "card1_name": "vanessa.jpg",
+          "card2_name": "mithras.jpg",
+          "iou": 0.408,
+          "position1": "(409, 27)",
+          "position2": "(440, 37)"
+        },
+        {
+          "card1_name": "ysadorthefoul.jpg",
+          "card2_name": "forcedvigilance.jpg",
+          "iou": 0.3879,
+          "position1": "(376, 576)",
+          "position2": "(389, 542)"
+        },
+        {
+          "card1_name": "ysadorthefoul.jpg",
+          "card2_name": "shepherdsinnocence.jpg",
+          "iou": 0.5038,
+          "position1": "(376, 576)",
+          "position2": "(389, 598)"
+        },
+        {
+          "card1_name": "jeremymacneil.jpg",
+          "card2_name": "ophidiangaze.jpg",
+          "iou": 0.1106,
+          "position1": "(233, 944)",
+          "position2": "(169, 969)"
+        },
+        {
+          "card1_name": "deflection.jpg",
+          "card2_name": "sheldonlordoftheclogg1.jpg",
+          "iou": 0.1554,
+          "position1": "(79, 702)",
+          "position2": "(21, 677)"
+        },
+        {
+          "card1_name": "forcedvigilance.jpg",
+          "card2_name": "shepherdsinnocence.jpg",
+          "iou": 0.2906,
+          "position1": "(389, 542)",
+          "position2": "(389, 598)"
+        }
+      ]
+    },
+    {
+      "image": "image_000009.jpg",
+      "num_cards": 3,
+      "num_attached_pairs": 0,
+      "attached_pairs": []
+    }
+  ],
+  "metadata": {
+    "source": "bounds_log.json",
+    "generated_by": "calculate_iou.py",
+    "description": "Cartas solapadas (IoU >= 10%) en dataset VTES"
+  }
+}
