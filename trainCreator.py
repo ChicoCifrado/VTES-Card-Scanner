@@ -10,7 +10,7 @@ from tqdm import tqdm
 import zipfile
 
 def create_directory_structure():
-    """Crea la struttura delle directory necessarie per il dataset YOLO."""
+    """Crea la estructura de directorios necesaria para el dataset YOLO."""
     # Directory principali
     base_dirs = ['dataset', 'dataset/images', 'dataset/labels', 
                 'dataset/images/train', 'dataset/images/val', 'dataset/images/test',
@@ -19,15 +19,15 @@ def create_directory_structure():
     for dir_path in base_dirs:
         os.makedirs(dir_path, exist_ok=True)
         
-    print("✓ Struttura delle directory creata con successo")
+    print("✓ Estructura de directorios creada con éxito")
 
 def get_card_files(cards_dir):
-    """Ottiene la lista dei file delle carte Pokemon."""
+    """Obtiene la lista de archivos de cartas Pokémon."""
     return [os.path.join(cards_dir, f) for f in os.listdir(cards_dir) 
             if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))]
 
 def get_background_files(backgrounds_dir):
-    """Ottiene la lista dei file di sfondo."""
+    """Obtiene la lista de archivos de fondo."""
     return [os.path.join(backgrounds_dir, f) for f in os.listdir(backgrounds_dir) 
             if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp'))]
 
@@ -36,30 +36,30 @@ def calculate_iou(box1, box2):
     Calcola l'IoU (Intersection over Union) tra due bounding box.
     box1, box2: ogni box è rappresentata da [x1, y1, x2, y2]
     """
-    # Coordinate dell'intersezione
+    # Coordenadas de la intersección
     x1 = max(box1[0], box2[0])
     y1 = max(box1[1], box2[1])
     x2 = min(box1[2], box2[2])
     y2 = min(box1[3], box2[3])
     
-    # Area dell'intersezione
+    # Área de la intersección
     intersection_area = max(0, x2 - x1) * max(0, y2 - y1)
     
-    # Area di ciascun box
+    # Área de cada box
     box1_area = (box1[2] - box1[0]) * (box1[3] - box1[1])
     box2_area = (box2[2] - box2[0]) * (box2[3] - box2[1])
     
-    # Unione
+    # Unión
     union_area = box1_area + box2_area - intersection_area
     
-    # IoU
+    # Índice de intersección sobre unión (IoU)
     if union_area <= 0:
         return 0
     return intersection_area / union_area
 
 def place_card_on_background(card_img, bg_img, existing_boxes=None, max_attempts=50, scale_factor=None):
     """
-    Posiziona una carta Pokemon su uno sfondo, usando un approccio a griglia.
+    Coloca una carta Pokémon sobre un fondo, usando un enfoque de grilla.
     """
     if existing_boxes is None:
         existing_boxes = []
