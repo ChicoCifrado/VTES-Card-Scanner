@@ -1,54 +1,23 @@
+#!/usr/bin/env python3
+"""
+Generador de dataset VTES para OBS plugin (con 12 hilos).
+Crea imágenes con 1-100 cartas, fondo aleatorio y rotación aleatoria (-180° a +180°).
+Genera 10,000 imágenes comprimidas en vtes-dataset.zip.
+"""
 import os
 import random
 import zipfile
 import shutil
+import multiprocessing
 from PIL import Image
 
-def scale_and_place_card(card_img, bg_img, scale_factor=None):
-    """
-    Escala la carta, aplica rotación y la coloca en posición aleatoria.
-    Todo el proceso se realiza en una imagen de 1080x1080.
-    
-    """
-    # Asegurarse de que el fondo tenga 1080x1080
-    if bg_img.size != (1080, 1080):
-        bg_img = bg_img.resize((1080, 1080), Image.LANCZOS)
-    
-    # Usa el factor de escala proporcionado o genera uno predeterminado
-    if scale_factor is None:
-        scale_factor = random.uniform(0.02, 0.08)
-    
-    # Calcula nuevas dimensiones
-    new_width = int(1080 * scale_factor)
-    new_height = int(card_img.height * (new_width / card_img.width))
-    
-    # Redimensiona la carta
-    card_img = card_img.resize((new_width, new_height), Image.LANCZOS)
-    
-    # Genera un ángulo de rotación aleatorio entre -180 y +180 grados
-    rotation_angle = random.uniform(-180, 180)
-        
-    # Aplica rotación (expand=True para ajustar tamaño)
-    card_img = card_img.rotate(rotation_angle, expand=True, resample=Image.BICUBIC)
+NUM_WORKERS = 12  # 12 hilos
+NUM_IMAGES_PER_WORKER = 10000 // NUM_WORKERS  # Imágenes por hilo
 
-    # Coloca en posición totalmente aleatoria
-    paste_x = random.randint(0, 1080 - card_img.width)
-    paste_y = random.randint(0, 1080 - card_img.height)
-    
-    result_img = bg_img.copy()
-    if card_img.mode == 'RGBA':
-        mask = card_img.split()[3]
-    else:
-        mask = None
-    result_img.paste(card_img, (paste_x, paste_y), mask)
-    
-    return result_img.convert("RGB")  # Convertir a RGB para JPG
-
-def generate_dataset_image(cards_files, backgrounds_files):
+def generate_and_save_image(cards_files, backgrounds_files, output_dir, image_index, num_images_total):
     """
-    Genera una imagen del dataset VTES con un número fijo de cartas.
-    Imagen de 1080x1080 sin compresión.
-    
+    Función para cada hilo: genera imágenes y las guarda.
+    Cada imagen tiene 1-100 cartas (como en trainCreator_mini.py).
     """
     # Selecciona un fondo aleatorio
     bg_file = random.choice(backgrounds_files)
@@ -57,7 +26,7 @@ def generate_dataset_image(cards_files, backgrounds_files):
     # Asegurarse de que el fondo tenga 1080x1080
     bg_img = bg_img.resize((1080, 1080), Image.LANCZOS)
     
-    # Generar entre 1 y 100 cartas
+    # Generar entre 1 y 100 cartas (como en trainCreator_mini.py)
     num_cards = random.randint(1, 100)
     
     for _ in range(num_cards):
@@ -65,13 +34,43 @@ def generate_dataset_image(cards_files, backgrounds_files):
         card_file = random.choice(cards_files)
         card_img = Image.open(card_file).convert("RGBA")
         
-        # Determina el factor de escala (entre 0.02 y 0.08)
+        # Determina el factor de escala
         scale_factor = random.uniform(0.02, 0.08)
+        new_width = int(1080 * scale_factor)
+        new_height = int(card_img.height * (new_width / card_img.width))
         
-        # Escala y coloca la carta
-        bg_img = scale_and_place_card(card_img, bg_img, scale_factor)
+        # Redimensiona la carta
+        card_img = card_img.resize((new_width, new_height), Image.LANCZOS)
+        
+        # Rotación aleatoria
+        rotation_angle = random.uniform(-180, 180)
+        card_img = card_img.rotate(rotation_angle, expand=True, resample=Image.BICUBIC)
+
+        # Posición aleatoria
+        paste_x = random.randint(0, 1080 - card_img.width)
+        paste_y = random.randint(0, 1080 - card_img.height)
+        
+        # Paste
+        result_img = bg_img.copy()
+        if card_img.mode == 'RGBA':
+            mask = card_img.split()[3]
+        else:
+            mask = None
+        result_img.paste(card_img, (paste_x, paste_y), mask)
+        
+        # Convertir a RGB y guardar
+        result_img_rgb = result_img.convert("RGB")
+        output_path = os.path.join(output_dir, f"image_{image_index:06d}.jpg")
+        result_img_rgb.save(output_path, quality=100)
+        
+        # Incrementar índice
+        image_index += 1
+        
+        # Si hemos generado todas las imágenes
+        if image_index >= num_images_total:
+            break
     
-    return bg_img
+    return image_index
 
 def main():
     """Función principal para generar múltiples imágenes del dataset VTES."""
@@ -107,25 +106,58 @@ def main():
     output_dir = 'vtes-dataset'
     os.makedirs(output_dir, exist_ok=True)
     
-    print("Generando imágenes...")
-    for i in range(num_images):
-        img = generate_dataset_image(cards_files, backgrounds_files)
-        img.save(os.path.join(output_dir, f"image_{i:06d}.jpg"), quality=100)
-        if (i + 1) % 2000 == 0:
-            print(f"✓ Generadas {i + 1} de {num_images} imágenes")
+    # Ruta de salida del ZIP
+    target_dir = '/mnt/e/VTES'
+    if not os.path.exists(target_dir):
+        print(f'❌ Directorio de salida no existe: {target_dir}')
+        print(f'Por favor crea el directorio {target_dir} o usa la ruta actual')
+        return
+    
+    print(f"Iniciando generación con {NUM_WORKERS} hilos...")
+    print(f"   Total imágenes: {num_images}")
+    print(f"   Imágenes por hilo: {NUM_IMAGES_PER_WORKER}")
+    
+    # Calcular índices de inicio para cada hilo
+    indices = []
+    for i in range(NUM_WORKERS):
+        start_idx = i * NUM_IMAGES_PER_WORKER
+        indices.append(start_idx)
+    
+    # Crear procesos
+    processes = []
+    for i in range(NUM_WORKERS):
+        p = multiprocessing.Process(
+            target=generate_and_save_image,
+            args=(cards_files, backgrounds_files, output_dir, indices[i], num_images)
+        )
+        p.start()
+        processes.append(p)
+    
+    # Esperar a que terminen todos los hilos
+    print("\nProcesos en marcha...")
+    for i, p in enumerate(processes):
+        p.join()
     
     # Comprimir a ZIP
-    zip_path = 'vtes-dataset.zip'
+    zip_path = os.path.join(target_dir, 'vtes-dataset.zip')
+    print(f'\nComprimiendo a ZIP: {zip_path}')
+    
+    # Comprimir todo el dataset
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        for file in os.listdir(output_dir):
-            if file.endswith('.jpg'):
-                file_path = os.path.join(output_dir, file)
-                zipf.write(file_path, file)
+        for j in range(num_images):
+            file_path = os.path.join(output_dir, f"image_{j:06d}.jpg")
+            if os.path.exists(file_path):
+                zipf.write(file_path, f"image_{j:06d}.jpg")
     
     # Limpiar carpeta temporal
     shutil.rmtree(output_dir)
     
-    print(f"✓ {num_images} imágenes del dataset VTES generadas con 1-100 cartas, fondo aleatorio y rotación aleatoria (-180° a +180°), guardadas en vtes-dataset.zip")
+    # Calcular tamaño del ZIP
+    zip_size = os.path.getsize(zip_path)
+    print(f"\n✅ Dataset completado:")
+    print(f"   📄 Imágenes: {num_images}")
+    print(f"   📦 ZIP: {zip_path}")
+    print(f"   💾 Tamaño: {zip_size / 1024 / 1024:.1f} MB")
 
 if __name__ == "__main__":
     main()
