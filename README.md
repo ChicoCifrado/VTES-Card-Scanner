@@ -29,7 +29,8 @@ Yo soy el autor de este código, pero no de las imágenes utilizadas. Estas y su
 - **cartas_vtes/**: Cartas de cartas VTES para generar el dataset
 - **fondos_vtes/**: Fondos para las imágenes del dataset
 - **trainCreator_mini.py**: Script simplificado que genera 10 imágenes con configuración específica
-- **trainCreator_multi.py**: Script de generación paralela optimizado para múltiples procesos - 10000 imágenes ⚠️⚠️⚠️ ALTO USO DE CPU
+- **trainCreator_multi.py**: Script de generación paralela optimizado para múltiples procesos - 10000 imágenes
+⚠️⚠️⚠️ CUIDADO, ESTE SCRIPT HACE UN USO INTENSO DE CPU ⚠️⚠️⚠️
 - **vtes_dataset/**: Carpeta del dataset generado con subcarpetas para train/val/test
 - **vtes-mini/**: Carpeta específica para las imágenes generadas por trainCreator_mini.py
 
