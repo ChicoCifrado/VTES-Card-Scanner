@@ -28,7 +28,7 @@ lock = threading.Lock()
 def generate_image(cards_files, backgrounds_files, image_index):
     """
     Genera una imagen con 1-100 cartas.
-    Todas las cartas se guardan en la MISMA imagen.
+    Todas las cartas se acumulan en la MISMA imagen.
     """
     # Selecciona un fondo aleatorio
     bg_file = random.choice(backgrounds_files)
@@ -40,10 +40,10 @@ def generate_image(cards_files, backgrounds_files, image_index):
     # Generar entre 1 y 100 cartas (como en trainCreator_mini.py)
     num_cards = random.randint(1, 100)
     
-    # Crear la imagen base para guardar
-    image_base_path = f"vtes-dataset/image_{image_index:06d}.jpg"
+    # Crear la imagen base (una sola vez)
+    result_img = bg_img.copy()
     
-    # Pesta cada carta en la misma imagen
+    # Añadir todas las cartas a la misma imagen
     for _ in range(num_cards):
         # Selecciona una carta aleatoria
         card_file = random.choice(cards_files)
@@ -65,8 +65,7 @@ def generate_image(cards_files, backgrounds_files, image_index):
         paste_x = random.randint(0, 1080 - card_img.width)
         paste_y = random.randint(0, 1080 - card_img.height)
         
-        # Paste (añade la carta a la imagen existente)
-        result_img = bg_img.copy()
+        # Paste (añade la carta a la imagen acumulada)
         if card_img.mode == 'RGBA':
             mask = card_img.split()[3]
         else:
@@ -75,7 +74,7 @@ def generate_image(cards_files, backgrounds_files, image_index):
     
     # Convertir a RGB y guardar (una sola vez al final)
     result_img_rgb = result_img.convert("RGB")
-    result_img_rgb.save(image_base_path, quality=100)
+    result_img_rgb.save(f"vtes-dataset/image_{image_index:06d}.jpg", quality=100)
 
 def main():
     """Función principal para generar múltiples imágenes del dataset VTES."""
