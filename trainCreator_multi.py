@@ -131,7 +131,7 @@ def main():
     for i in range(NUM_WORKERS):
         thread = threading.Thread(
             target=generate_image,
-            args=(cards_files, backgrounds_files, i)
+            args=(cards_files, backgrounds_files, i * NUM_PER_WORKER)
         )
         threads.append(thread)
         thread.start()
