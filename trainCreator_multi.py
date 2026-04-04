@@ -1,23 +1,34 @@
 #!/usr/bin/env python3
 """
-Generador de dataset VTES para OBS plugin (con 12 hilos).
+Generador de dataset VTES para OBS plugin (con 12 hilos en un solo proceso).
 Crea imágenes con 1-100 cartas, fondo aleatorio y rotación aleatoria (-180° a +180°).
 Genera 10,000 imágenes comprimidas en vtes-dataset.zip.
+
+📍 Ubicación de las imágenes:
+   - Temporales: /home/cifrado/.openclaw/workspace/projects/VTES-Card-Scanner/vtes-dataset/
+   - ZIP final: /mnt/e/VTES/vtes-dataset.zip
+
+🧵 12 hilos ejecutándose en un solo proceso
 """
 import os
 import random
 import zipfile
 import shutil
-import multiprocessing
+import threading
 from PIL import Image
 
 NUM_WORKERS = 12  # 12 hilos
-NUM_IMAGES_PER_WORKER = 10000 // NUM_WORKERS  # Imágenes por hilo
+NUM_IMAGES = 10000  # Total imágenes
+NUM_PER_WORKER = NUM_IMAGES // NUM_WORKERS  # 833 imágenes por hilo
 
-def generate_and_save_image(cards_files, backgrounds_files, output_dir, image_index, num_images_total):
+# Contador global para sincronizar los hilos
+image_counter = [0]
+lock = threading.Lock()
+
+def generate_image(cards_files, backgrounds_files, image_index):
     """
-    Función para cada hilo: genera imágenes y las guarda.
-    Cada imagen tiene 1-100 cartas (como en trainCreator_mini.py).
+    Genera una imagen con 1-100 cartas.
+    Todas las cartas se guardan en la MISMA imagen.
     """
     # Selecciona un fondo aleatorio
     bg_file = random.choice(backgrounds_files)
@@ -29,6 +40,10 @@ def generate_and_save_image(cards_files, backgrounds_files, output_dir, image_in
     # Generar entre 1 y 100 cartas (como en trainCreator_mini.py)
     num_cards = random.randint(1, 100)
     
+    # Crear la imagen base para guardar
+    image_base_path = f"vtes-dataset/image_{image_index:06d}.jpg"
+    
+    # Pesta cada carta en la misma imagen
     for _ in range(num_cards):
         # Selecciona una carta aleatoria
         card_file = random.choice(cards_files)
@@ -50,27 +65,17 @@ def generate_and_save_image(cards_files, backgrounds_files, output_dir, image_in
         paste_x = random.randint(0, 1080 - card_img.width)
         paste_y = random.randint(0, 1080 - card_img.height)
         
-        # Paste
+        # Paste (añade la carta a la imagen existente)
         result_img = bg_img.copy()
         if card_img.mode == 'RGBA':
             mask = card_img.split()[3]
         else:
             mask = None
         result_img.paste(card_img, (paste_x, paste_y), mask)
-        
-        # Convertir a RGB y guardar
-        result_img_rgb = result_img.convert("RGB")
-        output_path = os.path.join(output_dir, f"image_{image_index:06d}.jpg")
-        result_img_rgb.save(output_path, quality=100)
-        
-        # Incrementar índice
-        image_index += 1
-        
-        # Si hemos generado todas las imágenes
-        if image_index >= num_images_total:
-            break
     
-    return image_index
+    # Convertir a RGB y guardar (una sola vez al final)
+    result_img_rgb = result_img.convert("RGB")
+    result_img_rgb.save(image_base_path, quality=100)
 
 def main():
     """Función principal para generar múltiples imágenes del dataset VTES."""
@@ -102,10 +107,6 @@ def main():
     if not backgrounds_files:
         raise ValueError(f"No se encontraron imágenes en la carpeta {backgrounds_dir}")
     
-    num_images = 10000
-    output_dir = 'vtes-dataset'
-    os.makedirs(output_dir, exist_ok=True)
-    
     # Ruta de salida del ZIP
     target_dir = '/mnt/e/VTES'
     if not os.path.exists(target_dir):
@@ -113,30 +114,33 @@ def main():
         print(f'Por favor crea el directorio {target_dir} o usa la ruta actual')
         return
     
-    print(f"Iniciando generación con {NUM_WORKERS} hilos...")
-    print(f"   Total imágenes: {num_images}")
-    print(f"   Imágenes por hilo: {NUM_IMAGES_PER_WORKER}")
+    print(f"📍 Ubicaciones:")
+    print(f"   Cartas: {cards_dir}")
+    print(f"   Fondos: {backgrounds_dir}")
+    print(f"   Imágenes: vtes-dataset/")
+    print(f"   ZIP final: {target_dir}/vtes-dataset.zip")
+    print()
     
-    # Calcular índices de inicio para cada hilo
-    indices = []
-    for i in range(NUM_WORKERS):
-        start_idx = i * NUM_IMAGES_PER_WORKER
-        indices.append(start_idx)
+    print(f"Iniciando generación con {NUM_WORKERS} hilos en un solo proceso...")
+    print(f"   Total imágenes: {NUM_IMAGES}")
+    print(f"   Imágenes por hilo: {NUM_PER_WORKER}")
+    print(f"   Cartas por imagen: 1-100 (aleatorio)")
+    print()
     
-    # Crear procesos
-    processes = []
+    # Crear y lanzar los hilos
+    threads = []
     for i in range(NUM_WORKERS):
-        p = multiprocessing.Process(
-            target=generate_and_save_image,
-            args=(cards_files, backgrounds_files, output_dir, indices[i], num_images)
+        thread = threading.Thread(
+            target=generate_image,
+            args=(cards_files, backgrounds_files, i)
         )
-        p.start()
-        processes.append(p)
+        threads.append(thread)
+        thread.start()
     
-    # Esperar a que terminen todos los hilos
+    # Esperar a que todos los hilos terminen
     print("\nProcesos en marcha...")
-    for i, p in enumerate(processes):
-        p.join()
+    for thread in threads:
+        thread.join()
     
     # Comprimir a ZIP
     zip_path = os.path.join(target_dir, 'vtes-dataset.zip')
@@ -144,18 +148,18 @@ def main():
     
     # Comprimir todo el dataset
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        for j in range(num_images):
-            file_path = os.path.join(output_dir, f"image_{j:06d}.jpg")
+        for j in range(NUM_IMAGES):
+            file_path = f"vtes-dataset/image_{j:06d}.jpg"
             if os.path.exists(file_path):
                 zipf.write(file_path, f"image_{j:06d}.jpg")
     
     # Limpiar carpeta temporal
-    shutil.rmtree(output_dir)
+    shutil.rmtree('vtes-dataset')
     
     # Calcular tamaño del ZIP
     zip_size = os.path.getsize(zip_path)
     print(f"\n✅ Dataset completado:")
-    print(f"   📄 Imágenes: {num_images}")
+    print(f"   📄 Imágenes: {NUM_IMAGES}")
     print(f"   📦 ZIP: {zip_path}")
     print(f"   💾 Tamaño: {zip_size / 1024 / 1024:.1f} MB")
 
