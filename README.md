@@ -1,6 +1,7 @@
-# 🦇 VTES Card Detection
+# 🦇 Herramienta de detecciónde cartas de VTES 🦇
 
-Extracción automática de datos de cartas para OBS streaming
+El plugin que extrae de forma automática los datos de tus cartas vampíricas en OBS.
+Ideal para retransmitir torneos.
 
 ---
 
@@ -12,7 +13,7 @@ Esta herramienta es un fork de [Pokemon-TCGP-Card-Scanner](https://1vcian.github
 
 ## Descripción del proyecto
 
-Este proyecto ha sido creado para mejorar el streaming de las finales de torneos VTES y, por lo tanto, mejorar la visibilidad del juego para los espectadores. Para lograrlo, este plugin de OBS requiere un mecanismo de detección para emparejar las cartas con sus sets. Estamos usando OpenCV y YOLOv11. La implementación está hecha en C++ para maximizar la compatibilidad con OBS.
+Este proyecto ha sido creado para mejorar la visualización vía streaming de las finales de los torneos de VTES y, por lo tanto, de mejorar la visibilidad del juego para los espectadores. Para lograrlo, este plugin de OBS requiere de un mecanismo de detección para emparejar las cartas detectadas con sus sets. En este caso estoy usando OpenCV y YOLOv11. La implementación del plugin está hecha en C++ para maximizar la compatibilidad con OBS.
 
 Este repositorio usa fuentes públicas y estáticas como:
 - https://static.krcg.org/data/vtes.json
