@@ -18,7 +18,7 @@ Este repositorio usa fuentes públicas y estáticas como:
 - https://static.krcg.org/data/vtes.json
 - https://static.krcg.org/card/
 
-trainCreator.py crea un conjunto de datos de imágenes que *debería* incluir diferentes ángulos, iluminación, obstáculos, rotación y resolución.
+trainCreator_multi.py crea un conjunto de datos de imágenes que *debería* incluir diferentes ángulos, iluminación, obstáculos, rotación y resolución.
 
 Yo soy el autor de este código, pero no de las imágenes utilizadas. Estas y sus marcas comerciales pertenecen a Paradox Interactive AB, y se usan con permiso bajo el acuerdo Dark Pack.
 
@@ -27,11 +27,10 @@ Yo soy el autor de este código, pero no de las imágenes utilizadas. Estas y su
 ## Estructura del proyecto
 
 - **cartas_vtes/**: Cartas de cartas VTES para generar el dataset
-- **background/**: Fondos para las imágenes del dataset
-- **trainCreator.py**: Script principal para generar el dataset completo con YOLO
+- **fondos_vtes/**: Fondos para las imágenes del dataset
 - **trainCreator_mini.py**: Script simplificado que genera 10 imágenes con configuración específica
-- **trainCreator_multi.py**: Script de generación paralela optimizado para múltiples procesos
-- **dataset/**: Carpeta del dataset generado con subcarpetas para train/val/test
+- **trainCreator_multi.py**: Script de generación paralela optimizado para múltiples procesos - 10000 imágenes ⚠️⚠️⚠️ ALTO USO DE CPU
+- **vtes_dataset/**: Carpeta del dataset generado con subcarpetas para train/val/test
 - **vtes-mini/**: Carpeta específica para las imágenes generadas por trainCreator_mini.py
 
 ---
@@ -45,15 +44,12 @@ sudo apt-get install libglib2.0-dev libsm6 libxext6 libxrender-dev libgl1-mesa-g
 pip install pillow numpy pyyaml tqdm
 ```
 
-No se requiere TensorFlow.
-
 ---
 
 ## Uso
 
 1. **Preparar directorios**: Colocar cartas en `cartas_vtes/` y fondos en `background/`
 2. **Generar dataset**:
-   - trainCreator.py: Dataset completo para entrenamiento
    - trainCreator_mini.py: Genera 10 imágenes de ejemplo en `vtes-mini/`
    - trainCreator_multi.py: Generación paralela optimizada
 3. **Entrenar YOLO**: Usar el dataset generado con YOLOv8/v11
