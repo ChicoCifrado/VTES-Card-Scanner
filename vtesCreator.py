@@ -109,7 +109,7 @@ class CardPlacer:
             bg_img = bg_img.resize((1080, 1080), Image.LANCZOS)
         
         if scale_factor is None:
-            scale_factor = random.uniform(0.02, 0.08)
+            scale_factor = random.uniform(0.04, 0.08)
         
         # Calcular dimensiones manteniendo ratio de aspecto
         card_original = Image.open(card_file)
@@ -206,10 +206,10 @@ def generate_image_wrapper(args):
     # Generar cartas
     placer = CardPlacer()
     
-    for _ in range(random.randint(1, 100)):
+    for _ in range(random.randint(1, 4)):
         if cartas_files:
             card_file = random.choice(cartas_files)
-            scale_factor = random.uniform(0.02, 0.08)
+            scale_factor = random.uniform(0.04, 0.08)
             bg_img = placer.scale_and_place_card(card_file, bg_img, scale_factor)
         else:
             break
@@ -303,9 +303,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--num", 
         type=int,
-        choices=[1, 10, 1000, 10000],
+        choices=[1, 10, 100, 1000, 10000],
         default=10,
-        help="Número de imágenes a generar (1, 10, 1000, 10000)"
+        help="Número de imágenes a generar (1, 10, 100, 1000, 10000)"
     )
     parser.add_argument(
         "--output",
@@ -347,12 +347,12 @@ if __name__ == "__main__":
     cartas_files = [
         os.path.join(cartas_dir, f) 
         for f in os.listdir(cartas_dir) 
-        if f.endswith(('.png', '.jpg', '.jpeg'))
+        if f.endswith(('.png', '.jpg', '.jpeg', '.webp'))
     ]
     fondos_files = [
         os.path.join(fondos_dir, f) 
         for f in os.listdir(fondos_dir) 
-        if f.endswith(('.png', '.jpg', '.jpeg'))
+        if f.endswith(('.png', '.jpg', '.jpeg', '.webp'))
     ]
     
     print(f"📍 Archivos:")
@@ -385,10 +385,10 @@ if __name__ == "__main__":
             
             placer = CardPlacer()
             
-            for _ in range(random.randint(1, 100)):
+            for _ in range(random.randint(1, 4)):
                 if cartas_files:
                     card_file = random.choice(cartas_files)
-                    scale_factor = random.uniform(0.02, 0.08)
+                    scale_factor = random.uniform(0.04, 0.08)
                     bg_img = placer.scale_and_place_card(card_file, bg_img, scale_factor)
                 else:
                     break

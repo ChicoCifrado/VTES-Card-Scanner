@@ -1,0 +1,299 @@
+[
+  {
+    "filename": "image_000000.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000000.jpg",
+    "dir": "test",
+    "num_cards": 4,
+    "bounds": [
+      {
+        "name": "anarchistuprising.webp",
+        "x": 407,
+        "y": 626,
+        "width": 66,
+        "height": 93,
+        "rotation": 136.68194310286685,
+        "scale": 0.08658895358824245
+      },
+      {
+        "name": "marielstjohng4.webp",
+        "x": 879,
+        "y": 308,
+        "width": 90,
+        "height": 126,
+        "rotation": 77.01968905129792,
+        "scale": 0.11712285980626355
+      },
+      {
+        "name": "lenkonopkag3.webp",
+        "x": 311,
+        "y": 202,
+        "width": 63,
+        "height": 89,
+        "rotation": 39.65506830613401,
+        "scale": 0.08312292018119075
+      },
+      {
+        "name": "babble.webp",
+        "x": 747,
+        "y": 322,
+        "width": 80,
+        "height": 112,
+        "rotation": 116.39838787012735,
+        "scale": 0.10400782633531325
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000001.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000001.jpg",
+    "dir": "test",
+    "num_cards": 4,
+    "bounds": [
+      {
+        "name": "sensethesin.webp",
+        "x": 859,
+        "y": 51,
+        "width": 103,
+        "height": 144,
+        "rotation": -69.19219149670886,
+        "scale": 0.1338624665370436
+      },
+      {
+        "name": "vidaljarbeauxg5.webp",
+        "x": 431,
+        "y": 630,
+        "width": 103,
+        "height": 144,
+        "rotation": -127.24185647863042,
+        "scale": 0.1342516221021522
+      },
+      {
+        "name": "lordaaronwesleywilkshireg4.webp",
+        "x": 190,
+        "y": 58,
+        "width": 70,
+        "height": 99,
+        "rotation": -144.2010256021865,
+        "scale": 0.0922589679050618
+      },
+      {
+        "name": "jerichofounding.webp",
+        "x": 383,
+        "y": 122,
+        "width": 67,
+        "height": 94,
+        "rotation": -122.41182057579098,
+        "scale": 0.08757614575184355
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000002.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000002.jpg",
+    "dir": "test",
+    "num_cards": 1,
+    "bounds": [
+      {
+        "name": "jingweig1.webp",
+        "x": 15,
+        "y": 703,
+        "width": 107,
+        "height": 150,
+        "rotation": 44.83620285678816,
+        "scale": 0.1397413268738803
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000003.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000003.jpg",
+    "dir": "test",
+    "num_cards": 3,
+    "bounds": [
+      {
+        "name": "ruinsofvillersabbeybelgium.webp",
+        "x": 965,
+        "y": 411,
+        "width": 113,
+        "height": 158,
+        "rotation": 36.43331355143613,
+        "scale": 0.14668636134366625
+      },
+      {
+        "name": "fortuneteller.webp",
+        "x": 981,
+        "y": 198,
+        "width": 72,
+        "height": 101,
+        "rotation": 9.87545986805722,
+        "scale": 0.09384088943373574
+      },
+      {
+        "name": "sakupihlajamakig6.webp",
+        "x": 221,
+        "y": 547,
+        "width": 108,
+        "height": 151,
+        "rotation": -19.97673238090107,
+        "scale": 0.140455483325717
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000004.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000004.jpg",
+    "dir": "test",
+    "num_cards": 3,
+    "bounds": [
+      {
+        "name": "ethanlockeg2.webp",
+        "x": 451,
+        "y": 538,
+        "width": 100,
+        "height": 140,
+        "rotation": -16.02208786421963,
+        "scale": 0.13025649906803216
+      },
+      {
+        "name": "liquidation.webp",
+        "x": 120,
+        "y": 490,
+        "width": 64,
+        "height": 90,
+        "rotation": 60.68009386883355,
+        "scale": 0.08368181915126494
+      },
+      {
+        "name": "miriambenyonag2.webp",
+        "x": 298,
+        "y": 428,
+        "width": 73,
+        "height": 103,
+        "rotation": -91.43391726033653,
+        "scale": 0.09576432920705362
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000005.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000005.jpg",
+    "dir": "test",
+    "num_cards": 2,
+    "bounds": [
+      {
+        "name": "lucubratiog4.webp",
+        "x": 214,
+        "y": 518,
+        "width": 73,
+        "height": 103,
+        "rotation": 25.610254621658754,
+        "scale": 0.09538167119961191
+      },
+      {
+        "name": "tangineg4.webp",
+        "x": 367,
+        "y": 243,
+        "width": 93,
+        "height": 131,
+        "rotation": -155.9517398583534,
+        "scale": 0.12134743197305681
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000006.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000006.jpg",
+    "dir": "test",
+    "num_cards": 1,
+    "bounds": [
+      {
+        "name": "venceslavatheimplacableg6.webp",
+        "x": 197,
+        "y": 368,
+        "width": 88,
+        "height": 124,
+        "rotation": 47.377484713904835,
+        "scale": 0.11558925417238836
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000007.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000007.jpg",
+    "dir": "test",
+    "num_cards": 3,
+    "bounds": [
+      {
+        "name": "unexpectedcoalition.webp",
+        "x": 904,
+        "y": 289,
+        "width": 90,
+        "height": 126,
+        "rotation": -138.44052612978973,
+        "scale": 0.11667425916861641
+      },
+      {
+        "name": "josetteg6.webp",
+        "x": 657,
+        "y": 695,
+        "width": 83,
+        "height": 117,
+        "rotation": 168.90583536833253,
+        "scale": 0.10909725466763276
+      },
+      {
+        "name": "toreadorjusticar.webp",
+        "x": 580,
+        "y": 886,
+        "width": 107,
+        "height": 150,
+        "rotation": -125.84134444826606,
+        "scale": 0.13970120218618648
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000008.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000008.jpg",
+    "dir": "test",
+    "num_cards": 1,
+    "bounds": [
+      {
+        "name": "despiral.webp",
+        "x": 934,
+        "y": 397,
+        "width": 101,
+        "height": 142,
+        "rotation": -164.30288954874922,
+        "scale": 0.13197188172630425
+      }
+    ],
+    "attached_pairs": []
+  },
+  {
+    "filename": "image_000009.jpg",
+    "path": "/mnt/e/VTES/VTES-Card-Scanner/vtes-dataset/test/image_000009.jpg",
+    "dir": "test",
+    "num_cards": 1,
+    "bounds": [
+      {
+        "name": "grahamgottesmang5.webp",
+        "x": 314,
+        "y": 457,
+        "width": 101,
+        "height": 142,
+        "rotation": 168.5485110399021,
+        "scale": 0.13206565148932115
+      }
+    ],
+    "attached_pairs": []
+  }
+]
