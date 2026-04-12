@@ -1,0 +1,39 @@
+{
+  "nombre": "Zonas 3 Áreas Estratégicas",
+  "descripcion": "Solo 3 áreas clave para clasificar cartas VTES por SET",
+  "version": "4.0",
+  "fecha": "2026-04-12",
+  "zonas": {
+    "top_superior": {
+      "descripcion": "Título del set + símbolo de edición en esquina superior",
+      "y_range": [0, 15],
+      "x_range": [0, 100],
+      "propiedad": "ALTA",
+      "explicacion": "IDENTIFICA EL SET DIRECTAMENTE mediante título y logos + símbolo edición."
+    },
+    "imagen_central": {
+      "descripcion": "Ilustración principal (forma ovalada=vampiro, cuadrada=biblioteca)",
+      "y_range": [10, 65],
+      "x_range": [10, 90],
+      "propiedad": "MUY ALTA",
+      "explicacion": "FORMA DEL ARTE: ovalada=carta vampiro, cuadrada=carta biblioteca."
+    },
+    "banda_lateral": {
+      "descripcion": "Símbolo clan, requisitos, coste, tipo de carta (lateral izquierdo)",
+      "y_range": [0, 100],
+      "x_range": [0, 25],
+      "propiedad": "ALTA",
+      "explicacion": "Captura TIPO CARTA, CLAN, DISCIPLINAS y COSTE. Elementos distintivos del SET."
+    }
+  },
+  "configuracion_final_3_areas": {
+    "top_superior": [0, 15, 0, 100],
+    "imagen_central": [10, 65, 10, 90],
+    "banda_lateral": [0, 100, 0, 25]
+  },
+  "ventajas": {
+    "rapidez": "Más rápido con solo 3 áreas vs 8 zonas",
+    "precision": "Menor ruido visual, mayor precisión",
+    "robustez": "Más robusto ante variaciones de iluminación"
+  }
+}
