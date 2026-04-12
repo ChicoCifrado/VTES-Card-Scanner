@@ -1,49 +1,32 @@
 #!/usr/bin/env python3
 """
-VTES Perceptual Hash Unificado - Multi-Zona 3 Áreas + Visualización ROBUSTO
-=====================================================
-Script todo-en-uno para:
-- Visualizar zonas en cartas (las 3 áreas estratégicas)
-- Generar hashes perceptuales por zona (top, central, lateral)
-- Encontrar duplicados
-- Comparar cartas
-- Manejar imágenes corruptas sin detener el proceso
+VTES Perceptual Hash - CORREGIDO con AVG POOLING + BINARIZACIÓN
+Reemplaza DCT por método estándar perceptual.
+Genera hashes binarios de 8 bits por zona.
 
-3 Áreas Estratégicas:
+Método:
+1. Resize imagen con avg pooling (reducir resolución)
+2. Binarizar con umbral 128 (valores >=128 → '1', <128 → '0')
+3. Agrupar en chunks de 8 bits
+4. Retornar hex string de 6 caracteres (3 bytes × 2 hex digits)
+
+Las 3 Áreas Estratégicas:
 1. TOP SUPERIOR (0-15%) → Título + Símbolo Edición → Identifica SET
-2. IMAGEN CENTRAL (10-65%) → Forma del arte → Vampiro vs Biblioteca  
-3. BANDA LATERAL (0-25%) → Clan + Tipo + Coste → Distintivo
-
-Mejoras de robustez:
-- Saltar imágenes corruptas automáticamente
-- Validar imágenes antes de procesar
-- Detectar archivos corruptos y guardar lista
-- No detener el proceso en errores
-
-Uso básico:
-1. Visualizar carta: python vtes_ph_unificado_robusto.py --visualize --image carta.jpg
-2. Generar hashes: python vtes_ph_unificado_robusto.py --folder cartas_vtes
-3. Comparar cartas: python vtes_ph_unificado_robusto.py --compare carta1.jpg carta2.jpg
-
-Autor: La Garra Cifrada 🦞
-Fecha: 2026-04-12
+2. IMAGEN CENTRAL (10-65%) → Forma del arte → Ovalada=vampiro, cuadrada=biblioteca
+3. BANDA LATERAL (0-25%) → Clan + Tipo + Coste → Elementos distintivos
 """
 
 import os
 import sys
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 import argparse
 
 
-class VTESPerceptualHash3Areas:
+class VTESPerceptualHashCorrecto:
     """
-    Clases para hashing y visualización con las 3 Áreas Estratégicas.
-    
-    Uso básico:
-    1. Visualizar carta: python vtes_ph_unificado_robusto.py --visualize --image carta.jpg
-    2. Generar hashes: python vtes_ph_unificado_robusto.py --folder cartas_vtes
-    3. Comparar cartas: python vtes_ph_unificado_robusto.py --compare carta1.jpg carta2.jpg
+    Hash perceptual con AVG POOLING + BINARIZACIÓN (CORREGIDO).
+    Genera hashes binarios de 8 bits por zona.
     """
     
     def __init__(self, hash_size=8):
@@ -51,195 +34,112 @@ class VTESPerceptualHash3Areas:
     
     def get_default_zones_3_areas(self):
         """
-        Las 3 Áreas Estratégicas para clasificación.
-        
-        Returns:
-            Dict de las 3 áreas con rangos en porcentaje.
+        Las 3 Áreas Estratégicas.
         """
         return {
             'top_superior': (0, 15, 0, 100),      # Título + Símbolo Edición
-            'imagen_central': (10, 65, 10, 90),   # Arte (forma)
-            'banda_lateral': (0, 100, 0, 25),     # Clan + Tipo + Coste
+            'imagen_central': (10, 65, 10, 65),   # Arte (forma)
+            'banda_lateral': (0, 25, 0, 100),     # Clan + Tipo + Coste
         }
     
-    def extract_zone_hash(self, arr, y_range, x_range):
+    def avg_pooling(self, image, size=8):
         """
-        Extraer hash de una zona usando DCT.
+        Aplicar avg pooling para reducir resolución de imagen.
+        """
+        w, h = image.size
+        new_w, new_h = w // size, h // size
+        resized = image.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        return resized
+    
+    def extract_zone_hash(self, image, zone_name):
+        """
+        Extraer hash binario de una zona.
         
         Args:
-            arr: Array de imagen (grayscale).
-            y_range: (y_min, y_max) en porcentaje.
-            x_range: (x_min, x_max) en porcentaje.
+            image: Imagen PIL.
+            zone_name: Nombre de zona ('top_superior', 'imagen_central', 'banda_lateral').
             
         Returns:
-            Hash (0-1) o None si falla.
+            Hash binario de 6 caracteres hex (3 bytes) o None.
         """
         try:
-            h, w = arr.shape
-            y_min, y_max, x_min, x_max = y_range
+            # 1. Normalizar imagen si es muy grande
+            if image.width > 1920 or image.height > 1920:
+                image = image.resize((1920, 1920), Image.Resampling.LANCZOS)
             
-            # Convertir rangos a píxeles
-            y_min_px = int(h * y_min / 100)
-            y_max_px = int(h * y_max / 100)
-            x_min_px = int(w * x_min / 100)
-            x_max_px = int(w * x_max / 100)
+            # 2. Convertir a escala de grises
+            img_gray = image.convert('L')
             
-            # Extraer zona
-            zona = arr[y_min_px:y_max_px, x_min_px:x_max_px]
+            # 3. Aplicar avg pooling
+            img_pooled = self.avg_pooling(img_gray, size=8)
             
-            if zona.size == 0:
-                return None
+            # 4. Extraer zona
+            zonas_config = {
+                'top_superior': (0, 15, 0, 100),
+                'imagen_central': (10, 65, 10, 65),
+                'banda_lateral': (0, 25, 0, 100),
+            }
             
-            # Normalizar
-            arr_float = zona.astype(np.float32)
+            if zone_name not in zonas_config:
+                zone_name = 'imagen_central'
             
-            # Aplicar DCT y extraer hash
-            dct = np.fft.fft2(arr_float)
-            dct_shift = np.fft.ifftshift(np.abs(dct))
+            x_min_pct, x_max_pct, y_min_pct, y_max_pct = zonas_config[zone_name]
             
-            h_z, w_z = dct_shift.shape
-            h_low, w_low = h_z // 4, w_z // 4
+            w, h = img_pooled.size
+            x_min_px = int(w * x_min_pct / 100)
+            x_max_px = int(w * x_max_pct / 100)
+            y_min_px = int(h * y_min_pct / 100)
+            y_max_px = int(h * y_max_pct / 100)
             
-            if h_low > 0 and w_low > 0:
-                low_freq = dct_shift[h_low:2*h_low, w_low:2*w_low]
-                mean_val = np.mean(np.real(low_freq))
-                max_abs = np.max(np.abs(low_freq))
-                
-                if max_abs > 0:
-                    return float(mean_val / max_abs)
+            # 5. Crop zona
+            if x_max_px > x_min_px and y_max_px > y_min_px:
+                zona = img_pooled.crop((x_min_px, y_min_px, x_max_px, y_max_px))
+            else:
+                zona = img_pooled
             
-            return None
+            # 6. Convertir a array
+            zona_array = np.array(zona, dtype=np.uint8)
+            zona_flat = zona_array.flatten()
             
-        except Exception:
+            # 7. Binarizar con umbral 128
+            bits = ['1' if p >= 128 else '0' for p in zona_flat]
+            
+            # 8. Agrupar en chunks de 8 bits
+            hash_bytes = []
+            for i in range(0, len(bits), 8):
+                chunk = bits[i:i+8]
+                if len(chunk) < 8:
+                    chunk.extend(['0'] * (8 - len(chunk)))
+                byte_val = int(''.join(chunk), 2)
+                hash_bytes.append(f'{byte_val:02x}')
+            
+            # 9. Retornar string hex
+            return ''.join(hash_bytes) if hash_bytes else '00'
+            
+        except Exception as e:
+            print(f"    ⚠️ Error en zona {zone_name}: {e}")
             return None
     
     def compute_zone_hashes(self, image, zones=None):
         """
         Generar hashes para las 3 áreas.
-        
-        Args:
-            image: Imagen PIL.
-            zones: Config de zonas (opcional).
-            
-        Returns:
-            Dict con hashes por área.
         """
         if zones is None:
             zones = self.get_default_zones_3_areas()
         
-        if image.mode != 'L':
-            image = image.convert('L')
-        
-        arr = np.array(image)
         hashes = {}
         
-        for zona_name, (y_min_pct, y_max_pct, x_min_pct, x_max_pct) in zones.items():
-            hash_val = self.extract_zone_hash(arr, (y_min_pct, y_max_pct), (x_min_pct, x_max_pct))
+        for zona_name in zones.keys():
+            hash_val = self.extract_zone_hash(image, zona_name)
             if hash_val is not None:
                 hashes[zona_name] = hash_val
         
         return hashes
     
-    def draw_zones_overlay(self, image, zones=None, labels=True, 
-                          colors=['red', 'green', 'blue'],
-                          outline_width=3):
-        """
-        Dibujar superposición de las 3 áreas en imagen.
-        
-        Args:
-            image: Imagen PIL.
-            zones: Dict de zonas o None para usar predeterminado.
-            labels: Mostrar etiquetas.
-            colors: Colores para cada zona.
-            outline_width: Grosor de bordes.
-            
-        Returns:
-            Imagen con overlay.
-        """
-        if zones is None:
-            zones = self.get_default_zones_3_areas()
-        
-        # Convertir a RGB
-        if image.mode != 'RGB':
-            image = image.convert('RGB')
-        
-        draw = ImageDraw.Draw(image)
-        h, w = image.size
-        
-        # Dibujar cada zona
-        for i, (zona_name, (y_min_pct, y_max_pct, x_min_pct, x_max_pct)) in enumerate(zones.items()):
-            y_min = int(h * y_min_pct / 100)
-            y_max = int(h * y_max_pct / 100)
-            x_min = int(w * x_min_pct / 100)
-            x_max = int(w * x_max_pct / 100)
-            
-            # Dibujar borde
-            draw.rectangle(
-                [x_min, y_min, x_max, y_max],
-                outline=colors[i % len(colors)],
-                width=outline_width
-            )
-            
-            if labels:
-                # Texto de etiqueta
-                try:
-                    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 14)
-                    draw.text(
-                        (x_min + 5, y_min + 5),
-                        f"{zona_name.upper()}",
-                        fill=colors[i % len(colors)],
-                        font=font
-                    )
-                except:
-                    pass
-        
-        return image
-    
-    def visualize_image(self, image_path, zones=None, output_path=None):
-        """
-        Visualizar una carta con overlay de las 3 áreas.
-        
-        Args:
-            image_path: Ruta a la carta.
-            zones: Config de zonas (opcional).
-            output_path: Ruta para guardar imagen (opcional).
-            
-        Returns:
-            Imagen visualizada.
-        """
-        print(f"📷 Visualizando: {image_path}")
-        
-        try:
-            image = Image.open(image_path)
-        except Exception as e:
-            print(f"  ⚠️ Error al cargar imagen: {e}")
-            return None
-        
-        # Dibujar zonas
-        overlay = self.draw_zones_overlay(image, zones)
-        
-        if output_path:
-            overlay.save(output_path)
-            print(f"💾 Guardado en: {output_path}")
-        
-        return overlay
-    
-    def compute_batch_hashes(self, image_folder, zones=None, output_file=None, strict=False):
+    def compute_batch_hashes(self, image_folder, output_file=None, strict=False):
         """
         Generar hashes para todas las imágenes en carpeta.
-        
-        Args:
-            image_folder: Carpeta de imágenes.
-            zones: Config de zonas (opcional).
-            output_file: Archivo de salida (opcional).
-            strict: Si True, detener en primera imagen corrupta.
-            
-        Returns:
-            Dict con hashes.
         """
-        if zones is None:
-            zones = self.get_default_zones_3_areas()
-        
         print(f"\n📂 Carpeta: {image_folder}")
         
         # Buscar imágenes
@@ -265,27 +165,20 @@ class VTESPerceptualHash3Areas:
                 # Verificar si es imagen válida (tiene modo y tamaño)
                 if image.mode and image.size:
                     valid_files.append(img_path)
-                    image.close()  # Cerrar imagen para liberar memoria
-                else:
-                    print(f"  ⚠️ Imagen inválida: {img_path} (modo={image.mode}, tamaño={image.size})")
-                    corrupted_files.append(img_path)
                     image.close()
+                else:
+                    print(f"  ⚠️ Imagen inválida: {img_path}")
+                    corrupted_files.append(img_path)
                     
             except Exception as e:
                 corrupted_files.append(img_path)
-                print(f"  ⚠️ Archivo corrupto: {img_path}")
-                print(f"     Error: {type(e).__name__}: {e}")
-                
+                print(f"  ⚠️ Archivo corrupto: {img_path} - {e}")
+        
         print(f"  ✅ Válidas: {len(valid_files)} | ❌ Corruptas: {len(corrupted_files)}")
         
         # Si hay imágenes corruptas, preguntar si continuar
         if corrupted_files and not strict:
-            print(f"  💡 Estas imágenes se saltarán automáticamente:")
-            for cf in corrupted_files[:10]:  # Mostrar hasta 10
-                print(f"     - {os.path.basename(cf)}")
-            if len(corrupted_files) > 10:
-                print(f"     ... y {len(corrupted_files) - 10} más")
-            print(f"  💡 Para ver todas las corruptas: strict=True")
+            print(f"  💡 Estas imágenes se saltarán automáticamente")
         
         # Procesar solo imágenes válidas
         results = {}
@@ -294,14 +187,10 @@ class VTESPerceptualHash3Areas:
         for img_path in valid_files:
             try:
                 image = Image.open(img_path)
-                hashes = self.compute_zone_hashes(image, zones)
+                hashes = self.compute_zone_hashes(image)
                 
                 if hashes:
                     results[os.path.basename(img_path)] = hashes
-                    
-                    # Progress bar
-                    sys.stdout.write(f"\rProcesando: {len(results)}/{len(valid_files)}")
-                    sys.stdout.flush()
                 else:
                     print(f"  ⚠️ No se pudo generar hash para {img_path}")
                     skipped += 1
@@ -314,16 +203,16 @@ class VTESPerceptualHash3Areas:
         # Guardar resultados
         if output_file and results:
             with open(output_file, 'w') as f:
-                f.write(f"# VTES Perceptual Hashes - 3 Áreas Estratégicas\n")
+                f.write(f"# VTES Perceptual Hashes - CORREGIDO\n")
+                f.write(f"# Método: AVG POOLING + BINARIZACIÓN (umbral 128)\n")
                 f.write(f"# Total válidas: {len(valid_files)}\n")
-                f.write(f"# Corruptas: {len(corrupted_files)}\n")
                 f.write(f"# Procesadas: {len(results)}\n")
                 f.write(f"# Saltadas: {skipped}\n\n")
                 
                 for img_name, hashes in sorted(results.items()):
-                    f.write(f"\n[{img_name}]\n")
+                    f.write(f"[{img_name}]\n")
                     for zona, hash_val in hashes.items():
-                        f.write(f"  {zona}: {hash_val:.6f}\n")
+                        f.write(f"  {zona}: {hash_val}\n")
             
             print(f"\n  ✅ Hashes guardados en: {output_file}")
         
@@ -338,194 +227,27 @@ class VTESPerceptualHash3Areas:
             print(f"\n  ⚠️ Lista de imágenes corruptas guardada en: corrupted_images.txt")
         
         return results
-    
-    def compare_images(self, image1_path, image2_path, output_file=None):
-        """
-        Comparar dos cartas usando hashing por zonas.
-        
-        Args:
-            image1_path: Primera imagen.
-            image2_path: Segunda imagen.
-            output_file: Archivo de salida con resultados.
-            
-        Returns:
-            Diccionario con distancias Hamming y hashes.
-        """
-        print(f"\n🔍 Comparando: {image1_path} vs {image2_path}")
-        
-        # Cargar imágenes
-        try:
-            image1 = Image.open(image1_path).convert('L')
-            image2 = Image.open(image2_path).convert('L')
-        except Exception as e:
-            print(f"  ⚠️ Error cargando imágenes: {e}")
-            return None
-        
-        # Calcular hashes
-        hashes1 = self.compute_zone_hashes(image1)
-        hashes2 = self.compute_zone_hashes(image2)
-        
-        if not hashes1 or not hashes2:
-            print("  ⚠️ Una de las imágenes no pudo procesarse")
-            return None
-        
-        # Calcular distancia Hamming para cada zona
-        print(f"  ✅ Hashes calculados")
-        print(f"  \n  Carta 1:")
-        for zona, hash_val in hashes1.items():
-            print(f"    {zona}: {hash_val:.6f}")
-        
-        print(f"  \n  Carta 2:")
-        for zona, hash_val in hashes2.items():
-            print(f"    {zona}: {hash_val:.6f}")
-        
-        # Calcular diferencias
-        print(f"\n  Diferencias:")
-        diffs = {}
-        for zona in hashes1.keys() & hashes2.keys():
-            diff = abs(hashes1[zona] - hashes2[zona])
-            diffs[zona] = diff
-            print(f"    {zona}: {diff:.6f}")
-        
-        # Calcular distancia total (media de diferencias)
-        total_diff = sum(diffs.values()) / len(diffs) if diffs else 0
-        
-        print(f"\n  Distancia total (promedio): {total_diff:.6f}")
-        
-        # Guardar resultados
-        if output_file:
-            with open(output_file, 'w') as f:
-                f.write(f"# Comparación de imágenes\n")
-                f.write(f"Imagen 1: {image1_path}\n")
-                f.write(f"Imagen 2: {image2_path}\n")
-                f.write(f"Distancia total: {total_diff:.6f}\n\n")
-                
-                f.write(f"Imagen 1 hashes:\n")
-                for zona, hash_val in hashes1.items():
-                    f.write(f"  {zona}: {hash_val:.6f}\n")
-                
-                f.write(f"\nImagen 2 hashes:\n")
-                for zona, hash_val in hashes2.items():
-                    f.write(f"  {zona}: {hash_val:.6f}\n")
-            
-            print(f"\n  ✅ Resultados guardados en: {output_file}")
-        
-        return {
-            'hashes1': hashes1,
-            'hashes2': hashes2,
-            'diffs': diffs,
-            'total_diff': total_diff
-        }
-    
-    def print_usage(self):
-        """Imprimir ayuda de uso."""
-        print("""
-VTES Perceptual Hash - 3 Áreas Estratégicas 🦞
-===
-
-Uso básico:
-  
-  # Ver resumen de las 3 áreas
-  python vtes_ph_unificado_robusto.py --help
-  
-  # Visualizar carta con las 3 áreas
-  python vtes_ph_unificado_robusto.py visualize --image carta.jpg
-  
-  # Guardar visualización
-  python vtes_ph_unificado_robusto.py visualize --image carta.jpg --output overlay.jpg
-  
-  # Generar hashes para carpeta
-  python vtes_ph_unificado_robusto.py hash --folder cartas_vtes
-  
-  # Guardar hashes en archivo
-  python vtes_ph_unificado_robusto.py hash --folder cartas_vtes --output hashes.txt
-  
-  # Comparar dos cartas
-  python vtes_ph_unificado_robusto.py compare --image1 carta1.jpg --image2 carta2.jpg
-  
-  # Comparar con salida
-  python vtes_ph_unificado_robusto.py compare --image1 carta1.jpg --image2 carta2.jpg --output comparacion.txt
-
-Las 3 Áreas Estratégicas:
-  
-  1. TOP SUPERIOR (0-15%)
-     - Título del set + símbolo de edición
-     - Identifica el SET directamente
-  
-  2. IMAGEN CENTRAL (10-65%)
-     - Ilustración principal (forma ovalada=vampiro, cuadrada=biblioteca)
-     - Forma del arte diferencia vampiros vs biblioteca
-  
-  3. BANDA LATERAL (0-25%)
-     - Símbolo clan, requisitos, coste, tipo de carta
-     - Captura elementos distintivos del SET
-
-Ventajas de las 3 áreas:
-  
-  ✅ Más rápido (menor procesamiento)
-  ✅ Menor ruido visual (mayor precisión)
-  ✅ Más robusto a variaciones de iluminación
-  ✅ Ideal para matching masivo
-  ✅ Saltar imágenes corruptas automáticamente
-
-Para ver lista de imágenes corruptas:
-  python vtes_ph_unificado_robusto.py hash --folder cartas_vtes
-
-Imágenes corruptas se guardarán en: corrupted_images.txt
-
-Autor: La Garra Cifrada 🦞
-        """)
-
 
 def main():
     """Función principal."""
     parser = argparse.ArgumentParser(
-        description='VTES Perceptual Hash - 3 Áreas Estratégicas (Robusto)',
+        description='VTES Perceptual Hash - CORREGIDO (Avg Pooling + Binario)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Ver resumen de uso con: python vtes_ph_unificado_robusto.py --help
-        """,
     )
     
-    subparsers = parser.add_subparsers(dest='command', help='Comandos')
-    
-    # Subcomando visualize
-    visualize_parser = subparsers.add_parser('visualize', help='Visualizar carta con overlay')
-    visualize_parser.add_argument('--image', '-i', type=str, required=True, help='Carta a visualizar')
-    visualize_parser.add_argument('--output', '-o', type=str, default=None, help='Guardar imagen visualizada')
-    
-    # Subcomando hash
-    hash_parser = subparsers.add_parser('hash', help='Generar hashes para carpeta')
-    hash_parser.add_argument('--folder', '-f', type=str, required=True, help='Carpeta de imágenes')
-    hash_parser.add_argument('--output', type=str, default=None, help='Archivo de salida')
-    hash_parser.add_argument('--strict', action='store_true', help='Detener en primera imagen corrupta')
-    
-    # Subcomando compare
-    compare_parser = subparsers.add_parser('compare', help='Comparar dos cartas')
-    compare_parser.add_argument('--image1', '-1', type=str, required=True, help='Primera carta')
-    compare_parser.add_argument('--image2', '-2', type=str, required=True, help='Segunda carta')
-    compare_parser.add_argument('--output', type=str, default=None, help='Archivo de salida')
+    parser.add_argument('command', choices=['hash'], help='Comando principal')
+    parser.add_argument('--folder', '-f', type=str, required=True, help='Carpeta de imágenes')
+    parser.add_argument('--output', '-o', type=str, default=None, help='Archivo de salida')
+    parser.add_argument('--strict', action='store_true', help='Detener en primera imagen corrupta')
     
     args = parser.parse_args()
     
-    if not args.command:
-        parser.print_help()
-        return
+    hash_engine = VTESPerceptualHashCorrecto()
+    hashes = hash_engine.compute_batch_hashes(args.folder, output_file=args.output, strict=args.strict)
     
-    hash_engine = VTESPerceptualHash3Areas()
-    
-    if args.command == 'visualize':
-        # Visualizar carta
-        hash_engine.visualize_image(args.image, output_path=args.output)
-        
-    elif args.command == 'hash':
-        # Generar hashes
-        hashes = hash_engine.compute_batch_hashes(args.folder, output_file=args.output, strict=args.strict)
-        print(f"\n✅ {len(hashes)} cartas procesadas")
-        
-    elif args.command == 'compare':
-        # Comparar imágenes
-        hash_engine.compare_images(args.image1, args.image2, output_file=args.output)
+    print(f"\n{'='*60}")
+    print(f"✅ Completado: {len(hashes)} cartas procesadas")
+    print(f"{'='*60}")
 
 
 if __name__ == '__main__':
