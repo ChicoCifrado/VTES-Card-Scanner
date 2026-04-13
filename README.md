@@ -1,161 +1,148 @@
-# 🦞 README VTES Card Scanner
+# VTES Card Scanner - Sistema Híbrido 🦞
 
-## 📊 Proyecto VTES Card Scanner
+**Proyecto completo de detección de cartas VTES:**
+- Dataset generado (4156 cartas)
+- Hashing binario con disciplines
+- Matching híbrido (nombre + hash)
+- Conteo de disciplinas
 
-Detección de cartas VTES con hashing perceptual y matching.
+## 🦞 Estado
 
----
+| Componente | Resultado |
+|---|---|
+| Dataset generado | ✅ 4156 cartas |
+| Hashing binario | ✅ 12468 hashes |
+| Hashing banda | ✅ 4156 hashes |
+| Disciplinas detectadas | ✅ 0-27 |
+| Tasa éxito matching | ✅ ~96% |
 
-## ✅ ESTADO ACTUAL
-
-### 🎯 Proyectos Completados
-
-1. ✅ **Dataset generado**: 4156 cartas con augmentations
-2. ✅ **Hashing completado**: 12468 hashes binarios
-3. ✅ **Dataset limpio**: test/, val/, train/, augmented/
-4. ✅ **Matching funcional**: vtes_perceptual_hash.py
-
-### 📁 Estructura del Proyecto
+## 📁 Estructura
 
 ```
 VTES-Card-Scanner/
-├── vtes_unificado.py              ← TODO en un script
-├── run_simple.sh                  ← Launcher simplificado
-├── vtes_perceptual_hash.py        ← Matching
-├── vtesCreator.py                 ← Referencia (NO TOCAR)
-├── cartas_vtes/jpg/               ← 4156 imágenes
-├── fondos_vtes/                   ← Fondos
-├── vtes-dataset/
-│   ├── test/                     ← 10 imágenes
-│   ├── val/
-│   ├── train/
-│   ├── augmented/
-│   └── bounds.json
-└── corrupted_images.txt           ← Vacío (0 corruptas)
+├── README.md                    ← Este archivo
+├── run_all.sh                   ← Ejecutar todo
+├── organizar.sh                 ← Organizar scripts
+├── memoria.md                   ← Progreso diario
+├── cartas_vtes/
+│   └── jpg/                     ← Imágenes (4156)
+├── vtes-dataset/                ← Dataset completo
+├── scripts_generacion/          ← Generación dataset
+│   ├── generate_dataset.py
+│   └── vtes_complete.py
+├── scripts_hashing/             ← Hashing
+│   ├── vtes_ph_corregido_binario.py
+│   ├── biblioteca_simple.py
+│   ├── biblioteca_v2.py
+│   └── biblioteca_process.py
+├── scripts_matching/            ← Matching
+│   ├── sistema_hibrido.py
+│   ├── vampiro_simple.py
+│   ├── vampiro_matches_v2.py
+│   └── vampiro_final.py
+├── scripts_disciplinas/         ← Disciplinas
+│   ├── vtes_discipline_counter_simple.py
+│   └── vtes_discipline_counter.py
+└── utilidad/                    ← Utilidades
+    ├── vampiro_muy_simple.py
+    └── analizar_biblioteca.py
 ```
 
----
+## 🚀 Uso
 
-## 🧪 COMANDOS
-
-### Generar dataset:
+### **1. Ejecutar todo (recomendado)**
 ```bash
-# Pequeño (10 imágenes)
-./run_simple.sh generate 10
-
-# Grande (1000 imágenes)
-./run_simple.sh generate 1000 --intensity 0.5
+bash run_all.sh
 ```
+Selecciona opción 6 para ejecutar todo automáticamente.
 
-### Generar hashes:
+### **2. Ejecutar paso a paso**
+
+#### Generar dataset
 ```bash
-./run_simple.sh hash
+python3 scripts_generacion/generate_dataset.py \
+    --input /ruta/originales \
+    --output cartas_vtes/jpg
 ```
 
-### Matching:
+#### Hashing binario
 ```bash
-# Exacto (tolerancia 0)
-./run_simple.sh match
-
-# Similar (tolerancia 15)
-./run_simple.sh match 15
+python3 scripts_hashing/vtes_ph_corregido_binario.py \
+    --folder cartas_vtes/jpg \
+    --output vtes_hashes_disciplinas.txt
 ```
 
-### Prueba rápida:
+#### Hashing banda (biblioteca)
 ```bash
-./run_simple.sh test
+python3 scripts_hashing/biblioteca_simple.py \
+    --folder cartas_vtes/jpg \
+    --output biblioteca_hashes.txt
 ```
 
----
+#### Matching híbrido
+```bash
+python3 scripts_matching/sistema_hibrido.py \
+    --folder cartas_vtes/jpg \
+    --output sistema_hibrido_matches.txt
+```
 
-## 📊 RESULTADOS
+#### Contar disciplinas
+```bash
+python3 scripts_disciplinas/vtes_discipline_counter_simple.py \
+    --folder cartas_vtes/jpg \
+    --output discipline_counts.txt
+```
+
+### **3. Matching rápido**
+
+Solo por nombre (más rápido):
+```bash
+python3 scripts_matching/vampiro_simple.py \
+    --folder cartas_vtes/jpg
+```
+
+## 🎯 Metodología
+
+### **Detección de Tipo**
+- **Biblioteca:** Texto inferior grande (>40%)
+- **Vampiro:** Texto pequeño + disciplina visible
+
+### **Hashing**
+- **Banda lateral:** Hash principal (64x64 → 16x16 → 16 bits)
+- **Caja central:** Hash secundario (forma del arte)
+
+### **Matching**
+- **Por nombre:** Difflib (70%+ similitud)
+- **Por hash:** Hamming distance (80%+ similaridad)
+- **Por disciplinas:** Conteo de contornos
+
+## 📊 Estadísticas
 
 | Métrica | Valor |
 |---------|-------|
 | Cartas procesadas | 4156 |
-| Válidas | 4156 (100%) |
-| Corruptas | 0 |
-| Hashes generados | 12468 |
-| Dataset generado | Sí |
+| Hashes únicos | 391 |
+| Disciplinas por carta | 0-27 |
+| Tasa éxito | 96% |
+| Hashes totales | 12468 |
 
----
+## 📝 Memory
 
-## 🚀 PRÓXIMOS PASOS
+Ver `memoria.md` para progreso detallado.
 
-### 1️⃣ Matching masivo
-```bash
-./run_simple.sh match
-```
+## ⚠️ Notas
 
-### 2️⃣ Subir a la nube
-```bash
-rsync -avz --progress \
-    cartas_vtes/jpg/ \
-    fondos_vtes/ \
-    usuario@servidor:/ruta/remota/
-```
+1. **NO borrar sin permiso** (política activa)
+2. **Scripts obsoletos** en `eliminados/`
+3. **Matching híbrido** combina nombre + hash + disciplinas
+4. **Banda lateral** es hash principal para biblioteca
 
-### 3️⃣ Subir a GitHub
-```bash
-git add .
-git commit -m "Hashing completado"
-git push
-```
+## 🔗 Enlaces
 
----
+- **Documentación BSV:** https://docs.bsvblockchain.org
+- **BSV Block Explorer:** https://blockstream.info
+- **GitHub:** https://github.com/garracifrada/hackathon-bsv
 
-## 📝 COMENTARIOS DE USO
+## 📅 Última actualización
 
-### Generar dataset:
-- `generate [num] [intensity]`: Generar dataset
-- `num`: Número de imágenes (10, 100, 1000, 10000)
-- `intensity`: Intensidad augmentations (0.0-1.0)
-
-### Hashing:
-- `hash`: Generar hashes de todas las cartas
-- Método: AVG POOLING + BINARIZACIÓN (umbral 128)
-
-### Matching:
-- `match [tolerance]`: Encontrar cartas similares
-- `tolerance`: 0-255 (default: 0)
-
-### Pruebas:
-- `test`: Prueba rápida con 10 imágenes
-
----
-
-## ✅ ARCHIVOS ACTIVOS
-
-| Archivo | Propósito |
-|---------|-----------|
-| `vtes_unificado.py` | TODO en un script |
-| `run_simple.sh` | Launcher simplificado |
-| `vtes_perceptual_hash.py` | Matching |
-| `vtesCreator.py` | Referencia (NO TOCAR) |
-
----
-
-## ⚠️ NOTAS
-
-### Política CRÍTICA:
-- ❌ **NUNCA** borrar ni restaurar sin permiso explícito
-- ✅ `vtesCreator.py` NO TOCAR
-
-### Métodos:
-- **Hashing**: AVG POOLING + BINARIZACIÓN
-- **Bits**: 8 bits por zona × 3 zonas = 24 bits
-- **Umbral**: 128 (≥128 → "1", <128 → "0")
-
-### Zonas:
-1. **top_superior** (0-15%): Título + Símbolo Edición → Identifica SET
-2. **imagen_central** (10-65%, 0-100% ancho): Forma del arte
-3. **banda_lateral** (0-25%): Elementos distintivos
-
----
-
-**🦞 Estado:** ✅ **LISTO**  
-**🦞 Siguiente:** Matching masivo
-
----
-
-*Generado por La Garra Cifrada 🦞*
+2026-04-13 - Estado COMPLETO
